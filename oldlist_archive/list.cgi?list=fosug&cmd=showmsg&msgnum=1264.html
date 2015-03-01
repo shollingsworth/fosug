@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: out of context question</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: out of context question</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1263.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1265.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1263.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1265.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo&amp;month=200606.html">Steven Hollingsworth ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 21:01:25 -0700
+<br><b>Message-Id:</b> &lt;1149829321.29487.113.camel@slappy.howe-electric.net&gt;
+<br>
+<hr><pre>On Thu, 2006-06-08 at 09:40 -0700, Mike wrote:
+&gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; installed client firewalls on a LAN with AD / Exchange?
+
+I have every workstation on my network individually firewalled with
+windows XP firewall, with only port 3389 being open.
+
+&gt; We had a field laptop connect to our network (with contained malware) and it
+&gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; except the ones needed for normal operation. looking at the port list for AD
+&gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+
+I agree with Robert about the clients really only needing access to the
+server but not their peers. If you give machines static IP's through
+dhcp and mac addresses, then another pool for IP's for unknown mac
+addresses, you can make scope access control lists on your firewall.
+
+Granted this setup isn't terribly secure, but it would prevent your
+average &quot;oops I released a virus on the network scenario :-P
+
+I also think you can blow out firewall rules based on group policy no? I
+wouldn't know this because I haven't enabled AD yet, but I'm sure as
+heck looking forward to it. The only thing I think sucks is the lack of
+structured access control lists (ACLs). There may be third party
+applications out there that do a better part of managing an enterprise
+on a client level but I don't know any.
+
+&gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; authenticate with AD but cannot connect with Exchange.
+
+I'd use tcpview [0] to see what ports and doing what, and what process
+ID's they are attached to. Granted a lot of process are hooked into
+svchost.exe , the exchange ones should reside in a more obvious
+executable.
+
+&gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; foot???
+
+Good luck, you're looking in the right direction.
+
+~ stevo
+
+[0]  <a href="http://www.sysinternals.com/Utilities/TcpView.html">http://www.sysinternals.com/Utilities/TcpView.html</a>
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1263.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1265.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1263.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>8 Jun 2006 21:01:25 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1265.html">Re: out of context question</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

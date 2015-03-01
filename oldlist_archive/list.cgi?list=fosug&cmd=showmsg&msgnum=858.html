@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: bsd network bridge</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: bsd network bridge</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=857.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">mcederquist.it-email.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=859.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp.html">Keith Conley</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=857.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">mcederquist.it-email.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=859.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp.html">Keith Conley</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: bsd network bridge">Re: bsd network bridge</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200601.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+7 Jan 2006 19:24:00 -0000
+<br><b>Message-Id:</b> &lt;20060107192353.GH4389@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.01.07 10:21:00 -0800, ####@####.#### wrote:
+&gt; I would suggest squid proxy if you're looking to control your staff . That
+&gt; way you have way more control on what their surfing on . Plus if you add
+&gt; mysql into it the mix and some pretty nice reporting tools  !  You have a
+&gt; great solution .....
+
+I would concur with Mike here.
+
+It's quite simple to put the proxy in place, and you can start it out as a
+transparent proxy.
+
+Additionally, if your clients dhcp for their ip addresses, I would start by
+locking down dhcp so that your clients always get the same IP address.  If you
+would like the setup for this, I have it in-place at my work and will gladly
+forward all the pertinent details, the mysql db schema and all the php pages
+for the administrative front-end.
+
+The combination of squid and the ability to lookup ip addresses and know who
+the primary user is just rocks.
+
+I don't know if you have any way to push registry settings or programs on your
+users, but you can force the proxy issue in IE if you can push the registry
+settings.  We use Zenworks at the City and I have not investigated other ways
+of doing the same with free software (or if there is such a beast).  Probably
+the easiest part is to use the registry program to silently insert said
+settings via a login script (I forget what the program is called and would
+have to investigate - someone here probably knows off the top of their dome).
+
+If you can get management buyin, you can block 80 outbound at the firewall for
+all boxen but your squid box and then turn on authentication on the squid box.
+It's truly alarming how big a reduction in usage we saw when we turned on
+authentication at Water.  It finally hit home that they were tagging all of
+their web traffic with personally identifiable information.  Also, if someone
+else provably is using their credentials, it's a policy violation for them to
+have given said credentials out to someone else.  Nice, tight little net.
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/858/3.html">Download</a>]</strong><br>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=857.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">mcederquist.it-email.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=859.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp.html">Keith Conley</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=857.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dbfcabnmmpgfbdibogec.html">mcederquist.it-email.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>7 Jan 2006 19:24:00 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=859.html">Re: bsd network bridge</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp.html">Keith Conley</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

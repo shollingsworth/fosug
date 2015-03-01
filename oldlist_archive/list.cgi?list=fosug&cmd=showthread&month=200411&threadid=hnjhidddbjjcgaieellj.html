@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Intrusion Attempt</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200411.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Intrusion Attempt</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Intrusion Attempt">Intrusion Attempt</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200411.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+29 Nov 2004 22:04:40 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d04112914042d6e105@mail.gmail.com&gt;
+<br>
+<hr><pre>Hey all,
+
+I got some reports on my apache server that a client was trying to
+access files her shouldn't. Ohh... sbout 12 pages worth. And I also
+had a grip of stuff in my IDS from the same IP. I believe the person
+was using Nessus.
+
+Here is a snip from my snort Report:
+
+I want to make sure that my webserver isn't compromised... anybody
+have any suggestions. I've never had to dig into a machine forensicly
+before, so my experience isn't that great.
+
+Any help would be appreciated. Oh... btw... the host that was
+attacking me isn't local.
+
+<a href="http://www.whois.sc/67.18.100.114">http://www.whois.sc/67.18.100.114</a>
+
+Cheers,
+
+Stevo
+
+	Earliest: 05:48:32.259746 on 11/28/2004
+	Latest: 05:53:25.497673 on 11/28/2004
+	
+	34 different signatures are present for 67.18.100.114 as a source
+	
+	    * 1 instances of WEB-IIS iissamples access
+	    * 1 instances of WEB-MISC Oracle Java Process Manager access
+	    * 1 instances of WEB-IIS _mem_bin access
+	    * 1 instances of (http_inspect) APACHE WHITESPACE (TAB)
+	    * 1 instances of WEB-MISC DELETE attempt
+	    * 1 instances of WEB-MISC robots.txt access
+	    * 1 instances of WEB-IIS iisadmin access
+	    * 1 instances of WEB-MISC webcart-lite access
+	    * 1 instances of WEB-MISC mod-plsql administration access
+	    * 1 instances of WEB-MISC WebDAV search access
+	    * 1 instances of WEB-MISC webcart access
+	    * 1 instances of WEB-MISC /CVS/Entries access
+	    * 1 instances of WEB-IIS srchadm access
+	    * 1 instances of WEB-CGI way-board access
+	    * 1 instances of WEB-MISC Admin_files access
+	    * 1 instances of WEB-MISC bad HTTP/1.1 request, Potentially worm attack
+	    * 1 instances of WEB-MISC Invalid HTTP Version String
+	    * 1 instances of WEB-MISC TRACE attempt
+	    * 1 instances of WEB-CGI test-cgi access
+	    * 1 instances of WEB-MISC apache directory disclosure attempt
+	    * 1 instances of WEB-MISC Oracle Dynamic Monitoring Services dms access
+	    * 1 instances of WEB-FRONTPAGE /_vti_bin/ access
+	    * 1 instances of WEB-MISC intranet access
+	    * 1 instances of WEB-CGI /cgi-bin/ access
+	    * 1 instances of WEB-CGI www-sql access
+	    * 2 instances of WEB-MISC server-status access
+	    * 2 instances of WEB-MISC /~root access
+	    * 2 instances of WEB-MISC server-info access
+	    * 2 instances of WEB-MISC backup access
+	    * 2 instances of WEB-MISC webalizer access
+	    * 2 instances of WEB-MISC /doc/ access
+	    * 3 instances of (http_inspect) NON-RFC HTTP DELIMITER
+	    * 5 instances of WEB-FRONTPAGE _vti_inf.html access
+	    * 19 instances of WEB-MISC nessus 2.x 404 probe
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Intrusion Attempt">Re: Intrusion Attempt</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200411.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+29 Nov 2004 22:39:10 -0000
+<br><b>Message-Id:</b> &lt;20041129223853.GL3316@homebase.we1.client2.attbi.com&gt;
+<br>
+<hr><pre>On 2004.11.29 14:04:26 +0000, Stevo wrote:
+&gt; Hey all,
+&gt; 
+&gt; I got some reports on my apache server that a client was trying to
+&gt; access files her shouldn't. Ohh... sbout 12 pages worth. And I also
+&gt; had a grip of stuff in my IDS from the same IP. I believe the person
+&gt; was using Nessus.
+
+&lt;insert favorite explitive&gt; script kiddie!
+
+&gt; I want to make sure that my webserver isn't compromised... anybody
+&gt; have any suggestions. I've never had to dig into a machine forensicly
+&gt; before, so my experience isn't that great.
+
+First things first, get the versions of all the software that you're using for
+your web service and find all the vulnerabilities for that service (e.g.
+apache's last several problems have been with the openssl libraries).  Write
+it all down so that you have a handy reference.
+
+I would suggest running mactime against the system
+<a href="http://fosug.org/cgi-bin/(http://www.sleuthkit.org/sleuthkit/).">(http://www.sleuthkit.org/sleuthkit/).</a>  What the utility does is look at the
+timestamps on your filesystem (Modified/Access/Change).  Using vi, you can
+open up the output file and do a reverse search (?&lt;criterion&gt;) for the string
+&quot; mac &quot; and it'll tell you the files that have been modified and changed
+recently (this is a good indicator of nefarious deeds).
+
+&gt; Any help would be appreciated. Oh... btw... the host that was
+&gt; attacking me isn't local.
+&gt; 
+&gt; <a href="http://www.whois.sc/67.18.100.114">http://www.whois.sc/67.18.100.114</a>
+
+That doesn't matter.  Use the abuse address and send whatever info you get.
+Either it's a zombie (doubtful as most don't run wide range scans) or it's a
+script kiddie who just learned about nessus and picked you for fun (or
+whatever other reason seems valid -- likely you're not the only one).
+
+BTW: the web link is nice, but you get crap information sometimes.  ALWAYS go
+command line here (whois -h whois.arin.net xx.xx.xx.xx).  The example above
+gives no contact mail address, but command line gets the following:
+
+OrgAbuseHandle: ABUSE271-ARIN
+OrgAbuseName:   Abuse 
+OrgAbusePhone:  +1-214-782-7802
+OrgAbuseEmail:  ####@####.####
+
+Expect to get an automated response.
+
+&gt; Cheers,
+&gt; 
+&gt; Stevo
+&gt; 
+&gt; 	Earliest: 05:48:32.259746 on 11/28/2004
+&gt; 	Latest: 05:53:25.497673 on 11/28/2004
+&gt; 	
+&gt; 	34 different signatures are present for 67.18.100.114 as a source
+&gt; 	
+[...]
+
+The IDS log is nice for knowing to look, but you need to look at the web logs
+for that time period.  Try something like this:
+
+grep 67.18.100.114 /path/to/web/log/access.file /path/to/web/log/error.file
+
+That'll give you some information on your service issues and you can see the
+actual requests made against the server.
+
+Also, look at your syslog files (using mactime is a good idea here) and see if
+there's any mention of your http service crapping out.
+
+That's all for now.  More specifics if you find anything there.
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/93/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Intrusion Attempt">Re: Intrusion Attempt</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200411.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+29 Nov 2004 23:54:30 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0411291554184c7f46@mail.gmail.com&gt;
+<br>
+<hr><pre>OK... I downloaded Sleuthkit... Do I have to make a WHOLE DD copy of
+the partitions! Sheesh.... that kinda sucks on a 11GB partition :-(
+
+*sniff*
+
+Am I correct in the assumption I learned from this site. 
+
+<a href="http://www.sleuthkit.org/sleuthkit/docs/ref_timeline.html">http://www.sleuthkit.org/sleuthkit/docs/ref_timeline.html</a>
+
+cheers,
+
+Stevo
+
+
+On Mon, 29 Nov 2004 14:38:53 -0800, Robert Nickel ####@####.#### wrote:
+&gt; On 2004.11.29 14:04:26 +0000, Stevo wrote:
+&gt; &gt; Hey all,
+&gt; &gt;
+&gt; &gt; I got some reports on my apache server that a client was trying to
+&gt; &gt; access files her shouldn't. Ohh... sbout 12 pages worth. And I also
+&gt; &gt; had a grip of stuff in my IDS from the same IP. I believe the person
+&gt; &gt; was using Nessus.
+&gt; 
+&gt; &lt;insert favorite explitive&gt; script kiddie!
+&gt; 
+&gt; &gt; I want to make sure that my webserver isn't compromised... anybody
+&gt; &gt; have any suggestions. I've never had to dig into a machine forensicly
+&gt; &gt; before, so my experience isn't that great.
+&gt; 
+&gt; First things first, get the versions of all the software that you're using for
+&gt; your web service and find all the vulnerabilities for that service (e.g.
+&gt; apache's last several problems have been with the openssl libraries).  Write
+&gt; it all down so that you have a handy reference.
+&gt; 
+&gt; I would suggest running mactime against the system
+&gt; <a href="http://fosug.org/cgi-bin/(http://www.sleuthkit.org/sleuthkit/).">(http://www.sleuthkit.org/sleuthkit/).</a>  What the utility does is look at the
+&gt; timestamps on your filesystem (Modified/Access/Change).  Using vi, you can
+&gt; open up the output file and do a reverse search (?&lt;criterion&gt;) for the string
+&gt; &quot; mac &quot; and it'll tell you the files that have been modified and changed
+&gt; recently (this is a good indicator of nefarious deeds).
+&gt; 
+&gt; &gt; Any help would be appreciated. Oh... btw... the host that was
+&gt; &gt; attacking me isn't local.
+&gt; &gt;
+&gt; &gt; <a href="http://www.whois.sc/67.18.100.114">http://www.whois.sc/67.18.100.114</a>
+&gt; 
+&gt; That doesn't matter.  Use the abuse address and send whatever info you get.
+&gt; Either it's a zombie (doubtful as most don't run wide range scans) or it's a
+&gt; script kiddie who just learned about nessus and picked you for fun (or
+&gt; whatever other reason seems valid -- likely you're not the only one).
+&gt; 
+&gt; BTW: the web link is nice, but you get crap information sometimes.  ALWAYS go
+&gt; command line here (whois -h whois.arin.net xx.xx.xx.xx).  The example above
+&gt; gives no contact mail address, but command line gets the following:
+&gt; 
+&gt; OrgAbuseHandle: ABUSE271-ARIN
+&gt; OrgAbuseName:   Abuse
+&gt; OrgAbusePhone:  +1-214-782-7802
+&gt; OrgAbuseEmail:  ####@####.####
+&gt; 
+&gt; Expect to get an automated response.
+&gt; 
+&gt; &gt; Cheers,
+&gt; &gt;
+&gt; &gt; Stevo
+&gt; &gt;
+&gt; &gt;       Earliest: 05:48:32.259746 on 11/28/2004
+&gt; &gt;       Latest: 05:53:25.497673 on 11/28/2004
+&gt; &gt;
+&gt; &gt;       34 different signatures are present for 67.18.100.114 as a source
+&gt; &gt;       
+&gt; [...]
+&gt; 
+&gt; The IDS log is nice for knowing to look, but you need to look at the web logs
+&gt; for that time period.  Try something like this:
+&gt; 
+&gt; grep 67.18.100.114 /path/to/web/log/access.file /path/to/web/log/error.file
+&gt; 
+&gt; That'll give you some information on your service issues and you can see the
+&gt; actual requests made against the server.
+&gt; 
+&gt; Also, look at your syslog files (using mactime is a good idea here) and see if
+&gt; there's any mention of your http service crapping out.
+&gt; 
+&gt; That's all for now.  More specifics if you find anything there.
+&gt; 
+&gt; --Robert
+&gt; 
+&gt; 
+&gt;
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200411.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

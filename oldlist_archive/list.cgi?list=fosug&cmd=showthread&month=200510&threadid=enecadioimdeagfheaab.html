@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Re: Decent deal on WRT54G wireless router...</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Re: Decent deal on WRT54G wireless router...</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200510.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 17:20:25 -0000
+<br><b>Message-Id:</b> &lt;20051027172015.GH1715@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>I'm not normally someone who will darken the doors of CompUSA [0], but I found
+that they've got a decent deal on the Linksys WRT54G wireless router.
+
+It's 69.99, with two rebates that knock the price down to 39.99.  Not too
+shabby for wifi plus 4 ports.
+
+If you don't know why the WRT54G is a cool device, have you been living under
+a rock? [1]
+
+br,
+--Robert
+
+[0] <a href="http://www.penny-arcade.com/view.php?date=2000-09-20&amp;res=l">http://www.penny-arcade.com/view.php?date=2000-09-20&amp;res=l</a>
+[1] Go immediately to <a href="http://www.wrt54g.net">http://www.wrt54g.net</a> and learn, padawan.  Be sure to
+heed the advice given about not purchasing the version 5 device.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200510.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 17:29:21 -0000
+<br><b>Message-Id:</b> &lt;20051027172911.GJ1715@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>Crap, I hate replying to my own posts.
+
+Anyway, for those who think that 012345678901234567890123456 or
+123456789012345678901234567 are ok for a secure WEP key [0], I threw together
+this perl code to help.  It will generate a random [1] 26 character (128-bit)
+WEP key for your use.
+
+-------------------- Begin --------------------
+#!/usr/bin/perl -w
+#
+# Generate a random 128-bit WEP key.
+#
+
+use strict;
+
+my @FNchars = ();
+# If you need to generate a different length key, just change keylen!
+my $keylen = 26;
+
+my $key = &quot;&quot;;
+
+for(48..57,65..90,97..122) { push @FNchars, chr($_); }
+
+srand (time ^ $$ ^ unpack &quot;%L*&quot;, `ps axww | gzip`); #generate some randomness.
+
+for(0..$keylen) { $key .= $FNchars[rand($#FNchars)]; }
+
+print &quot;Your key sir: $key \n&quot;;
+
+-------------------- End --------------------
+
+hth,
+--Robert
+
+[0] If this is you, please begin self-flogging now.
+[1] Ok, fine.  Pseudo-random.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200510.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 17:39:32 -0000
+<br><b>Message-Id:</b> &lt;20051027173921.GL1715@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.10.27 10:29:11 -0700, Robert Nickel wrote:
+&lt;blush&gt;
+
+Oops.  Horrible when you borrow code from yourself that works right the first
+time you use it and then is broken upon close inspection.
+
+&lt;sigh&gt;
+
+Unfortunately, G-Z are not valid hex digits.
+
+The code below is correct:
+-------------------- Begin --------------------
+#!/usr/bin/perl -w
+#
+# Generate a random 128-bit WEP key.
+#
+
+use strict;
+
+my @FNchars = ();
+# If you need to generate a different length key, just change keylen!
+my $keylen = 26;
+
+my $key = &quot;&quot;;
+
+for(48..57,65..70) { push @FNchars, chr($_); }
+
+srand (time ^ $$ ^ unpack &quot;%L*&quot;, `ps axww | gzip`); #generate some randomness.
+
+for(0..$keylen) { $key .= $FNchars[rand($#FNchars)]; }
+
+print &quot;Your key sir: $key \n&quot;;
+
+-------------------- End --------------------
+ 
+hth,
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=iejgjhcpolhkmiihphbb&amp;month=200510.html">&quot;Dennis M. Aston&quot; ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 17:41:57 -0000
+<br><b>Message-Id:</b> &lt;C6FFC805CD2A6046875F24BB673846430232A8@berry-mail.berrydevelopment.com&gt;
+<br>
+<hr><pre>Least you can write code.  The only script I know is super script...
+
+-----Original Message-----
+From: Robert Nickel ####@####.####
+Sent: Thursday, October 27, 2005 10:39 AM
+To: FOSUG
+Subject: Re: FYI: Decent deal on WRT54G wireless router...
+
+
+On 2005.10.27 10:29:11 -0700, Robert Nickel wrote:
+&lt;blush&gt;
+
+Oops.  Horrible when you borrow code from yourself that works right the first
+time you use it and then is broken upon close inspection.
+
+&lt;sigh&gt;
+
+Unfortunately, G-Z are not valid hex digits.
+
+The code below is correct:
+-------------------- Begin --------------------
+#!/usr/bin/perl -w
+#
+# Generate a random 128-bit WEP key.
+#
+
+use strict;
+
+my @FNchars = ();
+# If you need to generate a different length key, just change keylen!
+my $keylen = 26;
+
+my $key = &quot;&quot;;
+
+for(48..57,65..70) { push @FNchars, chr($_); }
+
+srand (time ^ $$ ^ unpack &quot;%L*&quot;, `ps axww | gzip`); #generate some randomness.
+
+for(0..$keylen) { $key .= $FNchars[rand($#FNchars)]; }
+
+print &quot;Your key sir: $key \n&quot;;
+
+-------------------- End --------------------
+ 
+hth,
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200510.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 19:24:56 -0000
+<br><b>Message-Id:</b> &lt;20051027192445.GM1715@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.10.27 10:41:27 -0700, Dennis M. Aston wrote:
+&gt; Least you can write code.  The only script I know is super script...
+
+LOL.  There's still a bug in there.  It's non-fatal (like the previous one),
+but still silly.
+
+I'm sure that Stevo will be here soon to flog me for it [0]. :-)
+
+--Robert (embarassed yet again)
+
+&gt; -----Original Message-----
+[...]
+&gt; The code below is correct:
+                   ^mostly 
+
+&gt; -------------------- Begin --------------------
+&gt; #!/usr/bin/perl -w
+&gt; #
+&gt; # Generate a random 128-bit WEP key.
+&gt; #
+&gt; 
+&gt; use strict;
+&gt; 
+&gt; my @FNchars = ();
+&gt; # If you need to generate a different length key, just change keylen!
+&gt; my $keylen = 26;
+&gt; 
+&gt; my $key = &quot;&quot;;
+&gt; 
+&gt; for(48..57,65..70) { push @FNchars, chr($_); }
+&gt; 
+&gt; srand (time ^ $$ ^ unpack &quot;%L*&quot;, `ps axww | gzip`); #generate some randomness.
+&gt; 
+&gt; for(0..$keylen) { $key .= $FNchars[rand($#FNchars)]; }
+&gt; 
+&gt; print &quot;Your key sir: $key \n&quot;;
+&gt; 
+&gt; -------------------- End --------------------
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200510.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 19:30:27 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0510271230w6def4bc6wfad672c500f296be@mail.gmail.com&gt;
+<br>
+<hr><pre>On 10/27/05, Robert Nickel ####@####.#### wrote:
+&gt; On 2005.10.27 10:41:27 -0700, Dennis M. Aston wrote:
+&gt; &gt; Least you can write code.  The only script I know is super script...
+&gt;
+&gt; LOL.  There's still a bug in there.  It's non-fatal (like the previous one),
+&gt; but still silly.
+&gt;
+&gt; I'm sure that Stevo will be here soon to flog me for it [0]. :-)
+&gt;
+
+#!/usr/bin/perl
+@robsmistakes = `find / -iname '*robgoof*'`;
+foreach (@robsmistakes) {
+  print &quot;you screwed up $_ ... *points and laughs*\n&quot;;
+  &amp;flog(withextremepredjudice);
+}
+
+There's one for you Rob LOL
+
+~ stevo
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Decent deal on WRT54G wireless router...">Re: Decent deal on WRT54G wireless router...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200510.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 20:13:05 -0000
+<br><b>Message-Id:</b> &lt;20051027131254.G2581@pmmay.sytes.net&gt;
+<br>
+<hr><pre>On Thu, Oct 27, 2005 at 10:20:15AM -0700, Robert Nickel wrote:
+&gt; I'm not normally someone who will darken the doors of CompUSA [0], but I found
+&gt; that they've got a decent deal on the Linksys WRT54G wireless router.
+&gt; 
+&gt; It's 69.99, with two rebates that knock the price down to 39.99.  Not too
+&gt; shabby for wifi plus 4 ports.
+&gt; 
+&gt; If you don't know why the WRT54G is a cool device, have you been living under
+&gt; a rock? [1]
+&gt; 
+&gt; br,
+&gt; --Robert
+&gt; 
+&gt; [0] <a href="http://www.penny-arcade.com/view.php?date=2000-09-20&amp;res=l">http://www.penny-arcade.com/view.php?date=2000-09-20&amp;res=l</a>
+&gt; [1] Go immediately to <a href="http://www.wrt54g.net">http://www.wrt54g.net</a> and learn, padawan.  Be sure to
+&gt; heed the advice given about not purchasing the version 5 device.
+
+Dang, that sucks. Have one on a UPS truck somewhere between here and Illinois.
+I didn't plan to tinker with the firmware so the V5 issue isn't a biggie.
+(Have a V4 at home.) Think we paid $65 for it. :/ Oh well. It's probably all
+written off anyways. LOL.
+
+Patrick
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

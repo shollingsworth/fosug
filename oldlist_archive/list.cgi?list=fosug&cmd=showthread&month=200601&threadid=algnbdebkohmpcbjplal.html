@@ -1,0 +1,649 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Connecting to a switch via serial port</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Connecting to a switch via serial port</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Connecting to a switch via serial port">Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 03:52:38 -0000
+<br><b>Message-Id:</b> &lt;43C5D275.4080606@drac0.net&gt;
+<br>
+<hr><pre>I have a Linksys EtherFast II 10/100 Managed 24-Port GigaSwitch that I'm 
+trying to connect to via the consol port so I can set an IP address and 
+try to find out how to set up stuff like vlans etc.  I've tried 
+connecting to it with my windows computer using hyperterminal but all I 
+get is a blank window.  Since I've seen this happen with more then one 
+windows based pc, I'm trying to connect with my one of my linux 
+computers, but I'm unsure where to start.  I've never had to use a 
+serial connection using Linux before.
+
+Can someone point me to some howto's or something to get me pointed in 
+the right direction?  I've googled it, but all I'm finding are howtos on 
+how to set up a linux server to allow consol sessions to connect to it 
+via serial ports...
+
+Thanks!
+
+Keith
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=eohcdhlkcmfanomafofg&amp;month=200601.html">####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 04:13:18 -0000
+<br><b>Message-Id:</b> &lt;3349734.1137039182524.JavaMail.teamon@b216.teamon.com&gt;
+<br>
+<hr><pre>The main culprit I have found on these types of things is the flow control option in hyperterminal....on cisco devices it is none..on hp switches, it is Xon/Xoff...use 9600 baud,default parity,default stop bits,and try all the flow control settings.
+
+Mike
+
+-----Original Message-----
+    From: &quot;Keith ####@####.####
+    Sent: 1/11/06 7:52:21 PM
+    To: ####@####.####
+    Subject: Connecting to a switch via serial port
+      I have a Linksys EtherFast II 10/100 Managed 24-Port GigaSwitch that I'm 
+    trying to connect to via the consol port so I can set an IP address and 
+    try to find out how to set up stuff like vlans etc.  I've tried 
+    connecting to it with my windows computer using hyperterminal but all I 
+    get is a blank window.  Since I've seen this happen with more then one 
+    windows based pc, I'm trying to connect with my one of my linux 
+    computers, but I'm unsure where to start.  I've never had to use a 
+    serial connection using Linux before.
+    
+    Can someone point me to some howto's or something to get me pointed in 
+    the right direction?  I've googled it, but all I'm finding are howtos on 
+    how to set up a linux server to allow consol sessions to connect to it 
+    via serial ports...
+    
+    Thanks!
+    
+    Keith
+    
+    
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 04:20:03 -0000
+<br><b>Message-Id:</b> &lt;43C5D8E1.8080509@drac0.net&gt;
+<br>
+<hr><pre>####@####.#### wrote:
+
+&gt;The main culprit I have found on these types of things is the flow control option in hyperterminal....on cisco devices it is none..on hp switches, it is Xon/Xoff...use 9600 baud,default parity,default stop bits,and try all the flow control settings.
+&gt;
+&gt;Mike
+&gt;  
+&gt;
+I've set it up according to the manual, but I'll try your suggestion. 
+Here's what the manual says:
+
+Local Console Management
+You can manage the GigaSwitch locally by connecting the switch to a PC 
+or workstation with terminal emulation software using the serial port. 
+Before you log on to the GigaSwitch, make sure that the switch’s serial 
+port settings are as follows:
+BAUD RATE: 115200
+FLOW: None
+PARITY: None
+STOP BITS: 1
+DATA BITS: 8
+EMULATION: ANSI
+CURSOR EMULATION: VT100
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=eohcdhlkcmfanomafofg&amp;month=200601.html">####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 04:29:46 -0000
+<br><b>Message-Id:</b> &lt;5401276.1137040165312.JavaMail.teamon@b216.teamon.com&gt;
+<br>
+<hr><pre>I didn?t realize you had the man but I have never seen these 2 settings in hyperterm(at least off the top of my head..I am on my handheld)..    good luck, sorry I can?t help more.
+EMULATION: ANSI
+CURSOR EMULATION: VT100
+
+
+
+
+-----Original Message-----
+    From: &quot;Keith ####@####.####
+    Sent: 1/11/06 8:19:45 PM
+    Cc: ####@####.####
+    Subject: Re: Connecting to a switch via serial port
+    
+    ####@####.#### wrote:
+    
+    &gt;The main culprit I have found on these types of things is the flow control option in hyperterminal....on cisco devices it is none..on hp switches, it is Xon/Xoff...use 9600 baud,default parity,default stop bits,and try all the flow control settings.
+    &gt;
+    &gt;Mike
+    &gt;  
+    &gt;
+    I've set it up according to the manual, but I'll try your suggestion. 
+    Here's what the manual says:
+    
+    Local Console Management
+    You can manage the GigaSwitch locally by connecting the switch to a PC 
+    or workstation with terminal emulation software using the serial port. 
+    Before you log on to the GigaSwitch, make sure that the switch?s serial 
+    port settings are as follows:
+    BAUD RATE: 115200
+    FLOW: None
+    PARITY: None
+    STOP BITS: 1
+    DATA BITS: 8
+    EMULATION: ANSI
+    CURSOR EMULATION: VT100
+    
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200601.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 05:23:04 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0601112122v6e9a24ackda71db2bc5b552d3@mail.gmail.com&gt;
+<br>
+<hr><pre>On 1/11/06, Keith Conley ####@####.#### wrote:
+&gt; Can someone point me to some howto's or something to get me pointed in
+&gt; the right direction?  I've googled it, but all I'm finding are howtos on
+&gt; how to set up a linux server to allow consol sessions to connect to it
+&gt; via serial ports...
+&gt;
+&gt; Thanks!
+&gt;
+&gt; Keith
+
+I read the manual...
+<a href="http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1115416834345&amp;pagename=Linksys%2FCommon%2FVisitorWrapper">http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1115416834345&amp;pagename=Linksys%2FCommon%2FVisitorWrapper</a>
+
+OK, I hate to ask... but did you plug the  switch into a network with
+a dhcp server?
+
+do an nmap scan, or check your dhcp log for anything that gives an odd
+&quot;linksysish&quot; name or none at all.
+
+try to plug into it on port <a href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a>
+
+give the username: blank
+password: admin
+
+see if that works.
+
+
+PS: the documentation sucks for that switch LOL
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200601.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 05:30:33 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0601112130q2ed2e22br4e593bdfca6bd5d2@mail.gmail.com&gt;
+<br>
+<hr><pre>On 1/11/06, Stevo ####@####.#### wrote:
+&gt; I read the manual...
+
+&gt; try to plug into it on port <a href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a>
+&gt;
+&gt; give the username: blank
+&gt; password: admin
+&gt;
+&gt; see if that works.
+&gt;
+&gt;
+&gt; PS: the documentation sucks for that switch LOL
+
+ooops... unless we're talking about this one.
+Sorry... I ASS(U)MED too much in the previous post.
+
+<a href="http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1130276637958&amp;pagename=Linksys%2FCommon%2FVisitorWrapper">http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1130276637958&amp;pagename=Linksys%2FCommon%2FVisitorWrapper</a>
+
+The DHCP thing still remains... you just have to look up the default
+password which with linksys is &quot;admin&quot;
+
+Cheers,
+
+~ stevo
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 05:31:22 -0000
+<br><b>Message-Id:</b> &lt;43C5E998.2080306@drac0.net&gt;
+<br>
+<hr><pre>I read the manual...
+
+<a href="http://fosug.org/cgi-bin/%3Ehttp://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1115416834345&amp;pagename=Linksys%2FCommon%2FVisitorWrapper">&gt;http://www.linksys.com/servlet/Satellite?childpagename=US%2FLayout&amp;packedargs=c%3DL_Product_C2%26cid%3D1115416834345&amp;pagename=Linksys%2FCommon%2FVisitorWrapper</a>
+&gt;
+&gt;OK, I hate to ask... but did you plug the  switch into a network with
+&gt;a dhcp server?
+&gt;
+&gt;do an nmap scan, or check your dhcp log for anything that gives an odd
+&gt;&quot;linksysish&quot; name or none at all.
+&gt;
+&gt;try to plug into it on port <a href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a>
+&gt;
+&gt;give the username: blank
+&gt;password: admin
+&gt;
+&gt;see if that works.
+&gt;
+&gt;
+&gt;PS: the documentation sucks for that switch LOL
+&gt;
+&gt;  
+&gt;
+Yeah, tried that too, even reset the switch.  using nmap doing a scan on 
+my whole network I still can't find anything that's not already know 
+about...  The switch part of it works fine though.
+
+I'll check my dhcp logs though.
+
+Keith
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 06:01:08 -0000
+<br><b>Message-Id:</b> &lt;43C5F092.1020207@drac0.net&gt;
+<br>
+<hr><pre>
+&gt;
+&gt; I'll check my dhcp logs though.
+
+Nada in the dhcp logs.  Just my 3 pc's that pull an IP Address through dhcp.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200601.html">George Fragos ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 06:16:09 -0000
+<br><b>Message-Id:</b> &lt;618e69c70601112215u33b35d87y7900e5791f648b71@mail.gmail.com&gt;
+<br>
+<hr><pre>You could hook up one of your Linux boxes as the network with a DCHP
+server.  That way you'll know what the network is doing.  When all else
+fails -- eliminate and isolate.
+
+Just my two cents -- George
+
+On 1/11/06, Keith Conley ####@####.#### wrote:
+&gt;
+&gt;
+&gt; &gt;
+&gt; &gt; I'll check my dhcp logs though.
+&gt;
+&gt; Nada in the dhcp logs.  Just my 3 pc's that pull an IP Address through
+&gt; dhcp.
+&gt;
+
+
+
+--
+____________
+George Fragos
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 06:34:23 -0000
+<br><b>Message-Id:</b> &lt;43C5F85C.6040205@drac0.net&gt;
+<br>
+<hr><pre>George Fragos wrote:
+
+&gt;You could hook up one of your Linux boxes as the network with a DCHP
+&gt;server.  That way you'll know what the network is doing.  When all else
+&gt;fails -- eliminate and isolate.
+&gt;
+&gt;Just my two cents -- George
+&gt;
+&gt;  
+&gt;
+&gt;____________
+&gt;George Fragos
+&gt;  
+&gt;
+My main server is the dhcp server. 
+my set up is:
+
+Modem
+   |
+Linksys router 192.168.1.1
+     |
+Linksys switch_______
+\      \      \      \      \      \
+ \       \       \     \      \      Server1 (linux) 192.168.1.2
+  \       \       \     \      Server2 (linux) 192.168.1.3
+   \       \       \     Workstation1 (linux) 192.168.1.197
+     \       \       Laptop (Windows XP Pro) 192.168.1.150
+      \       Desktop (Windows XP Pro) 192.168.1.100
+        Laptop2 (Windows XP Pro) 192.168.1.151
+
+I've done countless network scans with nmap, and I've been sniffing my 
+traffic with Ethereal, EtherApe (just cause I like that one... lol) and 
+Ntop and none of these show anything other then what's shown above.
+
+But enough for tonight.  I'm off to bed.  Thanks for all the input from 
+everyone.
+
+Keith
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=edpaojimmkohhomoafea&amp;month=200601.html">Snuggles ####@####.####</a>
+<br><b>Date:</b>
+12 Jan 2006 06:53:16 -0000
+<br><b>Message-Id:</b> &lt;43C5FCCF.6020601@w00ttech.com&gt;
+<br>
+<hr><pre>Keith Conley wrote:
+
+&gt; I have a Linksys EtherFast II 10/100 Managed 24-Port GigaSwitch that 
+&gt; I'm trying to connect to via the consol port so I can set an IP 
+&gt; address and try to find out how to set up stuff like vlans etc.  I've 
+&gt; tried connecting to it with my windows computer using hyperterminal 
+&gt; but all I get is a blank window.  Since I've seen this happen with 
+&gt; more then one windows based pc, I'm trying to connect with my one of 
+&gt; my linux computers, but I'm unsure where to start.  I've never had to 
+&gt; use a serial connection using Linux before.
+&gt;
+&gt; Can someone point me to some howto's or something to get me pointed in 
+&gt; the right direction?  I've googled it, but all I'm finding are howtos 
+&gt; on how to set up a linux server to allow consol sessions to connect to 
+&gt; it via serial ports...
+&gt;
+&gt; Thanks!
+&gt;
+&gt; Keith
+
+
+Minicom <a href="http://fosug.org/cgi-bin/%3Chttp://alioth.debian.org/projects/minicom/%3E">&lt;http://alioth.debian.org/projects/minicom/&gt;</a> is used to console 
+into devices.
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200601.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+13 Jan 2006 02:25:19 -0000
+<br><b>Message-Id:</b> &lt;20060113022506.GE18173@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.01.11 22:53:03 -0800, Snuggles wrote:
+&gt; Keith Conley wrote:
+&gt; 
+&gt; &gt;I have a Linksys EtherFast II 10/100 Managed 24-Port GigaSwitch that 
+&gt; &gt;I'm trying to connect to via the consol port so I can set an IP 
+&gt; &gt;address and try to find out how to set up stuff like vlans etc.  I've 
+&gt; &gt;tried connecting to it with my windows computer using hyperterminal 
+&gt; &gt;but all I get is a blank window.  Since I've seen this happen with 
+&gt; &gt;more then one windows based pc, I'm trying to connect with my one of 
+&gt; &gt;my linux computers, but I'm unsure where to start.  I've never had to 
+&gt; &gt;use a serial connection using Linux before.
+&gt; &gt;
+&gt; &gt;Can someone point me to some howto's or something to get me pointed in 
+&gt; &gt;the right direction?  I've googled it, but all I'm finding are howtos 
+&gt; &gt;on how to set up a linux server to allow consol sessions to connect to 
+&gt; &gt;it via serial ports...
+&gt; &gt;
+&gt; &gt;Thanks!
+&gt; &gt;
+&gt; &gt;Keith
+&gt; 
+&gt; 
+&gt; Minicom <a href="http://fosug.org/cgi-bin/%3Chttp://alioth.debian.org/projects/minicom/%3E">&lt;http://alioth.debian.org/projects/minicom/&gt;</a> is used to console 
+&gt; into devices.
+
+*nod*
+
+Minicom rocks.  It's the de-facto standard for linux comms.
+
+As for how I would address your problem, I wouldn't futz with the serial cable
+at all.  Connect a machine to that box and nothing else.  Get the mac address
+for the switch off the bottom of the box (it should be down there somewhere,
+yes?) and then do an arp -s [0] for the mac address of the switch to set the ip to
+something on the same subnet as the machine you plugged into it (you'll have
+to setup a fixed address on the computer with the default gateway either empty
+or set to the ip you set on the computer).
+
+HTH,
+--Robert
+
+[0]  Assuming that the mac address of the switch is 11:22:33:44:55:66, the ip
+of your computer is 192.168.1.1/24, 'arp -s 11:22:33:44:55:66 192.168.1.2'.
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/894/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+13 Jan 2006 03:32:58 -0000
+<br><b>Message-Id:</b> &lt;43C71F5A.9000400@drac0.net&gt;
+<br>
+<hr><pre>Robert Nickel wrote:
+
+&gt;*nod*
+&gt;
+&gt;Minicom rocks.  It's the de-facto standard for linux comms.
+&gt;
+&gt;As for how I would address your problem, I wouldn't futz with the serial cable
+&gt;at all.  Connect a machine to that box and nothing else.  Get the mac address
+&gt;for the switch off the bottom of the box (it should be down there somewhere,
+&gt;yes?) and then do an arp -s [0] for the mac address of the switch to set the ip to
+&gt;something on the same subnet as the machine you plugged into it (you'll have
+&gt;to setup a fixed address on the computer with the default gateway either empty
+&gt;or set to the ip you set on the computer).
+&gt;
+&gt;HTH,
+&gt;--Robert
+&gt;
+&gt;[0]  Assuming that the mac address of the switch is 11:22:33:44:55:66, the ip
+&gt;of your computer is 192.168.1.1/24, 'arp -s 11:22:33:44:55:66 192.168.1.2'.
+&gt;  
+&gt;
+I've come to the conclusion that this part of my switch may be 
+defective.  I've tried the arp approach from both a Linux and Windows 
+computer, plus I've even brought home an old win98 laptop to try 
+connecting via serial cable all with no joy.
+
+Under Windows: arp -s 192.168.1.10 00-04-5A-80-13-DF (00-04-5A-80-13-DF 
+being the MAC Address of the switch) still gets me no where.  I can't 
+ping it, I can't access through a web browser and I can't telnet to it 
+by the IP Address of 192.168.1.10 which I tried to assign it with the 
+above command.
+
+ I've tried resetting the router several times and as far as installing 
+the factory firmware, you can't do that unless you can access the router 
+by network.  I've tried connecting to the Serial interface from 4 
+different computers now, all with no joy as well.
+
+Thank you, everyone, for your input and help.  I guess this nut just 
+isn't going to crack :(   Maybe my boss wont mind if I mess around with 
+our nice new Foundry switches at work... lol
+
+Keith
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp&amp;month=200601.html">&quot;Ian R. Justman&quot; ####@####.####</a>
+<br><b>Date:</b>
+13 Jan 2006 16:39:06 -0000
+<br><b>Message-Id:</b> &lt;43C7D7A2.4030101@ian-justman.com&gt;
+<br>
+<hr><pre>
+Meant this more for the list...
+
+Keith Conley wrote:
+
+&gt; I've come to the conclusion that this part of my switch may be 
+&gt; defective.  I've tried the arp approach from both a Linux and Windows 
+&gt; computer, plus I've even brought home an old win98 laptop to try 
+&gt; connecting via serial cable all with no joy.
+
+Lately, I've had not the best luck with the arp -s method with some
+pieces of gear, like some Aironet radios we have at work.  However,
+firmware upgrades which give the ability to clear passwords really work
+well.
+
+Though does the manual say whether it has a default IP address as
+shipped?  If so, you might go that route (no pun intended).  Granted,
+that would apply more to routers than to managed switches.
+
+Anyway, those are a couple of ideas I had.  But if it's new, warranties
+are Very Good Things(R).
+
+--Ian.
+
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200601.html">George Fragos ####@####.####</a>
+<br><b>Date:</b>
+13 Jan 2006 18:31:29 -0000
+<br><b>Message-Id:</b> &lt;618e69c70601131031w4e1fbeefie6cbf6c5057a0a2@mail.gmail.com&gt;
+<br>
+<hr><pre>Don't assume that all telecommunications equipment has properly implemented
+Internet standards.  Cisco is famous for creating their own &quot;standards.&quot;  I
+used to build network access equipment and we had to have configuration
+parameters that worked with cisco or everyone else's routers.  Many devices
+with telnet access only support one session.  My favorite is Motorola.
+Their cell site radios have two Ethernet ports for redundancy of management
+connections.  Their configuration gives both ports the same IP address.  I
+had to build a hub with a failure switch to allow connection of both
+management port to the Internet.
+
+George
+
+On 1/13/06, Ian R. Justman ####@####.#### wrote:
+&gt;
+&gt;
+&gt; Meant this more for the list...
+&gt;
+&gt; Keith Conley wrote:
+&gt;
+&gt; &gt; I've come to the conclusion that this part of my switch may be
+&gt; &gt; defective.  I've tried the arp approach from both a Linux and Windows
+&gt; &gt; computer, plus I've even brought home an old win98 laptop to try
+&gt; &gt; connecting via serial cable all with no joy.
+&gt;
+&gt; Lately, I've had not the best luck with the arp -s method with some
+&gt; pieces of gear, like some Aironet radios we have at work.  However,
+&gt; firmware upgrades which give the ability to clear passwords really work
+&gt; well.
+&gt;
+&gt; Though does the manual say whether it has a default IP address as
+&gt; shipped?  If so, you might go that route (no pun intended).  Granted,
+&gt; that would apply more to routers than to managed switches.
+&gt;
+&gt; Anyway, those are a couple of ideas I had.  But if it's new, warranties
+&gt; are Very Good Things(R).
+&gt;
+&gt; --Ian.
+&gt;
+&gt;
+&gt;
+
+
+--
+____________
+George Fragos
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

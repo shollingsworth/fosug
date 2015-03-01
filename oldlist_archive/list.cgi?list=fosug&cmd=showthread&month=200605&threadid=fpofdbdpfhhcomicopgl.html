@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: ivyv problem from a tvtime perspective</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: ivyv problem from a tvtime perspective</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: ivyv problem from a tvtime perspective">ivyv problem from a tvtime perspective</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200605.html">&quot;George Fragos&quot; ####@####.####</a>
+<br><b>Date:</b>
+1 May 2006 14:16:34 -0700
+<br><b>Message-Id:</b> &lt;618e69c70605011420o18358ff9s887130e291333c7e@mail.gmail.com&gt;
+<br>
+<hr><pre>This time I tried from a tvtime perspective and have attached both the
+configuration file and the output with the -v option.  Perhaps this console
+output tells the full story &quot;videoinput: Card failed to allocate capture
+buffers: Invalid argument.&quot;
+
+Have a great day -- George
+
+---tvtime from the command line with -v option
+Running tvtime 0.99.
+Reading configuration from /etc/tvtime/tvtime.xml
+Reading configuration from /home/fragos/.tvtime/tvtime.xml
+cpuinfo: CPU AMD Sempron(tm) Processor 2800+, family 15, model 12, stepping
+2.
+cpuinfo: CPU measured at 1607.453MHz.
+tvtime: Cannot set priority to -10: Permission denied.
+xcommon: Display :0.0, vendor The X.Org Foundation, vendor release 60802000
+xfullscreen: Single-head detected, pixel aspect will be calculated.
+xfullscreen: Pixel aspect ratio on the primary head is: 16/15 == 1.07.
+xfullscreen: Using the XFree86-VidModeExtension to calculate fullscreen
+size.
+xfullscreen: Fullscreen to 0,0 with size 1280x1024.
+xcommon: Have XTest, will use it to ping the screensaver.
+xcommon: Pixel aspect ratio 16:15.
+xcommon: Pixel aspect ratio 16:15.
+xcommon: Window manager is KWin and is EWMH compliant.
+xcommon: Using EWMH state fullscreen property.
+xcommon: Using EWMH state above property.
+xcommon: Using EWMH state below property.
+xcommon: Pixel aspect ratio 16:15.
+xcommon: Displaying in a 720x576 window inside 720x576 space.
+xvoutput: Using XVIDEO adaptor 61: NV Video Overlay.
+speedycode: Using MMXEXT optimized functions.
+station: Reading stationlist from /home/fragos/.tvtime/stationlist.xml
+videoinput: Using video4linux2 driver 'ivtv', card 'WinTV PVR 150' (bus 0).
+videoinput: Version is 775, capabilities 1070011.
+videoinput: Maximum input width: 0 pixels.
+videoinput: Card failed to allocate capture buffers: Invalid argument
+xcommon: Pixel aspect ratio 16:15.
+xcommon: Displaying in a 720x576 window inside 720x576 space.
+xcommon: Received a map, marking window as visible (71).
+xcommon: Window fully obscured, marking window as hidden (71).
+xcommon: Window made visible, marking window as visible (72).
+
+---tvtime.xml configuration file
+  &lt;tvtime <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22%3E">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;&gt;</a>
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;FullScreen&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;768&quot;
+name=&quot;InputWidth&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;45&quot;
+name=&quot;DefaultBrightness&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;45&quot;
+name=&quot;DefaultContrast&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;80&quot;
+name=&quot;DefaultSaturation&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;60&quot;
+name=&quot;DefaultHue&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;26&quot;
+name=&quot;PrevChannel&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;60&quot;
+name=&quot;Channel&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;FramerateMode&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;3.5&quot;
+name=&quot;OverScan&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;1&quot;
+name=&quot;CheckForSignal&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;100&quot;
+name=&quot;AudioBoost&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;1&quot;
+name=&quot;AlwaysOnTop&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;QuietScreenshots&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;17476&quot;
+name=&quot;UnmuteVolume&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;Muted&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;V4LInput&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;stereo&quot;
+name=&quot;AudioMode&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;PalDKMode&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a>
+value=&quot;AdaptiveAdvanced&quot; name=&quot;DeinterlaceMethod&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;ShowCC&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;top&quot;
+name=&quot;FullscreenPosition&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;Widescreen&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0&quot;
+name=&quot;Verbose&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;0x576&quot;
+name=&quot;WindowGeometry&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;/dev/video0&quot;
+name=&quot;V4LDevice&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;/dev/vbi0&quot;
+name=&quot;VBIDevice&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;NTSC&quot;
+name=&quot;Norm&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;US-Cable&quot;
+name=&quot;Frequencies&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a>
+value=&quot;/dev/mixer:line&quot; name=&quot;MixerDevice&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a>
+value=&quot;/home/fragos/listings.xml&quot; name=&quot;XMLTVFile&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;none&quot;
+name=&quot;XMLTVLanguage&quot; /&gt;
+    &lt;option <a href="http://fosug.org/cgi-bin/xmlns=%22http://tvtime.sourceforge.net/DTD/%22">xmlns=&quot;http://tvtime.sourceforge.net/DTD/&quot;</a> value=&quot;-10&quot;
+name=&quot;ProcessPriority&quot; /&gt;
+  &lt;/tvtime&gt;
+
+
+--
+____________
+George Fragos
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

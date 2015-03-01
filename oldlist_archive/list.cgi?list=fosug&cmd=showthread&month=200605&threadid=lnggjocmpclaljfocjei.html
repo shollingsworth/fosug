@@ -1,0 +1,824 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: UPS support in Linux</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: UPS support in Linux</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: UPS support in Linux">UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aebgfjieckjekglanegb&amp;month=200605.html">####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 10:45:22 -0700
+<br><b>Message-Id:</b> &lt;20060525114434.0ru01c3fquww4sss@www.thorslund.us&gt;
+<br>
+<hr><pre>Hi everyone,
+
+Power outage season is here. The first outage just happened to us this  
+morning (in the Alluvial/Willow area of Clovis), and well, it's always  
+a little iffy when a running computer suddenly loses power.
+
+I'm no sysadmin, and no expert on file systems either, so I'm not very  
+familiar about how robust the ext3 (for instance) file system is in  
+these cases. Is the data recoverable in &quot;almost all&quot; cases? As for  
+MySQL, I think tables can become corrupted if the system loses power  
+in the middle of a transaction. A &quot;repair table&quot; seems to fix it but  
+it's an interruption.
+
+Yes I know, backups are always a good idea.
+
+We're running a couple of desktop systems in our office/living room.  
+No power-hungry servers, and nothing that can't be &quot;off&quot; for the  
+duration of an outage.
+
+So, I started looking for cheap, low-budget UPS packages. Any  
+recommendations? Anything worthwhile in the $25-$50 range? All we  
+really need is something that can maintain power long enough to shut  
+down the machines in an orderly fashion, although it would be really  
+nice if the UPS would cause the machines to shut down automatically  
+rather than having to do it manually once the UPS starts beeping...
+
+Is UPS yet another area where I need to check for Linux hardware  
+support before buying?
+
+Many questions. TIA for any pointers.
+
+Mattias
+
+PS. Thanks to Chad for the MySQL presentation last Saturday! I work  
+with MySQL every day but I couldn't have done half as good of a  
+presentation. We need more MySQL-savvy people in our area so this was  
+a great start.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=ajghnoicddplbdhmeagi&amp;month=200605.html">&quot;Sean-Paul Rees&quot; ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 11:42:07 -0700
+<br><b>Message-Id:</b> &lt;889876910605251241g6406b042p6f8cc86cb67ab6c6@mail.gmail.com&gt;
+<br>
+<hr><pre>Mattias,
+
+I've had pretty good luck with the low-end APC models. I have a BackUPS-ES
+750 and a BackUPS RS 800 supporting a few machines at my apartment. Each is
+supported by the free apcupsd (www.apcupsd.com) (OSS, works on FreeBSD, I
+can only assume it also works on Linux). I think the hardware cost me
+something like $70 or so.
+
+If you have old UPSes (doesn't really matter how old) laying about (working
+or otherwise), APC has a cool TradeUPS program. You buy a new UPS from them
+at a decent discount, and send the old unit back to them for safe disposal.
+I'm pretty sure they pay for return shipping.
+
+Cheers,
+Sean
+
+On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt;
+&gt; Hi everyone,
+&gt;
+&gt; Power outage season is here. The first outage just happened to us this
+&gt; morning (in the Alluvial/Willow area of Clovis), and well, it's always
+&gt; a little iffy when a running computer suddenly loses power.
+&gt;
+&gt; I'm no sysadmin, and no expert on file systems either, so I'm not very
+&gt; familiar about how robust the ext3 (for instance) file system is in
+&gt; these cases. Is the data recoverable in &quot;almost all&quot; cases? As for
+&gt; MySQL, I think tables can become corrupted if the system loses power
+&gt; in the middle of a transaction. A &quot;repair table&quot; seems to fix it but
+&gt; it's an interruption.
+&gt;
+&gt; Yes I know, backups are always a good idea.
+&gt;
+&gt; We're running a couple of desktop systems in our office/living room.
+&gt; No power-hungry servers, and nothing that can't be &quot;off&quot; for the
+&gt; duration of an outage.
+&gt;
+&gt; So, I started looking for cheap, low-budget UPS packages. Any
+&gt; recommendations? Anything worthwhile in the $25-$50 range? All we
+&gt; really need is something that can maintain power long enough to shut
+&gt; down the machines in an orderly fashion, although it would be really
+&gt; nice if the UPS would cause the machines to shut down automatically
+&gt; rather than having to do it manually once the UPS starts beeping...
+&gt;
+&gt; Is UPS yet another area where I need to check for Linux hardware
+&gt; support before buying?
+&gt;
+&gt; Many questions. TIA for any pointers.
+&gt;
+&gt; Mattias
+&gt;
+&gt; PS. Thanks to Chad for the MySQL presentation last Saturday! I work
+&gt; with MySQL every day but I couldn't have done half as good of a
+&gt; presentation. We need more MySQL-savvy people in our area so this was
+&gt; a great start.
+&gt;
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200605.html">&quot;Drew Baker&quot; ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 12:37:45 -0700
+<br><b>Message-Id:</b> &lt;61c1dc3c0605251336p7b788883o514be88c4499d261@mail.gmail.com&gt;
+<br>
+<hr><pre>heck, if you have old ups's laying around grab one. Buy the
+replacement batteries from Advantec.  Only thing that goes wrong with
+thoes are the batteries.  Try to get one that uses a serial
+connection, vs, a USB.  some USB's do not follow standards and are a
+pain to get to work correctly in linux (or windows for that matter)
+
+
+
+On 5/25/06, Sean-Paul Rees ####@####.#### wrote:
+&gt; Mattias,
+&gt;
+&gt; I've had pretty good luck with the low-end APC models. I have a BackUPS-ES
+&gt; 750 and a BackUPS RS 800 supporting a few machines at my apartment. Each is
+&gt; supported by the free apcupsd (www.apcupsd.com) (OSS, works on FreeBSD, I
+&gt; can only assume it also works on Linux). I think the hardware cost me
+&gt; something like $70 or so.
+&gt;
+&gt; If you have old UPSes (doesn't really matter how old) laying about (working
+&gt; or otherwise), APC has a cool TradeUPS program. You buy a new UPS from them
+&gt; at a decent discount, and send the old unit back to them for safe disposal.
+&gt; I'm pretty sure they pay for return shipping.
+&gt;
+&gt; Cheers,
+&gt; Sean
+&gt;
+&gt; On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt; &gt;
+&gt; &gt; Hi everyone,
+&gt; &gt;
+&gt; &gt; Power outage season is here. The first outage just happened to us this
+&gt; &gt; morning (in the Alluvial/Willow area of Clovis), and well, it's always
+&gt; &gt; a little iffy when a running computer suddenly loses power.
+&gt; &gt;
+&gt; &gt; I'm no sysadmin, and no expert on file systems either, so I'm not very
+&gt; &gt; familiar about how robust the ext3 (for instance) file system is in
+&gt; &gt; these cases. Is the data recoverable in &quot;almost all&quot; cases? As for
+&gt; &gt; MySQL, I think tables can become corrupted if the system loses power
+&gt; &gt; in the middle of a transaction. A &quot;repair table&quot; seems to fix it but
+&gt; &gt; it's an interruption.
+&gt; &gt;
+&gt; &gt; Yes I know, backups are always a good idea.
+&gt; &gt;
+&gt; &gt; We're running a couple of desktop systems in our office/living room.
+&gt; &gt; No power-hungry servers, and nothing that can't be &quot;off&quot; for the
+&gt; &gt; duration of an outage.
+&gt; &gt;
+&gt; &gt; So, I started looking for cheap, low-budget UPS packages. Any
+&gt; &gt; recommendations? Anything worthwhile in the $25-$50 range? All we
+&gt; &gt; really need is something that can maintain power long enough to shut
+&gt; &gt; down the machines in an orderly fashion, although it would be really
+&gt; &gt; nice if the UPS would cause the machines to shut down automatically
+&gt; &gt; rather than having to do it manually once the UPS starts beeping...
+&gt; &gt;
+&gt; &gt; Is UPS yet another area where I need to check for Linux hardware
+&gt; &gt; support before buying?
+&gt; &gt;
+&gt; &gt; Many questions. TIA for any pointers.
+&gt; &gt;
+&gt; &gt; Mattias
+&gt; &gt;
+&gt; &gt; PS. Thanks to Chad for the MySQL presentation last Saturday! I work
+&gt; &gt; with MySQL every day but I couldn't have done half as good of a
+&gt; &gt; presentation. We need more MySQL-savvy people in our area so this was
+&gt; &gt; a great start.
+&gt; &gt;
+&gt;
+&gt;
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+
+Open Source Software, Not only a way of life, but a tasty desert as
+well.  <a href="http://www.fosug.org">http://www.fosug.org</a>
+
+Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aebgfjieckjekglanegb&amp;month=200605.html">####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 13:37:13 -0700
+<br><b>Message-Id:</b> &lt;20060525143623.nizz206yp7cco04s@www.thorslund.us&gt;
+<br>
+<hr><pre>Thanks, Drew and Sean.
+
+So I hear good things about APC? Looking around on the various  
+retailer sites I don't see anything about serial connectivity (only  
+USB) in any of their UPS's or their competitor's (Belkin is what I  
+found).
+
+Wonder if 350 VA is going to be enough for a desktop, a flatscreen  
+monitor and a laptop? Probably not. Between the thumb and forefinger,  
+does 500 sound like enough?
+
+Mattias
+
+Quoting Drew Baker ####@####.####
+
+&gt; heck, if you have old ups's laying around grab one. Buy the
+&gt; replacement batteries from Advantec.  Only thing that goes wrong with
+&gt; thoes are the batteries.  Try to get one that uses a serial
+&gt; connection, vs, a USB.  some USB's do not follow standards and are a
+&gt; pain to get to work correctly in linux (or windows for that matter)
+&gt;
+&gt;
+&gt;
+&gt; On 5/25/06, Sean-Paul Rees ####@####.#### wrote:
+&gt;&gt; Mattias,
+&gt;&gt;
+&gt;&gt; I've had pretty good luck with the low-end APC models. I have a BackUPS-ES
+&gt;&gt; 750 and a BackUPS RS 800 supporting a few machines at my apartment. Each is
+&gt;&gt; supported by the free apcupsd (www.apcupsd.com) (OSS, works on FreeBSD, I
+&gt;&gt; can only assume it also works on Linux). I think the hardware cost me
+&gt;&gt; something like $70 or so.
+&gt;&gt;
+&gt;&gt; If you have old UPSes (doesn't really matter how old) laying about (working
+&gt;&gt; or otherwise), APC has a cool TradeUPS program. You buy a new UPS from them
+&gt;&gt; at a decent discount, and send the old unit back to them for safe disposal.
+&gt;&gt; I'm pretty sure they pay for return shipping.
+&gt;&gt;
+&gt;&gt; Cheers,
+&gt;&gt; Sean
+&gt;&gt;
+&gt;&gt; On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt;&gt;&gt;
+&gt;&gt;&gt; Hi everyone,
+&gt;&gt;&gt;
+&gt;&gt;&gt; Power outage season is here. The first outage just happened to us this
+&gt;&gt;&gt; morning (in the Alluvial/Willow area of Clovis), and well, it's always
+&gt;&gt;&gt; a little iffy when a running computer suddenly loses power.
+&gt;&gt;&gt;
+&gt;&gt;&gt; I'm no sysadmin, and no expert on file systems either, so I'm not very
+&gt;&gt;&gt; familiar about how robust the ext3 (for instance) file system is in
+&gt;&gt;&gt; these cases. Is the data recoverable in &quot;almost all&quot; cases? As for
+&gt;&gt;&gt; MySQL, I think tables can become corrupted if the system loses power
+&gt;&gt;&gt; in the middle of a transaction. A &quot;repair table&quot; seems to fix it but
+&gt;&gt;&gt; it's an interruption.
+&gt;&gt;&gt;
+&gt;&gt;&gt; Yes I know, backups are always a good idea.
+&gt;&gt;&gt;
+&gt;&gt;&gt; We're running a couple of desktop systems in our office/living room.
+&gt;&gt;&gt; No power-hungry servers, and nothing that can't be &quot;off&quot; for the
+&gt;&gt;&gt; duration of an outage.
+&gt;&gt;&gt;
+&gt;&gt;&gt; So, I started looking for cheap, low-budget UPS packages. Any
+&gt;&gt;&gt; recommendations? Anything worthwhile in the $25-$50 range? All we
+&gt;&gt;&gt; really need is something that can maintain power long enough to shut
+&gt;&gt;&gt; down the machines in an orderly fashion, although it would be really
+&gt;&gt;&gt; nice if the UPS would cause the machines to shut down automatically
+&gt;&gt;&gt; rather than having to do it manually once the UPS starts beeping...
+&gt;&gt;&gt;
+&gt;&gt;&gt; Is UPS yet another area where I need to check for Linux hardware
+&gt;&gt;&gt; support before buying?
+&gt;&gt;&gt;
+&gt;&gt;&gt; Many questions. TIA for any pointers.
+&gt;&gt;&gt;
+&gt;&gt;&gt; Mattias
+&gt;&gt;&gt;
+&gt;&gt;&gt; PS. Thanks to Chad for the MySQL presentation last Saturday! I work
+&gt;&gt;&gt; with MySQL every day but I couldn't have done half as good of a
+&gt;&gt;&gt; presentation. We need more MySQL-savvy people in our area so this was
+&gt;&gt;&gt; a great start.
+&gt;&gt;&gt;
+&gt;&gt;
+&gt;&gt;
+&gt;
+&gt;
+&gt; -- 
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt;
+&gt; Open Source Software, Not only a way of life, but a tasty desert as
+&gt; well.  <a href="http://www.fosug.org">http://www.fosug.org</a>
+&gt;
+&gt; Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=ajghnoicddplbdhmeagi&amp;month=200605.html">&quot;Sean-Paul Rees&quot; ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 13:45:10 -0700
+<br><b>Message-Id:</b> &lt;889876910605251444v495cc278rf508cd70e3efe096@mail.gmail.com&gt;
+<br>
+<hr><pre>I would say 500+, possibly as much as 750 in case all those things draw full
+load. Patrick might know better?
+
+
+Sean
+
+On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt;
+&gt; Thanks, Drew and Sean.
+&gt;
+&gt; So I hear good things about APC? Looking around on the various
+&gt; retailer sites I don't see anything about serial connectivity (only
+&gt; USB) in any of their UPS's or their competitor's (Belkin is what I
+&gt; found).
+&gt;
+&gt; Wonder if 350 VA is going to be enough for a desktop, a flatscreen
+&gt; monitor and a laptop? Probably not. Between the thumb and forefinger,
+&gt; does 500 sound like enough?
+&gt;
+&gt; Mattias
+&gt;
+&gt; Quoting Drew Baker ####@####.####
+&gt;
+&gt; &gt; heck, if you have old ups's laying around grab one. Buy the
+&gt; &gt; replacement batteries from Advantec.  Only thing that goes wrong with
+&gt; &gt; thoes are the batteries.  Try to get one that uses a serial
+&gt; &gt; connection, vs, a USB.  some USB's do not follow standards and are a
+&gt; &gt; pain to get to work correctly in linux (or windows for that matter)
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; On 5/25/06, Sean-Paul Rees ####@####.#### wrote:
+&gt; &gt;&gt; Mattias,
+&gt; &gt;&gt;
+&gt; &gt;&gt; I've had pretty good luck with the low-end APC models. I have a
+&gt; BackUPS-ES
+&gt; &gt;&gt; 750 and a BackUPS RS 800 supporting a few machines at my apartment.
+&gt; Each is
+&gt; &gt;&gt; supported by the free apcupsd (www.apcupsd.com) (OSS, works on FreeBSD,
+&gt; I
+&gt; &gt;&gt; can only assume it also works on Linux). I think the hardware cost me
+&gt; &gt;&gt; something like $70 or so.
+&gt; &gt;&gt;
+&gt; &gt;&gt; If you have old UPSes (doesn't really matter how old) laying about
+&gt; (working
+&gt; &gt;&gt; or otherwise), APC has a cool TradeUPS program. You buy a new UPS from
+&gt; them
+&gt; &gt;&gt; at a decent discount, and send the old unit back to them for safe
+&gt; disposal.
+&gt; &gt;&gt; I'm pretty sure they pay for return shipping.
+&gt; &gt;&gt;
+&gt; &gt;&gt; Cheers,
+&gt; &gt;&gt; Sean
+&gt; &gt;&gt;
+&gt; &gt;&gt; On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Hi everyone,
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Power outage season is here. The first outage just happened to us this
+&gt; &gt;&gt;&gt; morning (in the Alluvial/Willow area of Clovis), and well, it's always
+&gt; &gt;&gt;&gt; a little iffy when a running computer suddenly loses power.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; I'm no sysadmin, and no expert on file systems either, so I'm not very
+&gt; &gt;&gt;&gt; familiar about how robust the ext3 (for instance) file system is in
+&gt; &gt;&gt;&gt; these cases. Is the data recoverable in &quot;almost all&quot; cases? As for
+&gt; &gt;&gt;&gt; MySQL, I think tables can become corrupted if the system loses power
+&gt; &gt;&gt;&gt; in the middle of a transaction. A &quot;repair table&quot; seems to fix it but
+&gt; &gt;&gt;&gt; it's an interruption.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Yes I know, backups are always a good idea.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; We're running a couple of desktop systems in our office/living room.
+&gt; &gt;&gt;&gt; No power-hungry servers, and nothing that can't be &quot;off&quot; for the
+&gt; &gt;&gt;&gt; duration of an outage.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; So, I started looking for cheap, low-budget UPS packages. Any
+&gt; &gt;&gt;&gt; recommendations? Anything worthwhile in the $25-$50 range? All we
+&gt; &gt;&gt;&gt; really need is something that can maintain power long enough to shut
+&gt; &gt;&gt;&gt; down the machines in an orderly fashion, although it would be really
+&gt; &gt;&gt;&gt; nice if the UPS would cause the machines to shut down automatically
+&gt; &gt;&gt;&gt; rather than having to do it manually once the UPS starts beeping...
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Is UPS yet another area where I need to check for Linux hardware
+&gt; &gt;&gt;&gt; support before buying?
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Many questions. TIA for any pointers.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Mattias
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; PS. Thanks to Chad for the MySQL presentation last Saturday! I work
+&gt; &gt;&gt;&gt; with MySQL every day but I couldn't have done half as good of a
+&gt; &gt;&gt;&gt; presentation. We need more MySQL-savvy people in our area so this was
+&gt; &gt;&gt;&gt; a great start.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;
+&gt; &gt;&gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt;
+&gt; &gt; Open Source Software, Not only a way of life, but a tasty desert as
+&gt; &gt; well.  <a href="http://www.fosug.org">http://www.fosug.org</a>
+&gt; &gt;
+&gt; &gt; Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+&gt;
+&gt;
+&gt;
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200605.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 15:41:06 -0700
+<br><b>Message-Id:</b> &lt;20060525234027.GJ29255@server.may.localdomain&gt;
+<br>
+<hr><pre>On Thu, May 25, 2006 at 02:44:08PM -0700, Sean-Paul Rees wrote:
+&gt; I would say 500+, possibly as much as 750 in case all those things draw full
+&gt; load. Patrick might know better?
+&gt; 
+&gt; 
+&gt; Sean
+
+<a href="http://www.apc.com/tools/ups_selector/index.cfm">http://www.apc.com/tools/ups_selector/index.cfm</a>
+
+I've got APC BackUPS Pro 650s on all the machines at work. Server (P3-800 3x
+10K SCSI, no monitor) is on a SmartUPS 1000.
+
+I have a BackUPS Pro 420 or something at home that isn't enough for the Athlon
+850 MHz space heater + 17&quot; monitor. Or the battery is toast again. It pretty 
+much shuts off immediately on power failure.
+
+I have pretty much always gotten 3 years out of batteries, unless they are
+used heavily and drained way down.
+
+Oh there is one thing that will trash a UPS: removing the neutral on the line
+side power. No, I did't do it. No, they weren't salvagable...I tried. LOL.
+
+One guestimate. Add up the watts of all of your stuff that you want backed up.
+Divide that number by .8. Use that number for the VA size. (For those wonder
+WTF the .8 means, it's the power factor that UPSes are at.) You do lose quite
+a bit of power to heat in the conversion from DC to AC.
+
+As for montiring software, I've always used APCs software, Powerchute.
+
+Patrick
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1183/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=hdggnldinakgdeajfgef&amp;month=200605.html">Mattias Thorslund ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 16:46:42 -0700
+<br><b>Message-Id:</b> &lt;44764FC9.4050902@thorslund.us&gt;
+<br>
+<hr><pre>Patrick May wrote:
+&gt; On Thu, May 25, 2006 at 02:44:08PM -0700, Sean-Paul Rees wrote:
+&gt;   
+&gt;&gt; I would say 500+, possibly as much as 750 in case all those things draw full
+&gt;&gt; load. Patrick might know better?
+&gt;&gt;
+&gt;&gt;
+&gt;&gt; Sean
+&gt;&gt;     
+&gt;
+&gt; <a href="http://www.apc.com/tools/ups_selector/index.cfm">http://www.apc.com/tools/ups_selector/index.cfm</a>
+&gt;
+&gt; I've got APC BackUPS Pro 650s on all the machines at work. Server (P3-800 3x
+&gt; 10K SCSI, no monitor) is on a SmartUPS 1000.
+&gt;
+&gt; I have a BackUPS Pro 420 or something at home that isn't enough for the Athlon
+&gt; 850 MHz space heater + 17&quot; monitor. Or the battery is toast again. It pretty 
+&gt; much shuts off immediately on power failure.
+&gt;
+&gt; I have pretty much always gotten 3 years out of batteries, unless they are
+&gt; used heavily and drained way down.
+&gt;
+&gt; Oh there is one thing that will trash a UPS: removing the neutral on the line
+&gt; side power. No, I did't do it. No, they weren't salvagable...I tried. LOL.
+&gt;
+&gt; One guestimate. Add up the watts of all of your stuff that you want backed up.
+&gt; Divide that number by .8. Use that number for the VA size. (For those wonder
+&gt; WTF the .8 means, it's the power factor that UPSes are at.) You do lose quite
+&gt; a bit of power to heat in the conversion from DC to AC.
+&gt;
+&gt; As for montiring software, I've always used APCs software, Powerchute.
+&gt;
+&gt; Patrick
+&gt;   
+
+
+Hey that's a really handy product adviser/selector there, Patrick... I
+punched in some numbers and it gave me these  suggestions:
+
+BE500R for $60 (500 VA, 300W -- interesting difference!)
+BE500   for $110
+BE 650R for $80
+
+Does the Powerchute software run on Linux? And does the USB connector
+work easily with Linux? The BE500R, for instance comes with USB only...
+
+On a side note, I wonder why desktop/server power supplies don't just
+come with battery backups in them? The computer runs internally on DC
+(9V?), the batteries provide DC. This all seems to work fine on laptops
+(when the batteries work, that is). A UPS has to go through the extra
+conversion from the battery DC power to AC output. (Only to be converted
+back by the computer's own power supply).
+
+Maybe internal battery UPS's would deliver longer uptime and less
+complicated technology since everything would be DC and low-voltage? Do
+they exist at all?
+
+Thanks again,
+
+Mattias
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=bhdbalplpandhjmbbdfo&amp;month=200605.html">&quot;chad godfirnon&quot; ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 17:07:31 -0700
+<br><b>Message-Id:</b> &lt;52d8d94b0605251806i3f55c91k18c999a9a1decc19@mail.gmail.com&gt;
+<br>
+<hr><pre>I'm using an APC 350 VA connected via USB to my desktop machine.  My
+monitor and any peripherals are NOT connnected to battery backup, but
+are surge protectes.  Once this was done, I installed the APCUPSD
+package (in debian) which monitors signas from the UPS.  With a little
+help from the readme I was able to setup the config file in a couple
+of minutes.
+
+As a result, this is what I get.
+When power is first lost, the machine does nothing.  If power is not
+restored within 60 seconds, (or the battery reaches &lt;50% charge
+remaining), it runs a script that ssh's to my file server (which is on
+a dumb APC unit, along with the switch that connects the two machines)
+and shuts it down, then proceeds to shut itself down.
+
+I believe I saw the 350 at office depot on Shaw and Brawley for ~$30
+on tuesday. (might be after rebate)
+
+Also, compusa has the 800 on sale for like $80 after rebate
+<a href="http://fosug.org/cgi-bin/(http://dealnews.com/deals/APC-Back-UPS-800-VA-UPS-for-70-after-rebate/119805.html)">(http://dealnews.com/deals/APC-Back-UPS-800-VA-UPS-for-70-after-rebate/119805.html)</a>
+
+On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt; Thanks, Drew and Sean.
+&gt;
+&gt; So I hear good things about APC? Looking around on the various
+&gt; retailer sites I don't see anything about serial connectivity (only
+&gt; USB) in any of their UPS's or their competitor's (Belkin is what I
+&gt; found).
+&gt;
+&gt; Wonder if 350 VA is going to be enough for a desktop, a flatscreen
+&gt; monitor and a laptop? Probably not. Between the thumb and forefinger,
+&gt; does 500 sound like enough?
+&gt;
+&gt; Mattias
+&gt;
+&gt; Quoting Drew Baker ####@####.####
+&gt;
+&gt; &gt; heck, if you have old ups's laying around grab one. Buy the
+&gt; &gt; replacement batteries from Advantec.  Only thing that goes wrong with
+&gt; &gt; thoes are the batteries.  Try to get one that uses a serial
+&gt; &gt; connection, vs, a USB.  some USB's do not follow standards and are a
+&gt; &gt; pain to get to work correctly in linux (or windows for that matter)
+&gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; On 5/25/06, Sean-Paul Rees ####@####.#### wrote:
+&gt; &gt;&gt; Mattias,
+&gt; &gt;&gt;
+&gt; &gt;&gt; I've had pretty good luck with the low-end APC models. I have a BackUPS-ES
+&gt; &gt;&gt; 750 and a BackUPS RS 800 supporting a few machines at my apartment. Each is
+&gt; &gt;&gt; supported by the free apcupsd (www.apcupsd.com) (OSS, works on FreeBSD, I
+&gt; &gt;&gt; can only assume it also works on Linux). I think the hardware cost me
+&gt; &gt;&gt; something like $70 or so.
+&gt; &gt;&gt;
+&gt; &gt;&gt; If you have old UPSes (doesn't really matter how old) laying about (working
+&gt; &gt;&gt; or otherwise), APC has a cool TradeUPS program. You buy a new UPS from them
+&gt; &gt;&gt; at a decent discount, and send the old unit back to them for safe disposal.
+&gt; &gt;&gt; I'm pretty sure they pay for return shipping.
+&gt; &gt;&gt;
+&gt; &gt;&gt; Cheers,
+&gt; &gt;&gt; Sean
+&gt; &gt;&gt;
+&gt; &gt;&gt; On 5/25/06, ####@####.#### ####@####.#### wrote:
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Hi everyone,
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Power outage season is here. The first outage just happened to us this
+&gt; &gt;&gt;&gt; morning (in the Alluvial/Willow area of Clovis), and well, it's always
+&gt; &gt;&gt;&gt; a little iffy when a running computer suddenly loses power.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; I'm no sysadmin, and no expert on file systems either, so I'm not very
+&gt; &gt;&gt;&gt; familiar about how robust the ext3 (for instance) file system is in
+&gt; &gt;&gt;&gt; these cases. Is the data recoverable in &quot;almost all&quot; cases? As for
+&gt; &gt;&gt;&gt; MySQL, I think tables can become corrupted if the system loses power
+&gt; &gt;&gt;&gt; in the middle of a transaction. A &quot;repair table&quot; seems to fix it but
+&gt; &gt;&gt;&gt; it's an interruption.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Yes I know, backups are always a good idea.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; We're running a couple of desktop systems in our office/living room.
+&gt; &gt;&gt;&gt; No power-hungry servers, and nothing that can't be &quot;off&quot; for the
+&gt; &gt;&gt;&gt; duration of an outage.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; So, I started looking for cheap, low-budget UPS packages. Any
+&gt; &gt;&gt;&gt; recommendations? Anything worthwhile in the $25-$50 range? All we
+&gt; &gt;&gt;&gt; really need is something that can maintain power long enough to shut
+&gt; &gt;&gt;&gt; down the machines in an orderly fashion, although it would be really
+&gt; &gt;&gt;&gt; nice if the UPS would cause the machines to shut down automatically
+&gt; &gt;&gt;&gt; rather than having to do it manually once the UPS starts beeping...
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Is UPS yet another area where I need to check for Linux hardware
+&gt; &gt;&gt;&gt; support before buying?
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Many questions. TIA for any pointers.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; Mattias
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;&gt; PS. Thanks to Chad for the MySQL presentation last Saturday! I work
+&gt; &gt;&gt;&gt; with MySQL every day but I couldn't have done half as good of a
+&gt; &gt;&gt;&gt; presentation. We need more MySQL-savvy people in our area so this was
+&gt; &gt;&gt;&gt; a great start.
+&gt; &gt;&gt;&gt;
+&gt; &gt;&gt;
+&gt; &gt;&gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt;
+&gt; &gt; Open Source Software, Not only a way of life, but a tasty desert as
+&gt; &gt; well.  <a href="http://www.fosug.org">http://www.fosug.org</a>
+&gt; &gt;
+&gt; &gt; Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+&gt;
+&gt;
+&gt;
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200605.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 18:02:40 -0700
+<br><b>Message-Id:</b> &lt;20060526020202.GK29255@server.may.localdomain&gt;
+<br>
+<hr><pre>On Thu, May 25, 2006 at 05:46:01PM -0700, Mattias Thorslund wrote:
+ 
+&gt; Hey that's a really handy product adviser/selector there, Patrick... I
+&gt; punched in some numbers and it gave me these  suggestions:
+
+Yeah it is. I actually used it to spec a UPS for a breathing machine for my
+boss's friend. Has sleep apnia(sp) and sometimes loses power at night...not a
+good thing.
+&gt; 
+&gt; BE500R for $60 (500 VA, 300W -- interesting difference!)
+&gt; BE500   for $110
+&gt; BE 650R for $80
+&gt; 
+&gt; Does the Powerchute software run on Linux? And does the USB connector
+&gt; work easily with Linux? The BE500R, for instance comes with USB only...
+
+Yes it does. It's cross platform. Runs on pretty much all of the UNIX and
+Unix-like platforms out there. And can be cross-platform. I.e. monitor UNIX
+hosts from Windows clients. They have a couple different versions. I used the
+old version that wasn't cross-platform.
+
+I used to hear really good things about NUTS <a href="http://www.networkupstools.org/.">http://www.networkupstools.org/.</a>
+You can monitor on one system, with several connected to the UPS and shut all
+of them down.
+
+I have no idea on the USB setups. I would assume that APCs software would work
+find with it. Note, that it's not FOSS, if you're pedantic in your software
+usage. My UPSes are all serial. (I believe they actually pre-date USB
+connections on UPSes, or were just starting to show up.)
+
+And I was actually way wrong on the power factor. It's actually .6. 
+
+&gt; 
+&gt; On a side note, I wonder why desktop/server power supplies don't just
+&gt; come with battery backups in them? The computer runs internally on DC
+&gt; (9V?), the batteries provide DC. This all seems to work fine on laptops
+&gt; (when the batteries work, that is). A UPS has to go through the extra
+&gt; conversion from the battery DC power to AC output. (Only to be converted
+&gt; back by the computer's own power supply).
+
+PCs are 12V, 5V and 3.3V. So it is possible. The power supply would need to be
+MUCH larger than they currently are. Or the battery would need to be
+piggy-backed. 
+
+The closest I've seen to this is some mini-ITX cases have a 12V power supply
+for running off of say a car (for use as Nav, DVD, MP3, etc.) There was a brick
+type external power supply, like a laptop, ink jet, etc.
+
+&gt; Maybe internal battery UPS's would deliver longer uptime and less
+&gt; complicated technology since everything would be DC and low-voltage? Do
+&gt; they exist at all?
+
+One would think so. you lose a ton of power to heat, etc. with UPSes.
+
+&gt; 
+&gt; Thanks again,
+&gt; 
+&gt; Mattiasi
+
+Patrick
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1186/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: UPS support in Linux">Re: UPS support in Linux</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200605.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+25 May 2006 18:07:57 -0700
+<br><b>Message-Id:</b> &lt;20060526020719.GL29255@server.may.localdomain&gt;
+<br>
+<hr><pre>On Thu, May 25, 2006 at 06:06:31PM -0700, chad godfirnon wrote:
+ 
+&gt; As a result, this is what I get.
+&gt; When power is first lost, the machine does nothing.  If power is not
+&gt; restored within 60 seconds, (or the battery reaches &lt;50% charge
+&gt; remaining), it runs a script that ssh's to my file server (which is on
+&gt; a dumb APC unit, along with the switch that connects the two machines)
+&gt; and shuts it down, then proceeds to shut itself down.
+
+I forgot to note that that's an important thing. Backup the network gear too.
+I've got an APC Back-UPS Office running unmonitored for the network (DSL
+modem/router/LAN Hub, and switch). Kind of useless to have the server and
+clients running if the LAN is down.
+ 
+&gt; I believe I saw the 350 at office depot on Shaw and Brawley for ~$30
+&gt; on tuesday. (might be after rebate)
+&gt; 
+&gt; Also, compusa has the 800 on sale for like $80 after rebate
+&gt; <a href="http://fosug.org/cgi-bin/(http://dealnews.com/deals/APC-Back-UPS-800-VA-UPS-for-70-after-rebate/119805.html)">(http://dealnews.com/deals/APC-Back-UPS-800-VA-UPS-for-70-after-rebate/119805.html)</a>
+
+They sure are a LOT cheaper than they used to be!
+
+Patrick
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1187/3.html">Download</a>]</strong><br>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

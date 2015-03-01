@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="/list/browse.css" rel="stylesheet" type="text/css">
+
+
+<title>Error</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="http://fosug.org/cgi-bin/list.cgi">
+</head>
+<body class=error-body>
+
+<div class=error-title><h1>Error</h1></div>
+<hr>
+<p>Downloading raw messages is administratively prohibited.</p>
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

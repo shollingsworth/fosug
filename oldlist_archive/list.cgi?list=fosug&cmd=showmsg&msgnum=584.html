@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: My first bash shell script</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: My first bash shell script</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=583.html">My first bash shell script</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj.html">Joel Searcy</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=585.html">Windows 2003/HP RANT</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=583.html">My first bash shell script</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj.html">Joel Searcy</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: My first bash shell script">Re: My first bash shell script</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200509.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+20 Sep 2005 14:21:59 -0000
+<br><b>Message-Id:</b> &lt;20050920142153.GO5928@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.09.18 01:52:25 -0700, Joel Searcy wrote:
+&gt; Hey guys tonight during my spare time at work I
+&gt; finally finished my first useful bash shell script for
+&gt; automating log file backups to another direcotry.  I
+&gt; would like your opinions and if you have any
+&gt; suggestions or ideas as how to improve it or problems
+&gt; with the syntax please feel free to point it out.  I
+&gt; put multiple controls in case something went wrong it
+&gt; wouldn't automatically erase the log file and tried to
+&gt; use standard naming conventions.
+[snip script]
+
+I have two suggestions.  These are more portability and style issues, but
+there are also valid security reasons.
+
+1)  For all of your variable usage, enclose the variable in curly braces {}.
+    This prevents ambiguity and difficult debugging problems later in life if
+    you're using just the $VAR version instead of ${VAR}.  A simple example of
+    the problem shows up if you use something like this:
+
+      #!/bin/bash
+
+      VAR1=&quot;foo&quot;;
+      VAR2=&quot;$VAR1bar&quot;;
+      echo $VAR1
+      echo $VAR2
+
+    The correct version would be this:
+
+      #!/bin/bash
+
+      VAR1=&quot;foo&quot;;
+      VAR2=&quot;${VAR1}bar&quot;;
+      echo ${VAR1}
+      echo ${VAR2}
+
+    The first outputs:
+      
+      foo
+      &lt;blank line&gt;
+    
+    The second outputs what you expect:
+
+      foo
+      foobar
+
+    Neither offers any error for syntax.
+
+2)  Use full paths to the executables in your script.  This keeps someone from
+    manipulating ${PATH} to point to an executable of the same name with suid
+    scripts.
+
+    Alternately, you could (some would say should) specify your own ${PATH}
+    inside of the script.
+
+--Robert
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=583.html">My first bash shell script</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj.html">Joel Searcy</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=585.html">Windows 2003/HP RANT</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>20 Sep 2005 14:21:59 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=583.html">My first bash shell script</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj.html">Joel Searcy</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

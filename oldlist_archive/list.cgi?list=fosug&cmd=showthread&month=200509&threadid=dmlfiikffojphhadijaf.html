@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Postfix and Port 587 (RFC 2476)</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Postfix and Port 587 (RFC 2476)</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Postfix and Port 587 (RFC 2476)">Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb&amp;month=200509.html">Sean Champ ####@####.####</a>
+<br><b>Date:</b>
+13 Sep 2005 19:26:20 -0000
+<br><b>Message-Id:</b> &lt;20050913192607.GA16516@tokamak.dtdns.net&gt;
+<br>
+<hr><pre>FYI : Some advice about supporting  port 587 operations with Postfix,
+namely some configuration directives:
+
+  <a href="http://www.irbs.net/internet/postfix/0110/1396.html">http://www.irbs.net/internet/postfix/0110/1396.html</a>
+
+I'm not a wiz with postfix, enough to intepret that page into an
+expression, here. Hopefully, it will make sense to any Postfix 
+administrator, who would have to work such directives into a sites'
+Postfix configuration.
+
+
+This message is made in response to a new policy of SBC/Yahoo, about
+port 25 SMTP -- their having decided to block such, reportedly,
+when any SBC/Yahoo user would connect to an MTA not of the SBC/Yahoo
+nework.
+
+I'd tried to introduce the matter, in previous messages on the
+list. I'd wanted to try to conclude this matter of port 587 and Postfix.
+
+
+Adios
+
+--
+Sean Champ
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200509.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 06:00:13 -0000
+<br><b>Message-Id:</b> &lt;20050913225740.C2499@pmmay.sytes.net&gt;
+<br>
+<hr><pre>I'm going to reply here to this message instead of the other ones. SBCIS has
+been blocking outgoing SMTP (TCP/UDP Port 25) for several months. I used to
+send such small amounts of mail I didn't know about this for a few months
+until I looked at my logs...Yeah, I know Bad Admin, no cookie for you.
+
+Anyways, this is completely Opt-Outable as noted in the SBC message you posted
+earlier. You just need to configure your Postfix (or other MTA) to relay
+outgoing mail through SBC's SMTP servers. It's a one-line fix. Of course,
+depending on how old your account is (mine dates from pre-sbcglobal.net
+####@####.#### account...)) and the info on their site is incorrect for some
+people (like me.)
+
+Basically they are trying to stop the email worms that go out and ravage the
+Internet via SMTP. That should work, until a worm can actively search in IE/OE
+for the &quot;Outgoing SMTP server&quot;. At which time, something new will need to be
+tried. Probably on to using authentication for relaying. I know my ISP has
+this enabled.
+
+Also, this fixes the issue with some mail hosts not accepting mail directly
+from dymanic IP addresses, cable ISP IPs, etc., ala AOL. I think SBC gladly
+replays all mail sent to their SMTP servers via their own networks, no matter
+the content. They don't care what the FROM or REPLY addresses are. I still
+receive mail on 25 w/o problems (as well as 80, 22, etc.).
+
+As far as the government, specifically the FTC, RECOMMENDED that ISPs block
+outgoing port 25 and direct users to specifically using the ISP's outgoing
+SMTP servers. This was not a rule that the ISP must do this, just a measure
+they could take.
+
+Here's a Slashdot article about this, however, the linked CNN.COM article is
+gone:
+<a href="http://it.slashdot.org/comments.pl?sid=150605&amp;threshold=1&amp;mode=nested&amp;commentsort=0&amp;op=Change">http://it.slashdot.org/comments.pl?sid=150605&amp;threshold=1&amp;mode=nested&amp;commentsort=0&amp;op=Change</a>
+
+As for actually stopping spam, hard to say. The spammer can just send through
+their ISPs SMTP server. Though, I'm sure it would be noticed quickly and said
+user would probably be banned. Not that that would ever stop them.
+
+Patrick
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200509.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 06:08:50 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d05091323085775b168@mail.gmail.com&gt;
+<br>
+<hr><pre>On 9/13/05, Patrick May ####@####.#### wrote:
+&gt; As far as the government, specifically the FTC, RECOMMENDED that ISPs block
+&gt; outgoing port 25 and direct users to specifically using the ISP's outgoing
+&gt; SMTP servers. This was not a rule that the ISP must do this, just a measure
+&gt; they could take.
+&gt; 
+&gt; Here's a Slashdot article about this, however, the linked CNN.COM article is
+&gt; gone:
+&gt; 
+
+All good points Pat. I completely agree. I use an outgoing mail relay
+in all my home postfix configs. It's just easier that way.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200509.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 06:22:28 -0000
+<br><b>Message-Id:</b> &lt;20050913232010.D2499@pmmay.sytes.net&gt;
+<br>
+<hr><pre>On Tue, Sep 13, 2005 at 11:08:10PM -0700, Stevo wrote:
+ 
+&gt; All good points Pat. I completely agree. I use an outgoing mail relay
+&gt; in all my home postfix configs. It's just easier that way.
+
+Yup, once I got the CORRECT information from India...err...SBCIS Tech Support
+it worked like a champ.
+
+If you need to be sending directly to other SMTP servers, you shouldn't be
+using a dynamic account anyways. Get a &quot;real&quot; account with static addressing
+and reverse DNS that's assignable and what not.
+
+OT: How's that $60,000 going? I don't think I could get my boss to pop for $6K
+in gear at one shot. :( Though, we're going to need to a new WAP soon. The
+WAP11 is dieing. Just keeps rebooting itself. Mine did that as well. I want to
+go with something that does IPSec over the wireless to the inside. Firebox
+looks about like $700 I think.
+
+Patrick
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp&amp;month=200509.html">&quot;Ian R. Justman&quot; ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 07:28:24 -0000
+<br><b>Message-Id:</b> &lt;4327D110.7030207@ian-justman.com&gt;
+<br>
+<hr><pre>Patrick May wrote:
+
+&gt; If you need to be sending directly to other SMTP servers, you shouldn't be
+&gt; using a dynamic account anyways. Get a &quot;real&quot; account with static addressing
+&gt; and reverse DNS that's assignable and what not.
+
+What you are suggesting is an IDEAL solution.  In my case, I happen to 
+have the access necessary to implement it for myself (working for an ISP 
+has its perks).  Most people do not have this.
+
+I'd certainly like to know which ISPs anymore will give you both 
+capabilities, i.e. static IP addresses (which, alone, you should 
+consider yourself quite fortunate to be able to get) and assignable 
+IN-ADDR.ARPA (which is even rarer).
+
+--Ian.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb&amp;month=200509.html">Sean Champ ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 14:16:42 -0000
+<br><b>Message-Id:</b> &lt;20050914141634.GA18990@tokamak.dtdns.net&gt;
+<br>
+<hr><pre>
+On 09-13-05, Patrick May wrote:
+&gt; 
+&gt; Anyways, this is completely Opt-Outable as noted in the SBC message you posted
+&gt; earlier. You just need to configure your Postfix (or other MTA) to relay
+&gt; outgoing mail through SBC's SMTP servers. 
+
+My concern was that there may be circumstances that would require that
+an SMTP server (other than one of SBC) would be used as the
+next-in-line MTA. 
+
+I suppose this would be relevant only when one would be using an MTA
+of an agency or employer other than SBC.
+
+
+--
+Sean Champ
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200509.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 04:38:44 -0000
+<br><b>Message-Id:</b> &lt;20050914213637.E2499@pmmay.sytes.net&gt;
+<br>
+<hr><pre>On Wed, Sep 14, 2005 at 12:28:16AM -0700, Ian R. Justman wrote:
+ 
+&gt; What you are suggesting is an IDEAL solution.
+
+Would involve an amount of money that Bill Gates accountant might raise an
+eyebrow to. ;) Of course Gates is such a penny pincher he'd notice a buck gone
+from his wallet.
+
+&gt; In my case, I happen to 
+&gt; have the access necessary to implement it for myself (working for an ISP 
+&gt; has its perks).  Most people do not have this.
+
+Nope, they don't.
+
+&gt; 
+&gt; I'd certainly like to know which ISPs anymore will give you both 
+&gt; capabilities, i.e. static IP addresses (which, alone, you should 
+&gt; consider yourself quite fortunate to be able to get) and assignable 
+&gt; IN-ADDR.ARPA (which is even rarer).
+&gt; 
+&gt; --Ian.
+
+As far as consumer ISPs, probably none. Though SBC does sell their Pro or
+whatever DSL that is static IP (up to 4, IIRC). It's around $50 now, I think.
+Was roughly $100, but they've dropped their prices faster than people are
+dropping SCO products... ;) Whether they will set up the DNS fully, hard to
+say.
+
+Going into a business class ISP with a T1 or better, you can pretty much get
+all of that. My friend is about ready to have to do this and they have a T1
+from AT&amp;T with another company hosting his web site and DNS. Not sure what all
+happened, but he had an open proxy up for about a week and didn't know it. Now
+he's on some RBL or something that won't take him off until all the DNS is set
+up a particular way.
+
+Full service ISPs are out there, just be prepared to pay for it.
+
+Patrick
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200509.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 07:24:47 -0000
+<br><b>Message-Id:</b> &lt;20050915072446.88923.qmail@web51808.mail.yahoo.com&gt;
+<br>
+<hr><pre>I work for a VISP and we have to deal with all of the
+big name ISP's who block port 25, including other
+visps.  We didn't use to have that many customers who
+block port 25 but now most of our brands inpose some
+sort of control, either requires SMTP authentication,
+port 25 blocking, pop before smtp scripts, or a
+combinaition of the above (makes it difficult
+sometimes to help people getting relay access denied
+errors, especially if they are extremely dense).  As
+an alterantive way around it for people who can't get
+real addresses they user use ESMTP (port 587) or set
+up port 2525 (We have a few brands that do this,
+especially for domain hosting customers who have to
+use SBC or Cox Cable as their broadband provider) for
+standard SMTP service.
+
+We block people frequently for attempting to send spam
+( on purose or through mass emailing worms ).  If we
+find the spam is deliberaite then the account is
+canceled PERIOD, and not even our subsidiary companies
+will host them again.
+
+I hope better methods will exist in the near future to
+find out who is sending this spam and which virus's
+are sending them.  I've scene lots of incoming spam
+products that are great.  Does anybody know of any
+OUTGOING spam filtering for unix based systems that
+work well (other then the standard limiting of
+recipients and how many emails at once and per hour as
+well as scanning outgoing messages for known virus's).
+
+I would be interested in this solution if anybody has
+one.
+
+--- Sean Champ ####@####.#### wrote:
+
+&gt; FYI : Some advice about supporting  port 587
+&gt; operations with Postfix,
+&gt; namely some configuration directives:
+&gt; 
+&gt;  
+&gt; <a href="http://www.irbs.net/internet/postfix/0110/1396.html">http://www.irbs.net/internet/postfix/0110/1396.html</a>
+&gt; 
+&gt; I'm not a wiz with postfix, enough to intepret that
+&gt; page into an
+&gt; expression, here. Hopefully, it will make sense to
+&gt; any Postfix 
+&gt; administrator, who would have to work such
+&gt; directives into a sites'
+&gt; Postfix configuration.
+&gt; 
+&gt; 
+&gt; This message is made in response to a new policy of
+&gt; SBC/Yahoo, about
+&gt; port 25 SMTP -- their having decided to block such,
+&gt; reportedly,
+&gt; when any SBC/Yahoo user would connect to an MTA not
+&gt; of the SBC/Yahoo
+&gt; nework.
+&gt; 
+&gt; I'd tried to introduce the matter, in previous
+&gt; messages on the
+&gt; list. I'd wanted to try to conclude this matter of
+&gt; port 587 and Postfix.
+&gt; 
+&gt; 
+&gt; Adios
+&gt; 
+&gt; --
+&gt; Sean Champ
+&gt; 
+
+
+
+		
+__________________________________ 
+Yahoo! Mail - PC Magazine Editors' Choice 2005 
+<a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200509.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 12:59:02 -0000
+<br><b>Message-Id:</b> &lt;20050915125856.GU11398@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>All,
+
+Please do not forge the headers on your mail.  It bounces.  Please use the
+email address that you subscribed to the list with.
+
+--Robert
+
+---------------- Begin Forward ---------------------
+Date: Tue, 13 Sep 2005 18:53:23 -0700
+From: FOSUG discussion list ####@####.####
+To: FOSUG discussion list ####@####.####
+Subject: Re: Postfix and Port 587 (RFC 2476)
+References: ####@####.####
+In-Reply-To: ####@####.####
+
+Sean Champ wrote:
+&gt; FYI : Some advice about supporting  port 587 operations with Postfix,
+&gt; namely some configuration directives:
+&gt; 
+&gt;   <a href="http://www.irbs.net/internet/postfix/0110/1396.html">http://www.irbs.net/internet/postfix/0110/1396.html</a>
+&gt; 
+&gt; I'm not a wiz with postfix, enough to intepret that page into an
+&gt; expression, here. Hopefully, it will make sense to any Postfix 
+&gt; administrator, who would have to work such directives into a sites'
+&gt; Postfix configuration.
+&gt; 
+&gt; 
+&gt; This message is made in response to a new policy of SBC/Yahoo, about
+&gt; port 25 SMTP -- their having decided to block such, reportedly,
+&gt; when any SBC/Yahoo user would connect to an MTA not of the SBC/Yahoo
+&gt; nework.
+&gt; 
+&gt; I'd tried to introduce the matter, in previous messages on the
+&gt; list. I'd wanted to try to conclude this matter of port 587 and Postfix.
+&gt; 
+&gt; 
+&gt; Adios
+
+Actually, I will put my two cents in.  I apologize for any line wrappage.
+
+Here's my port 587 config for my own server:
+
+submission       inet    n       -       n       -       10
+smtpd
+                 -o content_filter=
+                 -o 
+smtpd_recipient_restrictions=permit_mynetworks,permit_sasl_au
+thenticated,reject
+                 -o smtpd_helo_restrictions=
+                 -o smtpd_client_restrictions=
+                 -o smtpd_sender_restrictions=
+
+Very simplistic since I know that I'll permit anything from my own IPs 
+and IPs I completely trust carte blanche, allow anything which has an 
+actual account on the server THAT HAS BEEN AUTHENTICATED FOR.  The rest 
+are told to shove it where the sun don't shine.
+
+I'm not all that concerned about ETRN, though I really should turn it 
+off for port 587 per RFC 2476.
+
+--Ian.
+
+----- End forwarded message -----
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp&amp;month=200509.html">&quot;Ian R. Justman&quot; ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 13:24:05 -0000
+<br><b>Message-Id:</b> &lt;432975E8.3010803@ian-justman.com&gt;
+<br>
+<hr><pre>Robert Nickel wrote:
+&gt; All,
+&gt; 
+&gt; Please do not forge the headers on your mail.  It bounces.  Please use the
+&gt; email address that you subscribed to the list with.
+&gt; 
+&gt; --Robert
+
+Yeah, it's a Thunderbird extension that seems to ba at fault here.  I 
+periodically forget about this.
+
+--Ian.
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200509.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 23:29:57 -0000
+<br><b>Message-Id:</b> &lt;20050915232942.GX11398@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.09.15 00:24:46 -0700, Joel Searcy wrote:
+[...]
+&gt; I hope better methods will exist in the near future to
+&gt; find out who is sending this spam and which virus's
+&gt; are sending them.  I've scene lots of incoming spam
+&gt; products that are great.  Does anybody know of any
+&gt; OUTGOING spam filtering for unix based systems that
+&gt; work well (other then the standard limiting of
+&gt; recipients and how many emails at once and per hour as
+&gt; well as scanning outgoing messages for known virus's).
+&gt; 
+&gt; I would be interested in this solution if anybody has
+&gt; one.
+
+Although I do not know of anyone implementing such a creature, it would make
+sense that you could implement an outbound bayesian filter much the same as
+your inbound filter.
+
+Ideally, you train this on all mail leaving your domain before you apply any
+other rate-limiting techniques, recipient counts, etc.  I don't think you can
+blatantly block using this, but you get a feel for what your user's email
+looks like to the bayesian engine and spam flagged emails are either, 1) a new
+customer who writes like absolutely nobody else or 2) a spam email.
+
+Unfortunately, you would have to be _very_ liberal in your abuse policy and
+use this more as a flagging technology than anything else.
+
+One of the most novel ideas that I've seen to date is that those who have 25
+blocking and an open relay mail server setup (for their ip space only, of
+course) is that they take the connection information for each SMTP transaction
+and embed it in the headers of the mail.  This lets them backtrace the mail
+vital information to a SP controlled time/date stamp and an IP address.  At
+least this eases the abuse complaint handling process.
+
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200509.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+15 Sep 2005 23:32:55 -0000
+<br><b>Message-Id:</b> &lt;20050915233240.GY11398@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.09.15 06:23:52 -0700, Ian R. Justman wrote:
+&gt; Robert Nickel wrote:
+&gt; &gt;All,
+&gt; &gt;
+&gt; &gt;Please do not forge the headers on your mail.  It bounces.  Please use the
+&gt; &gt;email address that you subscribed to the list with.
+&gt; &gt;
+&gt; &gt;--Robert
+&gt; 
+&gt; Yeah, it's a Thunderbird extension that seems to ba at fault here.  I 
+&gt; periodically forget about this.
+
+It's not just you.
+
+That's why I pushed the note up to everyone.
+
+If I offended, I apologize.  
+
+You can stick your tongue out at me in October. ;-)
+(alas, I will be gone again this weekend at the air races in Reno)
+
+--Robert
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

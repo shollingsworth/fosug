@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: php</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200511.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: php</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=701.html">Re: using My SQL</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=703.html">Re: php</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa.html">Stephan Aleman</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=703.html">Re: php</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa.html">Stephan Aleman</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: php">php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200511.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 04:10:20 -0000
+<br><b>Message-Id:</b> &lt;20051102041003.86384.qmail@web51813.mail.yahoo.com&gt;
+<br>
+<hr><pre>I gots me a php issue that is more an admin thing than
+anything.  No help in the MB about this either.
+
+This is a script meant to verify my php.ini settings
+are working the way they are suppose to.
+
+display_errors and register_globals return a null
+value and won't display anything.  I have an open
+source application that I am trying to install (OS
+COMMERCE) and it requires register globals turned on. 
+I turned them on in the php.ini file as well as
+display errors (for dev purposes only) but the errors
+don't display and either will register globals turn
+on.  Can't seem to find much on this issue except to
+say  &quot;turn register_globals on&quot;.  I did that and
+the're still not on and the php script I am running as
+root won't echo what the value is, it will on other
+php.ini settings but not those to.  Any advice?
+
+
+
+echo 'display_errors = ' . ini_get('display_errors') .
+&quot;\n&quot;;
+echo 'register_globals = ' .
+ini_get('register_globals') . &quot;\n&quot;;
+echo 'post_max_size = ' . ini_get('post_max_size') .
+&quot;\n&quot;;
+echo 'post_max_size+1 = ' .
+(ini_get('post_max_size')+1) . &quot;\n&quot;;
+echo 'post_max_size in bytes = ' .
+return_bytes(ini_get('post_max_size'));
+
+function return_bytes($val) {
+   $val = trim($val);
+   $last = strtolower($val{strlen($val)-1});
+   switch($last) {
+       case 'g':
+           $val *= 1024;
+       case 'm':
+           $val *= 1024;
+       case 'k':
+           $val *= 1024;
+   }
+
+   return $val;
+}
+
+?&gt;
+
+-=JoeL=-
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=701.html">Re: using My SQL</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=703.html">Re: php</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa.html">Stephan Aleman</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>2 Nov 2005 04:10:20 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=703.html">Re: php</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa.html">Stephan Aleman</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200511.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

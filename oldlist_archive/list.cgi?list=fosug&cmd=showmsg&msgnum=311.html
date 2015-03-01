@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: pop login scripts?</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: pop login scripts?</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=310.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=312.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=310.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=312.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: pop login scripts?">Re: pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kppepbbjmpdadomdnldp&amp;month=200503.html">Nathan England ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 15:02:48 -0000
+<br><b>Message-Id:</b> &lt;200503310805.08349.fosplug@the-arcanum.org&gt;
+<br>
+<hr><pre>
+My company mail server handles all the email for my companies domain, along 
+with spamassassin, clamav and some other little things.
+Also, a bunch of customers also use our mail server for various reasons.
+They have requested the ability for our mail server to retrieve their mail 
+from other pop accounts, thus fetchmail is being used.
+
+The problem is: they connect to the mail server using some kind of email 
+client, like outlook express or thunderbird for the most part, to pop3 110. 
+So this kind of login is difficult to track.
+
+The mail server is just an intel box, slackware 10.0, uw imap and apop3d. 
+Since these come with slack, it was the easiest to set up. I'm not stuck with 
+these, if I need to switch for some reason.
+
+Some of the customers are complaining about the amount of time it takes to get 
+their mail. Someone sends an email to their _real_ account, not my box, my 
+mail system might take 10 minutes to get through the fetchmail list and back 
+to theirs... So instead of using fetchmail, when the customer 'pops' in I 
+want the system to be able to fetch their mail right then...
+
+I'm beginning to think this isn't even possible. Now, it might not pull their 
+mail to their client on that same session, but if they are waiting for it, 
+they may hit the S/R button, not get anything, meanwhile my system is 
+fetching it, then they hit S/R again and ... Tadaa!
+
+Am I just dreamin' here? lol. I appreciate the brain power. I've been playing 
+with this for a few days now and I'm not sure what to do.
+
+Nathan
+
+On Wednesday 30 March 2005 23:07, Robert Nickel wrote:
+&gt; On 2005.03.30 20:14:55 +0000, Nathan England wrote:
+&gt; &gt; I need to have a mail server run a script when a user logs in. Anyone
+&gt; &gt; know how to do this? Or any specific pop server that can handle this?
+&gt; &gt; Basically, I have external clients connecting to a machine to check their
+&gt; &gt; mail from that machine. But everyone is complaining about my using
+&gt; &gt; fetchmail. I have it set to fetch the mail every 5 minutes. But some
+&gt; &gt; clients are complaining that that is too long. So I am wondering if there
+&gt; &gt; is a way for the system to fetch their mail when the pop is accessed. ??
+&gt; &gt;
+&gt; &gt; I'm stumped, but not really sure what to look for. Any ideas would be
+&gt; &gt; greatly appreciated!
+&gt;
+&gt; More information would be _very_ helpful here.  Especially important would
+&gt; be knowledge of the POP software in question, the architecture that you're
+&gt; using (it sounds like you have a central box using fetchmail to be a store
+&gt; for multiple email domains) and what &quot;login&quot; qualifies as for the users
+&gt; getting mail.
+&gt;
+&gt; --Robert
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=310.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=312.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=310.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>31 Mar 2005 15:02:48 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=312.html">Re: pop login scripts?</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

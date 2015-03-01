@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: SWAP!!!! (kind of like yelling fire---but not)</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: SWAP!!!! (kind of like yelling fire---but not)</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=287.html">Re: Uhhh...a little of this and a lot of that [was Re: Meeting]</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nkojbhfdfnhomhdbmecl.html">Steve Bibayoff</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=289.html">Re: SWAP!!!! (kind of like yelling fire---but not)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo.html">Elliott Johnson</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=289.html">Re: SWAP!!!! (kind of like yelling fire---but not)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo.html">Elliott Johnson</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: SWAP!!!! (kind of like yelling fire---but not)">SWAP!!!! (kind of like yelling fire---but not)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200503.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+25 Mar 2005 02:13:36 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d05032418136ffa45e9@mail.gmail.com&gt;
+<br>
+<hr><pre>Thought I'd share.
+
+I seriously had a kind of I think I'm going to be sick feeling in my
+stomach when I saw this. If you know the physical device of your swap
+partition.
+
+Do this on a frequently used machine.
+
+#swapoff /dev/hda8
+# cat /dev/hda8|strings|less
+
+so cat your swap partition to standard output, only print readable
+characters, and page it so you can read it one screen at a time.
+
+You'll see all sorts of lovely things fly by... such as visited URL's,
+kernel messages, and *gasp* passwords. Yup boys and girls. It's a very
+ugly thing.
+
+So I'd suggest this.
+
+<a href="http://www.google.com/search?hl=en&amp;q=dm-crypt+swap&amp;btnG=Google+Search">http://www.google.com/search?hl=en&amp;q=dm-crypt+swap&amp;btnG=Google+Search</a>
+<a href="http://www.saout.de/misc/dm-crypt/">http://www.saout.de/misc/dm-crypt/</a>
+
+I've been playing with dm-crypt. Actually my home partition is mounted
+with it. And I must say I like it a lot.
+
+This page gave me a simple kick in the butt. (if you like gentoo)
+Of course there are a ton of other references out there.
+
+<a href="http://gentoo-wiki.com/Special:Search?search=dm-crypt&amp;fulltext=Search">http://gentoo-wiki.com/Special:Search?search=dm-crypt&amp;fulltext=Search</a>
+
+I didn't see much of a performance hit. And the beautiful thing is the
+passphrase holds the seed. So you can enter any passphrase you want.
+It's just not going to yield a reiserfs formated drive. It'd be more
+along the lines of a ASCII or /dev/urandom joke.
+
+So anyhow boys and girls of FOSUG. I thought I'd share. I've had a lot
+of fun playing with crypto stuff the past few days.
+
+I know all of you are *so* interested in this. Well, maybe a few. So
+this is more for the benefit of those who are. But it's good to know
+this is out there.
+
+Cheers,
+
+Stevo
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=287.html">Re: Uhhh...a little of this and a lot of that [was Re: Meeting]</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nkojbhfdfnhomhdbmecl.html">Steve Bibayoff</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=289.html">Re: SWAP!!!! (kind of like yelling fire---but not)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo.html">Elliott Johnson</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>25 Mar 2005 02:13:36 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=289.html">Re: SWAP!!!! (kind of like yelling fire---but not)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo.html">Elliott Johnson</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

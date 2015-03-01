@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Connecting to a switch via serial port</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Connecting to a switch via serial port</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=894.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=896.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp.html">Ian R. Justman</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=894.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=896.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp.html">Ian R. Justman</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Connecting to a switch via serial port">Re: Connecting to a switch via serial port</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200601.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+13 Jan 2006 03:32:58 -0000
+<br><b>Message-Id:</b> &lt;43C71F5A.9000400@drac0.net&gt;
+<br>
+<hr><pre>Robert Nickel wrote:
+
+&gt;*nod*
+&gt;
+&gt;Minicom rocks.  It's the de-facto standard for linux comms.
+&gt;
+&gt;As for how I would address your problem, I wouldn't futz with the serial cable
+&gt;at all.  Connect a machine to that box and nothing else.  Get the mac address
+&gt;for the switch off the bottom of the box (it should be down there somewhere,
+&gt;yes?) and then do an arp -s [0] for the mac address of the switch to set the ip to
+&gt;something on the same subnet as the machine you plugged into it (you'll have
+&gt;to setup a fixed address on the computer with the default gateway either empty
+&gt;or set to the ip you set on the computer).
+&gt;
+&gt;HTH,
+&gt;--Robert
+&gt;
+&gt;[0]  Assuming that the mac address of the switch is 11:22:33:44:55:66, the ip
+&gt;of your computer is 192.168.1.1/24, 'arp -s 11:22:33:44:55:66 192.168.1.2'.
+&gt;  
+&gt;
+I've come to the conclusion that this part of my switch may be 
+defective.  I've tried the arp approach from both a Linux and Windows 
+computer, plus I've even brought home an old win98 laptop to try 
+connecting via serial cable all with no joy.
+
+Under Windows: arp -s 192.168.1.10 00-04-5A-80-13-DF (00-04-5A-80-13-DF 
+being the MAC Address of the switch) still gets me no where.  I can't 
+ping it, I can't access through a web browser and I can't telnet to it 
+by the IP Address of 192.168.1.10 which I tried to assign it with the 
+above command.
+
+ I've tried resetting the router several times and as far as installing 
+the factory firmware, you can't do that unless you can access the router 
+by network.  I've tried connecting to the Serial interface from 4 
+different computers now, all with no joy as well.
+
+Thank you, everyone, for your input and help.  I guess this nut just 
+isn't going to crack :(   Maybe my boss wont mind if I mess around with 
+our nice new Foundry switches at work... lol
+
+Keith
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=894.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=896.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp.html">Ian R. Justman</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=894.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>13 Jan 2006 03:32:58 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=896.html">Re: Connecting to a switch via serial port</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp.html">Ian R. Justman</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200601.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200601.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

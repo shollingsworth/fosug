@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: netcat rocks</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: netcat rocks</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=676.html">Parts for your memories...</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: netcat rocks">Re: netcat rocks</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200510.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 21:54:02 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0510271453n5fc912ecg4de03dd61cdbcf95@mail.gmail.com&gt;
+<br>
+<hr><pre>On 10/27/05, Robert Nickel ####@####.#### wrote:
+&gt; On 2005.10.27 13:28:00 -0700, Stevo wrote:
+&gt; [...]
+&gt; So you found something listening on 1025/udp on your personal box?
+&gt; [...]
+
+Yea... it's hooked into the svhost.exe process running as &quot;NETWORK
+SERVICE&quot;, I kind of know how that works... you usually find trojans
+and what not tied into system processes like that.
+
+Yes, it's a personal box, but it's one of those windows throw away
+machines that I use to *cough* backup things.
+
+&gt;
+&gt; The questions that popped into my mind are:
+&gt;
+&gt; 1) What was the dead process listening on 1025?
+
+answered this one... i think i misphrased the above.
+
+&gt; 2) Do you know who holds that ip address?
+
+Here is a short laundry list of source IP addresses. This started
+about 4 days ago. Because it's not going to any of my critical boxes
+per se.
+
+Here is a snort aspect, and below a firewall report snip.
+
+Earliest such alert at 03:00:30.121209 on 10/26/2005
+ Latest such alert at 02:53:22.673404 on 10/27/2005
+BAD-TRAFFIC udp port 0 traffic  82 sources  1 destinations
+  Priority: 3  Classification: Misc activity
+  [sid:525] [BUGTRAQ:576]
+  Sources triggering this attack signature
+Source  # Alerts (sig)  # Alerts (total)  # Dsts (sig)  # Dsts (total)
+  53.134.60.200  2  2  1  1
+  74.223.21.223  2  2  1  1
+  174.52.226.95  1  1  1  1
+=====================================
+#blocks: %blocks: kbytes:       last time: blocked packet
+-------: -------: ------: ---------------: --------------
+     94:    100%:  46.25: Oct/27/05 02:56: firewall
+     94:    100%:  46.25: Oct/27/05 02:56:   firewall/udp
+     94:    100%:  46.25: Oct/27/05 02:56:     firewall:blackjack (1025)/udp
+=====================================
+
+&gt; 3) Are you *really* going to follow directions from an unsolicited packet?
+
+Uhh.... yea Rob. Der de der... I'm a lemming, watch me jump off a
+cliff *aaaaaaaaaahhhhhhhh*
+
+NO :-P
+
+&gt; As a help for 2:
+&gt;
+&gt;   $ dig -x 131.59.98.11
+&gt;
+&gt;   ; &lt;&lt;&gt;&gt; DiG 9.2.5 &lt;&lt;&gt;&gt; -x 131.59.98.11
+&gt;   ;; global options:  printcmd
+&gt;   ;; Got answer:
+&gt;   ;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN, id: 44494
+&gt;   ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+&gt;
+&gt;   ;; QUESTION SECTION:
+&gt;   ;11.98.59.131.in-addr.arpa.     IN      PTR
+&gt;
+&gt;   ;; AUTHORITY SECTION:
+&gt;   59.131.in-addr.arpa.    10800   IN      SOA     ns1.acc.af.mil.
+&gt;   hostmaster.acc.af.mil. 2005072001 3600 900 604800 2700
+&gt;
+&gt;   ;; Query time: 157 msec
+&gt;   ;; SERVER: 204.127.202.4#53(204.127.202.4)
+&gt;   ;; WHEN: Thu Oct 27 14:30:31 2005
+&gt;   ;; MSG SIZE  rcvd: 123
+
+a .mil SOA.... niiiiiiiice. I'm paranoid as it is. That's great LOL
+
+&gt; There are a number of trojans that listen on 1025/udp. [0]
+
+Yea... I figured I picked up something nasty, I just don't know where.
+Time to do a security audit of all the boxes I control *sigh*
+
+&gt; --Robert
+&gt;
+&gt; [0] <a href="http://www.simovits.com/sve/nyhetsarkiv/1999/nyheter9902.html">http://www.simovits.com/sve/nyhetsarkiv/1999/nyheter9902.html</a>
+
+Thanks for the link and the info brother... much abliged :-)
+
+Cheers,
+
+~stevo
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=676.html">Parts for your memories...</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>27 Oct 2005 21:54:02 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

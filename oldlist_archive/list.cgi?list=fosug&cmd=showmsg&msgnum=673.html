@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: netcat rocks</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: netcat rocks</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=672.html">Re: Decent deal on WRT54G wireless router...</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: netcat rocks">netcat rocks</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200510.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+27 Oct 2005 20:28:13 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d0510271328n5cf60ba7heb6d8d189184366e@mail.gmail.com&gt;
+<br>
+<hr><pre>Hey guys... check this out.
+
+I keep getting the following error in my snort log:
+
+========================
+==&gt; /var/log/snort/alert &lt;==
+[**] [1:525:9] BAD-TRAFFIC udp port 0 traffic [**]
+[Classification: Misc activity] [Priority: 3]
+10/27-13:17:12.959630 131.59.98.11:0 -&gt; XXX.XXX.XXX.XXX:1025
+UDP TTL:49 TOS:0x0 ID:61493 IpLen:20 DgmLen:518
+Len: 490
+[Xref =&gt; <a href="http://cgi.nessus.org/plugins/dump.php3?id=10074][Xref">http://cgi.nessus.org/plugins/dump.php3?id=10074][Xref</a> =&gt;
+<a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=1999-0675][Xref">http://cve.mitre.org/cgi-bin/cvename.cgi?name=1999-0675][Xref</a> =&gt;
+<a href="http://www.securityfocus.com/bid/576]">http://www.securityfocus.com/bid/576]</a>
+=========================
+This is like all damn day.
+
+So I nmap my network and find one of my boxs at home has 1025 open but
+filtered. I'm like... OK... so what the hell is this trying to say to
+my box. I track down the PID and find a dead in there.
+
+I open up the port on my firewall and run the following command:
+# nc -vvn -l -p 1025 -u
+(this runs netcat verbose, no name res, listening on udp port 1025 and
+pipes to STDOUT)
+
+Anyhow.... to test this I wanted to see what netcat would do if I
+remoted from work and started typing with netcat again... so I ran
+this command.
+==============================
+ ~ $ nc -vvn -u xxx.xxx.xxx.xxx 1025
+(UNKNOWN) [XXX.XXX.XXX.XXX] 1025 (?) open
+testing
+haha
+thisisfun
+==============================
+On my server it returned this:
+==============================
+# nc -vvn -l -p 1025 -u
+listening on [any] 1025 ...
+connect to [XXX.XXX.XXX.XXX] from (UNKNOWN) [XXX.XXX.XXX.XXX] 56482
+testing
+haha
+thisisfun
+==============================
+Ok,
+
+so now I know that it works. I ran the command again and waited.
+
+This is what popped up.
+
+===============================
+# nc -vvn -l -p 1025 -u
+listening on [any] 1025 ...
+connect to [XXX.XXX.XXX.XXX] from (UNKNOWN) [131.59.98.11] 0
+xø{ZÿÐ(c)²ÀO¶æüÿÿÿÿ
+
+Microsoft##inform you about a virus detectionAASTOP! WINDOWS REQUIRES
+IMMEDIATE ATTENTION.
+
+Windows has found CRITICAL SYSTEM ERRORS
+
+To fix the errors please do the following:
+1. Download Registry Repair from: <a href="http://www.123regfix.com">http://www.123regfix.com</a>
+2. Install Registry Repair
+3. Run Registry Repair
+4. Reboot your computer
+FAILURE TO ACT NOW MAY LEAD TO DATA LOSS AND CORRUPTION!
+====================================
+
+How much butt does that kick?
+
+Just thought I'd share it with the group. Sometimes I just want to
+listen in and see what's going across the wire.
+
+Hope some of you learned a thing or two. Check out this link for an
+article on how to use netcat.
+<a href="http://www.datastronghold.com/articles/3.html">http://www.datastronghold.com/articles/3.html</a>
+
+Cheers,
+
+~ stevo
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=672.html">Re: Decent deal on WRT54G wireless router...</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>27 Oct 2005 20:28:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=674.html">Re: netcat rocks</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme.html">Robert Nickel</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200510.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Can't turn on DVD's DMA</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200505.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Can't turn on DVD's DMA</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=392.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=394.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=392.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=394.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200505.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 17:36:19 -0000
+<br><b>Message-Id:</b> &lt;f73f9abd050516103617fca076@mail.gmail.com&gt;
+<br>
+<hr><pre>Hey guys, I had a similar, but not exact problem. Below are the steps I 
+performed to resolve my issues. May be worth looking into...
+
+-Mike
+
+
+To Test HD Performance: hdparm -Tt /dev/hdx
+
+lspci | grep IDE 
+
+document the IDE controller driver and recompile the kernel with the driver. 
+
+
+After you have collected this information you can go into your kernel 
+configuration..
+[edit]
+Enabling the driver for your IDE controller in the kernel. 
+
+Once the curses GUI comes up navigate yourself over to Device Drivers ---&gt; 
+ATA/ATAPI/MFM/RLL support and scroll down until you find the controller that 
+matches the one you found in lspci. Note this may have a slightly different 
+name and may be a generic driver (i.e. VIA82CXXX). Select it and then build 
+your kernel. Don't forget to add any other options you might need.
+
+Restart your computer and see the annoying &quot;DMA NOT ENABLED&quot; error 
+disappear! Oh and it'll go faster too...
+
+Then rerun hdparm and compare. 
+
+
+
+
+
+
+
+
+On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; 
+&gt; Also have you tried changing the master and slave of your two drives?
+&gt; swap them around? Or just tryied running the DVD only?
+&gt; 
+&gt; On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; &gt; No, liton is a very good brand. They actually manufacture about 70%
+&gt; &gt; of all drives now. Vitually all drives you buy now are nothing more
+&gt; &gt; then rebranded Lite-On. They are a fast reliable drive.
+&gt; &gt;
+&gt; &gt; On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; Hi,
+&gt; &gt; &gt;
+&gt; &gt; &gt; George and I have been emailing a bit and it seems the drive's
+&gt; &gt; &gt; dma isn't being interpreted correctly at boot. In fact hdparm
+&gt; &gt; &gt; can't figure out any of the modes of operation PIO or U/DMA for
+&gt; &gt; &gt; the drive. He sent me his dmesg, and I'll chop it down to the
+&gt; &gt; &gt; important parts for those interested:
+&gt; &gt; &gt;
+&gt; &gt; &gt; George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM 
+&gt; -0700 write :
+&gt; &gt; &gt; &gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &gt; &gt; &gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override with 
+&gt; idebus=xx
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:
+&gt; 11.1
+&gt; &gt; &gt; &gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on pci0000:00:
+&gt; 11.1
+&gt; &gt; &gt; &gt; &lt;6&gt; ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &gt; &gt; &gt; &lt;6&gt; ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &gt; &gt; &gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &gt; &gt; &gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache, 
+&gt; CHS=16383/255/63, UDMA(100)
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: cache flushes supported
+&gt; &gt; &gt; &gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete 
+&gt; DataRequest }
+&gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &gt; &gt; &gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &gt; &gt; &gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &gt; &gt; &gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &gt; &gt; &gt; &lt;4&gt;Attempting manual resume
+&gt; &gt; &gt;
+&gt; &gt; &gt; I googled around on the status error and came up with this
+&gt; &gt; &gt; <a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+&gt; &gt; &gt; The thread ended up being fixed by a kernel patch, so it probably
+&gt; &gt; &gt; isn't just a firmware upgrade. George, I know you tried a
+&gt; &gt; &gt; knoppix boot and the problem persisted, but you may try a kernel
+&gt; &gt; &gt; upgrade none the less to see if that gets rid of it.
+&gt; &gt; &gt;
+&gt; &gt; &gt; One other thing you might check is how you have your IRQ's setup
+&gt; &gt; &gt; in your BIOS. The lines:
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:
+&gt; 11.1
+&gt; &gt; &gt;
+&gt; &gt; &gt; don't look so good. If that's all well (using defaults is
+&gt; &gt; &gt; usually best), you might first try booting without ACPI by
+&gt; &gt; &gt; appending noacpi to your bootloader line. It'd be worth a shot
+&gt; &gt; &gt; before you huck the drive or mail it back to be fixed.
+&gt; &gt; &gt;
+&gt; &gt; &gt; If your problem still persists, bring it this weekend and maybe 7-8
+&gt; &gt; &gt; minds can get it working :)
+&gt; &gt; &gt;
+&gt; &gt; &gt; Goodluck,
+&gt; &gt; &gt;
+&gt; &gt; &gt; Elliott
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; Yikes!,
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; &gt; &gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; &gt; &gt; &gt; That is very strange because they should read the
+&gt; &gt; &gt; &gt; &gt; same if the drive and software are working.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; The difference between the two is that -I is read
+&gt; &gt; &gt; &gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; &gt; &gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; &gt; &gt; &gt; found by probing during boot time.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; &gt; &gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; &gt; &gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; &gt; &gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; &gt; &gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; &gt; &gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; &gt; &gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; &gt; &gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; -Elliott
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; &gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; &gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; &gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; &gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; &gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; &gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; &gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; &gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; &gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; &gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; &gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; &gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt;
+&gt; 
+&gt; 
+&gt; --
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; 
+
+
+
+-- 
+Thanks,
+
+-Mike
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=392.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=394.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=392.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>16 May 2005 17:36:19 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=394.html">Re: Can't turn on DVD's DMA</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen.html">George Fragos</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200505.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

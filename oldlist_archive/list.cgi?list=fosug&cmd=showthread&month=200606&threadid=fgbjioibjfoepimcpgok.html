@@ -1,0 +1,765 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: out of context question</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: out of context question</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: out of context question">out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200606.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 08:40:28 -0700
+<br><b>Message-Id:</b> &lt;f73f9abd0606080940s771a0f24vc4905bc8c4605d62@mail.gmail.com&gt;
+<br>
+<hr><pre>Sorry if this is a little out of context, but has anyone successfully
+installed client firewalls on a LAN with AD / Exchange?
+
+We had a field laptop connect to our network (with contained malware) and it
+was attempting to traverse the network. So I wanted to lockdown all ports
+except the ones needed for normal operation. looking at the port list for AD
+and Exchange it seems rediculous impossible because services like lsass use
+about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+
+So far I have approximately 30 various tcp/udp ports open and can
+authenticate with AD but cannot connect with Exchange.
+
+Does anyone have any advice or am I shooting myself in the .... er...
+foot???
+
+Thanks,
+
+-Mike
+
+
+-- 
+&quot;All parts should go together without forcing. Therefore, if you can't get
+them together again, there must be a reason. By all means, do not use a
+hammer.&quot; -- IBM maintenance manual, 1975
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=hdggnldinakgdeajfgef&amp;month=200606.html">Mattias Thorslund ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 09:16:56 -0700
+<br><b>Message-Id:</b> &lt;44885BA9.1000001@thorslund.us&gt;
+<br>
+<hr><pre>I'm not of much help, but I can't help wondering:
+
+Would there be any &quot;sane&quot; reason for using randomly allocated ports? I
+could imagine that if one of the &quot;needed&quot; ports is blocked, it might try
+other ports but otherwise, this seems like malware-like behavior.
+
+But, I'm certainly no expert on this...
+
+Mike wrote:
+&gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; installed client firewalls on a LAN with AD / Exchange?
+&gt;
+&gt; We had a field laptop connect to our network (with contained malware)
+&gt; and it
+&gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; except the ones needed for normal operation. looking at the port list
+&gt; for AD
+&gt; and Exchange it seems rediculous impossible because services like
+&gt; lsass use
+&gt; about 9 standard ports plus randomly allocated ports between 1024 and
+&gt; 65536.
+&gt;
+&gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; authenticate with AD but cannot connect with Exchange.
+&gt;
+&gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; foot???
+&gt;
+&gt; Thanks,
+&gt;
+&gt; -Mike
+&gt;
+&gt;
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200606.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 11:58:39 -0700
+<br><b>Message-Id:</b> &lt;20060608195859.30577.qmail@web51807.mail.yahoo.com&gt;
+<br>
+<hr><pre>I've had to take a similar issue befpore.  I hope I can help.
+   
+  The big port for exchange is 135.  Depending on how you have your mail server configured you will probably on the clients and server need port 135 (RPC) , 25(SMTP), and 110 (POP3) open.
+   
+  If you are using ESMTP you will need port 587 open.
+   
+  Secure Pop3 requires 995
+   
+  Secure SMTP requires 465
+   
+  If you're looking for something simple for the use of email you can lock down the machines and just open port 143 for the use of IMAP.  In a way it's better to use IMAP because you don't have to worry about people actually downloading huge files onto the machines.  
+   
+  I ran into something similar once and I configured exchange to use IMAP and opened those ports on the clients, closed everything else and I had no more issues.
+   
+  
+
+Mike ####@####.#### wrote:
+  Sorry if this is a little out of context, but has anyone successfully
+installed client firewalls on a LAN with AD / Exchange?
+
+We had a field laptop connect to our network (with contained malware) and it
+was attempting to traverse the network. So I wanted to lockdown all ports
+except the ones needed for normal operation. looking at the port list for AD
+and Exchange it seems rediculous impossible because services like lsass use
+about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+
+So far I have approximately 30 various tcp/udp ports open and can
+authenticate with AD but cannot connect with Exchange.
+
+Does anyone have any advice or am I shooting myself in the .... er...
+foot???
+
+Thanks,
+
+-Mike
+
+
+-- 
+&quot;All parts should go together without forcing. Therefore, if you can't get
+them together again, there must be a reason. By all means, do not use a
+hammer.&quot; -- IBM maintenance manual, 1975
+
+
+ __________________________________________________
+Do You Yahoo!?
+Tired of spam?  Yahoo! Mail has the best spam protection around 
+<a href="http://mail.yahoo.com">http://mail.yahoo.com</a> </pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200606.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 11:58:42 -0700
+<br><b>Message-Id:</b> &lt;20060608195913.GO5634@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.06.08 09:40:41 -0700, Mike wrote:
+[...]
+&gt; We had a field laptop connect to our network (with contained malware) and it
+&gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; except the ones needed for normal operation. looking at the port list for AD
+&gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+&gt; 
+&gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; authenticate with AD but cannot connect with Exchange.
+&gt; 
+&gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; foot???
+
+I would turn the problem around.  If I'm a client and I'm connected to the
+network, what ip addresses should I be interested in connecting to?
+
+To whit:
+
+If a client connects to the network, it should *NOT* be trying to connect to
+other client machines.  It should only be trying to connect to a server/device
+that is providing a service.
+
+This, of course, will not apply to all clients as there may be legitemate
+reason for a client box to scan another (read: an admin trying to help another
+client) but this should be definable and you can then specify that traffic in
+your firewall rules.
+
+If you're not using static dhcp, you may want to consider doing so.  It makes
+many, MANY things easier.  In this case, it makes the short list of addresses
+that have extra privileges on your lan easy to obtain and maintain.
+
+HTH,
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1262/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200606.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 20:38:44 -0700
+<br><b>Message-Id:</b> &lt;f73f9abd0606082139y3ae0a3d0of837a5fc2f769d9@mail.gmail.com&gt;
+<br>
+<hr><pre>On 6/8/06, Robert Nickel ####@####.#### wrote:
+&gt; On 2006.06.08 09:40:41 -0700, Mike wrote:
+&gt; [...]
+&gt; &gt; We had a field laptop connect to our network (with contained malware) and it
+&gt; &gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; &gt; except the ones needed for normal operation. looking at the port list for AD
+&gt; &gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; &gt; about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+&gt; &gt;
+&gt; &gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; &gt; authenticate with AD but cannot connect with Exchange.
+&gt; &gt;
+&gt; &gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; &gt; foot???
+&gt;
+&gt; I would turn the problem around.  If I'm a client and I'm connected to the
+&gt; network, what ip addresses should I be interested in connecting to?
+&gt;
+&gt; To whit:
+&gt;
+&gt; If a client connects to the network, it should *NOT* be trying to connect to
+&gt; other client machines.  It should only be trying to connect to a server/device
+&gt; that is providing a service.
+
+I agree, my firebox was bieng port scanned on the internal interface
+and alerted me to the fact. So I figure if I make all workstations a
+smaller target by locking down the ports would be a good thing; but
+it's a little more difficult than I thougt.
+
+
+&gt; This, of course, will not apply to all clients as there may be legitemate
+&gt; reason for a client box to scan another (read: an admin trying to help another
+&gt; client) but this should be definable and you can then specify that traffic in
+&gt; your firewall rules.
+
+
+
+&gt;
+&gt; If you're not using static dhcp, you may want to consider doing so.  It makes
+&gt; many, MANY things easier.  In this case, it makes the short list of addresses
+&gt; that have extra privileges on your lan easy to obtain and maintain.
+
+Rob, do you use DD-wrt for static IP'ing?
+
+&gt;
+&gt; HTH,
+&gt; --Robert
+&gt;
+&gt;
+&gt;
+
+
+-- 
+&quot;All parts should go together without forcing. Therefore, if you can't
+get them together again, there must be a reason. By all means, do not
+use a hammer.&quot; -- IBM maintenance manual, 1975
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo&amp;month=200606.html">Steven Hollingsworth ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 21:01:25 -0700
+<br><b>Message-Id:</b> &lt;1149829321.29487.113.camel@slappy.howe-electric.net&gt;
+<br>
+<hr><pre>On Thu, 2006-06-08 at 09:40 -0700, Mike wrote:
+&gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; installed client firewalls on a LAN with AD / Exchange?
+
+I have every workstation on my network individually firewalled with
+windows XP firewall, with only port 3389 being open.
+
+&gt; We had a field laptop connect to our network (with contained malware) and it
+&gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; except the ones needed for normal operation. looking at the port list for AD
+&gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+
+I agree with Robert about the clients really only needing access to the
+server but not their peers. If you give machines static IP's through
+dhcp and mac addresses, then another pool for IP's for unknown mac
+addresses, you can make scope access control lists on your firewall.
+
+Granted this setup isn't terribly secure, but it would prevent your
+average &quot;oops I released a virus on the network scenario :-P
+
+I also think you can blow out firewall rules based on group policy no? I
+wouldn't know this because I haven't enabled AD yet, but I'm sure as
+heck looking forward to it. The only thing I think sucks is the lack of
+structured access control lists (ACLs). There may be third party
+applications out there that do a better part of managing an enterprise
+on a client level but I don't know any.
+
+&gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; authenticate with AD but cannot connect with Exchange.
+
+I'd use tcpview [0] to see what ports and doing what, and what process
+ID's they are attached to. Granted a lot of process are hooked into
+svchost.exe , the exchange ones should reside in a more obvious
+executable.
+
+&gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; foot???
+
+Good luck, you're looking in the right direction.
+
+~ stevo
+
+[0]  <a href="http://www.sysinternals.com/Utilities/TcpView.html">http://www.sysinternals.com/Utilities/TcpView.html</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200606.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 21:41:50 -0700
+<br><b>Message-Id:</b> &lt;f73f9abd0606082242x44f2bfd5la1d4e9cb7583f093@mail.gmail.com&gt;
+<br>
+<hr><pre>On 6/8/06, Steven Hollingsworth ####@####.#### wrote:
+&gt; On Thu, 2006-06-08 at 09:40 -0700, Mike wrote:
+&gt; &gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; &gt; installed client firewalls on a LAN with AD / Exchange?
+&gt;
+&gt; I have every workstation on my network individually firewalled with
+&gt; windows XP firewall, with only port 3389 being open.
+&gt;
+&gt; &gt; We had a field laptop connect to our network (with contained malware) and it
+&gt; &gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; &gt; except the ones needed for normal operation. looking at the port list for AD
+&gt; &gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; &gt; about 9 standard ports plus randomly allocated ports between 1024 and 65536.
+&gt;
+&gt; I agree with Robert about the clients really only needing access to the
+&gt; server but not their peers. If you give machines static IP's through
+&gt; dhcp and mac addresses, then another pool for IP's for unknown mac
+&gt; addresses, you can make scope access control lists on your firewall.
+
+Robert, I believe you mentioned at work you can track down rogue mac
+addresses. Would you mind elaborating?
+
+
+&gt;
+&gt; Granted this setup isn't terribly secure, but it would prevent your
+&gt; average &quot;oops I released a virus on the network scenario :-P
+&gt;
+&gt; I also think you can blow out firewall rules based on group policy no?
+
+Is this a Server 2003 thing?
+
+&gt; wouldn't know this because I haven't enabled AD yet, but I'm sure as
+&gt; heck looking forward to it. The only thing I think sucks is the lack of
+&gt; structured access control lists (ACLs). There may be third party
+&gt; applications out there that do a better part of managing an enterprise
+&gt; on a client level but I don't know any.
+&gt;
+&gt; &gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; &gt; authenticate with AD but cannot connect with Exchange.
+&gt;
+&gt; I'd use tcpview [0] to see what ports and doing what, and what process
+&gt; ID's they are attached to. Granted a lot of process are hooked into
+&gt; svchost.exe , the exchange ones should reside in a more obvious
+&gt; executable.
+&gt;
+&gt; &gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; &gt; foot???
+&gt;
+&gt; Good luck, you're looking in the right direction.
+&gt;
+&gt; ~ stevo
+&gt;
+&gt; [0]  <a href="http://www.sysinternals.com/Utilities/TcpView.html">http://www.sysinternals.com/Utilities/TcpView.html</a>
+&gt;
+
+
+-- 
+&quot;All parts should go together without forcing. Therefore, if you can't
+get them together again, there must be a reason. By all means, do not
+use a hammer.&quot; -- IBM maintenance manual, 1975
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo&amp;month=200606.html">Steven Hollingsworth ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 22:06:18 -0700
+<br><b>Message-Id:</b> &lt;1149833214.29487.119.camel@slappy.howe-electric.net&gt;
+<br>
+<hr><pre>On Thu, 2006-06-08 at 22:42 -0700, Mike wrote:
+[snip]
+&gt; &gt; I also think you can blow out firewall rules based on group policy no?
+&gt; 
+&gt; Is this a Server 2003 thing?
+
+Um XP Service Pack 2 thing and I think windows 2000 needs a patch
+
+<a href="http://tinyurl.com/rndhe">http://tinyurl.com/rndhe</a>
+
+~ stevo
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=agpfaepkdapihiiggedi&amp;month=200606.html">Jared Curtis ####@####.####</a>
+<br><b>Date:</b>
+8 Jun 2006 23:59:55 -0700
+<br><b>Message-Id:</b> &lt;44892A1E.4070502@w00ttech.com&gt;
+<br>
+<hr><pre>Mike wrote:
+&gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; installed client firewalls on a LAN with AD / Exchange?
+&gt; 
+&gt; We had a field laptop connect to our network (with contained malware)
+&gt; and it
+&gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; except the ones needed for normal operation. looking at the port list
+&gt; for AD
+&gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; about 9 standard ports plus randomly allocated ports between 1024 and
+&gt; 65536.
+&gt; 
+&gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; authenticate with AD but cannot connect with Exchange.
+&gt; 
+&gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; foot???
+&gt; 
+&gt; Thanks,
+&gt; 
+&gt; -Mike
+&gt; 
+&gt; 
+
+If the laptop is a member of a domain it will cache the user profile and
+any gpo's that it has applied just in case it becomes disconnected from
+the network.  If you do a good job locking down the laptop with gpo's
+then it shouldn't be possible to install any spyware.  But this all
+depends on how restrictive the policy is and how the spyware is
+installed.  Often times it is still possible to install software if it
+is able to install directly to a users home folder.
+
+If you really wanted to be an evil sysadmin then you can specify a list
+of allowed exe's in group policy.  By doing this it should be
+&quot;impossible&quot; to install anything on that laptop.  The settings to do
+this are in Computer Polices &gt; Windows Settings &gt; Software Restriction
+Policies &gt; Additional Rules.  Just remember to white list programs NOT
+blacklist if you blacklist you will miss something.  Enjoy being evil
+&gt;;), and remember sol.exe is a required system file.
+
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1267/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200606.html">&quot;Drew Baker&quot; ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2006 06:29:47 -0700
+<br><b>Message-Id:</b> &lt;61c1dc3c0606090730m126f6deqbeb9912a2003ff39@mail.gmail.com&gt;
+<br>
+<hr><pre>of course there is always the spyware that gets in regardless of
+policy. you know the whole, there is no TRUE seperation of user and
+system in windows.  You can minimize but not always stop the barage of
+crappola from the net.  GPO's unfrotunatly won't protect against all
+the spyware that gets installed due to security  flaws.  Easiest way
+to firewall a WAN based workstation is via a VPN connection. Block the
+rest.
+
+On 6/9/06, Jared Curtis ####@####.#### wrote:
+&gt; Mike wrote:
+&gt; &gt; Sorry if this is a little out of context, but has anyone successfully
+&gt; &gt; installed client firewalls on a LAN with AD / Exchange?
+&gt; &gt;
+&gt; &gt; We had a field laptop connect to our network (with contained malware)
+&gt; &gt; and it
+&gt; &gt; was attempting to traverse the network. So I wanted to lockdown all ports
+&gt; &gt; except the ones needed for normal operation. looking at the port list
+&gt; &gt; for AD
+&gt; &gt; and Exchange it seems rediculous impossible because services like lsass use
+&gt; &gt; about 9 standard ports plus randomly allocated ports between 1024 and
+&gt; &gt; 65536.
+&gt; &gt;
+&gt; &gt; So far I have approximately 30 various tcp/udp ports open and can
+&gt; &gt; authenticate with AD but cannot connect with Exchange.
+&gt; &gt;
+&gt; &gt; Does anyone have any advice or am I shooting myself in the .... er...
+&gt; &gt; foot???
+&gt; &gt;
+&gt; &gt; Thanks,
+&gt; &gt;
+&gt; &gt; -Mike
+&gt; &gt;
+&gt; &gt;
+&gt;
+&gt; If the laptop is a member of a domain it will cache the user profile and
+&gt; any gpo's that it has applied just in case it becomes disconnected from
+&gt; the network.  If you do a good job locking down the laptop with gpo's
+&gt; then it shouldn't be possible to install any spyware.  But this all
+&gt; depends on how restrictive the policy is and how the spyware is
+&gt; installed.  Often times it is still possible to install software if it
+&gt; is able to install directly to a users home folder.
+&gt;
+&gt; If you really wanted to be an evil sysadmin then you can specify a list
+&gt; of allowed exe's in group policy.  By doing this it should be
+&gt; &quot;impossible&quot; to install anything on that laptop.  The settings to do
+&gt; this are in Computer Polices &gt; Windows Settings &gt; Software Restriction
+&gt; Policies &gt; Additional Rules.  Just remember to white list programs NOT
+&gt; blacklist if you blacklist you will miss something.  Enjoy being evil
+&gt; &gt;;), and remember sol.exe is a required system file.
+&gt;
+&gt;
+&gt;
+&gt;
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+
+Open Source Software, Not only a way of life, but a tasty desert as
+well.  <a href="http://www.fosug.org">http://www.fosug.org</a>
+
+Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200606.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2006 06:37:32 -0700
+<br><b>Message-Id:</b> &lt;20060609143807.GS5634@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.06.08 21:39:00 -0700, Mike wrote:
+&gt; On 6/8/06, Robert Nickel ####@####.#### wrote:
+&gt; &gt;If a client connects to the network, it should *NOT* be trying to connect
+&gt; &gt;to other client machines.  It should only be trying to connect to a
+&gt; &gt;server/device that is providing a service.
+&gt; 
+&gt; I agree, my firebox was bieng port scanned on the internal interface
+&gt; and alerted me to the fact. So I figure if I make all workstations a
+&gt; smaller target by locking down the ports would be a good thing; but
+&gt; it's a little more difficult than I thougt.
+
+If your servers are on a segment by themselves, just use the core route to
+allow traffic any -&gt; servers and servers -&gt; any and then default drop
+everything else.
+
+I hope it's that simple.  :-)
+
+&gt; &gt;This, of course, will not apply to all clients as there may be legitemate
+&gt; &gt;reason for a client box to scan another (read: an admin trying to help
+&gt; &gt;another client) but this should be definable and you can then specify that
+&gt; &gt;traffic in your firewall rules.
+&gt;
+&gt; &gt;If you're not using static dhcp, you may want to consider doing so.  It
+&gt; &gt;makes many, MANY things easier.  In this case, it makes the short list of
+&gt; &gt;addresses that have extra privileges on your lan easy to obtain and
+&gt; &gt;maintain.
+&gt; 
+&gt; Rob, do you use DD-wrt for static IP'ing?
+
+lol.  No.  I have a LAMP (P=PHP) front end to a database that stores client
+information and mac addresses and also assigns IP addresses automagically for
+new users.  It's the only way to get a dhcp address on my network.
+
+If you're interested, I've got the code and can package it up for you at some
+point.
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1269/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200606.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2006 06:47:54 -0700
+<br><b>Message-Id:</b> &lt;20060609144831.GT5634@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.06.08 22:42:07 -0700, Mike wrote:
+[...]
+&gt; &gt;I agree with Robert about the clients really only needing access to the
+&gt; &gt;server but not their peers. If you give machines static IP's through
+&gt; &gt;dhcp and mac addresses, then another pool for IP's for unknown mac
+&gt; &gt;addresses, you can make scope access control lists on your firewall.
+&gt; 
+&gt; Robert, I believe you mentioned at work you can track down rogue mac
+&gt; addresses. Would you mind elaborating?
+
+I didn't write the above, but I will elaborate on the things that I've got in
+the queue and what's currently working.
+
+First, at our work we're using isc dhcp to hand out leases to clients.  This
+file is created by a perl script that is called from a php based front end on
+our LAN.  When a machine needs to be added to the DB, anyone can add it to the
+list and get a new IP address for that machine (this is done automatically by
+the scripts).
+
+Additionally, I have a long-term sidelined project to do rogue detection on
+our network.  We're a cisco shop so I'm using RANCID [0] to track
+configuration changes to our infrastructure devices.  It uses expect to do the
+work and you can leverage the login portion of RANCID to then launch your own
+scripts.  I do this to gather the mac addresses currently associated with a
+switch. [1]  I have not yet written the second stage of the program that just
+forks a process and checks each mac address against the DB and then forks
+another process to disable the port. [2]
+
+In the meantime, I'm using port security in cisco to have it lock down ports
+if more than one mac address is found.  This is terribly inconvenient but it
+works pretty well.
+
+--Robert
+
+[0] <a href="http://www.shrubbery.net/rancid/">http://www.shrubbery.net/rancid/</a>
+[1] You can do this with SNMP as well.  I chose expect because a) you can use
+it over ssh and b) the complexity of snmp in my environment was ugly.
+[2] My frustrations on this are great.  I've got all of the issues worked out
+in my head and just need the time to write the code!  *sigh*
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1270/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200606.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2006 06:54:22 -0700
+<br><b>Message-Id:</b> &lt;20060609145458.GU5634@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.06.09 00:58:22 -0700, Jared Curtis wrote:
+[...]
+&gt; If you really wanted to be an evil sysadmin then you can specify a list
+&gt; of allowed exe's in group policy.  By doing this it should be
+&gt; &quot;impossible&quot; to install anything on that laptop.  The settings to do
+&gt; this are in Computer Polices &gt; Windows Settings &gt; Software Restriction
+&gt; Policies &gt; Additional Rules.  Just remember to white list programs NOT
+&gt; blacklist if you blacklist you will miss something.  Enjoy being evil
+&gt; &gt;;), and remember sol.exe is a required system file.
+
+There was a great discussion on a security list not too long ago about this
+very item.  The unfortunate side effect here is that there is malware out
+there that will exploit the system using a known flaw and replace an exe that
+you've already got on the system.
+
+Another attack vector that is use often is to replace a common dll with a
+rootkit version.
+
+*cough*sony*cough*
+
+Also, this kind of policy is *very* difficult to maintain.  Not to mention the
+initial setup nightmare of having to inventory and validate every exe on the
+machines!
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1271/3.html">Download</a>]</strong><br>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: out of context question">Re: out of context question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200606.html">&quot;George Fragos&quot; ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2006 15:00:10 -0700
+<br><b>Message-Id:</b> &lt;618e69c70606091600y161abc33x7a1b4e4dc993523b@mail.gmail.com&gt;
+<br>
+<hr><pre>I've followed this thread because I learn so much from all of you.  The
+thread certainly shows how technology and attitudes have changed.  Having
+started as a software engineer in 1964 the focus of computing for those that
+even knew it existed was development and making new tools.  Now so much is
+about limiting access and making rules to control users.  I'm not saying
+there aren't reasons or for that matter, any of the system admins in this
+group are evil.  I can assure you that evil is alive and well in the IT
+world.  That evil is usually founded on a combination of incompetence and
+laziness.  Neither of which I've run into at FOSUG.
+
+Have a great day -- George
+
+On 6/9/06, Robert Nickel ####@####.#### wrote:
+&gt;
+&gt; There was a great discussion on a security list not too long ago about
+&gt; this
+&gt; very item.  The unfortunate side effect here is that there is malware out
+&gt; there that will exploit the system using a known flaw and replace an exe
+&gt; that
+&gt; you've already got on the system.
+&gt;
+&gt; Another attack vector that is use often is to replace a common dll with a
+&gt; rootkit version.
+&gt;
+&gt; *cough*sony*cough*
+&gt;
+&gt; Also, this kind of policy is *very* difficult to maintain.  Not to mention
+&gt; the
+&gt; initial setup nightmare of having to inventory and validate every exe on
+&gt; the
+&gt; machines!
+&gt;
+&gt; --Robert
+&gt;
+&gt;
+&gt;
+
+
+-- 
+____________
+George Fragos
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

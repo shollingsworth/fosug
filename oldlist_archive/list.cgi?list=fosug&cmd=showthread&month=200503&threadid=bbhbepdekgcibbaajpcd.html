@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: pop login scripts?</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: pop login scripts?</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: pop login scripts?">pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kppepbbjmpdadomdnldp&amp;month=200503.html">Nathan England ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 03:12:46 -0000
+<br><b>Message-Id:</b> &lt;200503302014.56083.fosplug@the-arcanum.org&gt;
+<br>
+<hr><pre>
+I need to have a mail server run a script when a user logs in. Anyone know how 
+to do this? Or any specific pop server that can handle this? 
+Basically, I have external clients connecting to a machine to check their mail 
+from that machine. But everyone is complaining about my using fetchmail. I 
+have it set to fetch the mail every 5 minutes. But some clients are 
+complaining that that is too long. So I am wondering if there is a way for 
+the system to fetch their mail when the pop is accessed. ??
+
+I'm stumped, but not really sure what to look for. Any ideas would be greatly 
+appreciated!
+
+Nathan
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: pop login scripts?">Re: pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200503.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 06:08:22 -0000
+<br><b>Message-Id:</b> &lt;20050331060757.GB14763@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.03.30 20:14:55 +0000, Nathan England wrote:
+&gt; I need to have a mail server run a script when a user logs in. Anyone know how 
+&gt; to do this? Or any specific pop server that can handle this? 
+&gt; Basically, I have external clients connecting to a machine to check their mail 
+&gt; from that machine. But everyone is complaining about my using fetchmail. I 
+&gt; have it set to fetch the mail every 5 minutes. But some clients are 
+&gt; complaining that that is too long. So I am wondering if there is a way for 
+&gt; the system to fetch their mail when the pop is accessed. ??
+&gt; 
+&gt; I'm stumped, but not really sure what to look for. Any ideas would be greatly 
+&gt; appreciated!
+
+More information would be _very_ helpful here.  Especially important would be
+knowledge of the POP software in question, the architecture that you're using
+(it sounds like you have a central box using fetchmail to be a store for
+multiple email domains) and what &quot;login&quot; qualifies as for the users getting
+mail.
+
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: pop login scripts?">Re: pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kppepbbjmpdadomdnldp&amp;month=200503.html">Nathan England ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 15:02:48 -0000
+<br><b>Message-Id:</b> &lt;200503310805.08349.fosplug@the-arcanum.org&gt;
+<br>
+<hr><pre>
+My company mail server handles all the email for my companies domain, along 
+with spamassassin, clamav and some other little things.
+Also, a bunch of customers also use our mail server for various reasons.
+They have requested the ability for our mail server to retrieve their mail 
+from other pop accounts, thus fetchmail is being used.
+
+The problem is: they connect to the mail server using some kind of email 
+client, like outlook express or thunderbird for the most part, to pop3 110. 
+So this kind of login is difficult to track.
+
+The mail server is just an intel box, slackware 10.0, uw imap and apop3d. 
+Since these come with slack, it was the easiest to set up. I'm not stuck with 
+these, if I need to switch for some reason.
+
+Some of the customers are complaining about the amount of time it takes to get 
+their mail. Someone sends an email to their _real_ account, not my box, my 
+mail system might take 10 minutes to get through the fetchmail list and back 
+to theirs... So instead of using fetchmail, when the customer 'pops' in I 
+want the system to be able to fetch their mail right then...
+
+I'm beginning to think this isn't even possible. Now, it might not pull their 
+mail to their client on that same session, but if they are waiting for it, 
+they may hit the S/R button, not get anything, meanwhile my system is 
+fetching it, then they hit S/R again and ... Tadaa!
+
+Am I just dreamin' here? lol. I appreciate the brain power. I've been playing 
+with this for a few days now and I'm not sure what to do.
+
+Nathan
+
+On Wednesday 30 March 2005 23:07, Robert Nickel wrote:
+&gt; On 2005.03.30 20:14:55 +0000, Nathan England wrote:
+&gt; &gt; I need to have a mail server run a script when a user logs in. Anyone
+&gt; &gt; know how to do this? Or any specific pop server that can handle this?
+&gt; &gt; Basically, I have external clients connecting to a machine to check their
+&gt; &gt; mail from that machine. But everyone is complaining about my using
+&gt; &gt; fetchmail. I have it set to fetch the mail every 5 minutes. But some
+&gt; &gt; clients are complaining that that is too long. So I am wondering if there
+&gt; &gt; is a way for the system to fetch their mail when the pop is accessed. ??
+&gt; &gt;
+&gt; &gt; I'm stumped, but not really sure what to look for. Any ideas would be
+&gt; &gt; greatly appreciated!
+&gt;
+&gt; More information would be _very_ helpful here.  Especially important would
+&gt; be knowledge of the POP software in question, the architecture that you're
+&gt; using (it sounds like you have a central box using fetchmail to be a store
+&gt; for multiple email domains) and what &quot;login&quot; qualifies as for the users
+&gt; getting mail.
+&gt;
+&gt; --Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: pop login scripts?">Re: pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200503.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 18:54:05 -0000
+<br><b>Message-Id:</b> &lt;20050331185355.GI14763@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.03.31 08:05:07 +0000, Nathan England wrote:
+[...]
+&gt; The mail server is just an intel box, slackware 10.0, uw imap and apop3d. 
+&gt; Since these come with slack, it was the easiest to set up. I'm not stuck with 
+&gt; these, if I need to switch for some reason.
+
+Ok.  apop3d.  I've not used it, so I'm not able to help with that part.
+
+&gt; Some of the customers are complaining about the amount of time it takes to get 
+&gt; their mail. Someone sends an email to their _real_ account, not my box, my 
+&gt; mail system might take 10 minutes to get through the fetchmail list and back 
+&gt; to theirs... So instead of using fetchmail, when the customer 'pops' in I 
+&gt; want the system to be able to fetch their mail right then...
+
+Down side to that is that they're going to have to wait for the mail to spool
+from the various accounts to their central repository.  Same problem since
+they'll not see the mail on the first login.
+
+A better alternative may be looking at the way that you're running fetchmail.
+
+Warning:  I'm assuming that fetchmail is rewriting the customer addresses for
+          you and injecting the mail to a local mta.
+
+If this is the case, I would just setup a reasonable number of mail fetching
+accounts: fetcher1, fetcher2, ..., fetcherN; where N represents the maximum
+number of fetchmail processes that you want to have running at any given time.
+At that point, you can then daemonize fetchmail processes for each &quot;user&quot; to
+parallel process the mail.  Set the daemon time at 60 seconds or so. Break
+your fetchmailrc up into chunks based on username or number of accounts, etc.
+
+If you find that the 90 second scan rate for the daemon is inadequate, you can
+simply specify a per account interval in the fetchmailrc file and crank the
+set daemon setting down to something like 30 seconds.  I'm not sure how
+fetchmail would adjust to the interval expiring before the completion of the
+first run, but that shouldn't be a big deal (and I'm pretty sure it's been
+dealt with).
+
+&gt; I'm beginning to think this isn't even possible. Now, it might not pull their 
+&gt; mail to their client on that same session, but if they are waiting for it, 
+&gt; they may hit the S/R button, not get anything, meanwhile my system is 
+&gt; fetching it, then they hit S/R again and ... Tadaa!
+
+All things are possible.  You simply need to free your mind and your butt will
+follow. ;-)
+
+&gt; Am I just dreamin' here? lol. I appreciate the brain power. I've been playing 
+&gt; with this for a few days now and I'm not sure what to do.
+
+No.  This is not a dream.  Just a twist of fate. ;-)
+
+If the above don't get you going in the right direction, mail back to the list
+with the specifics of what MTA you're using.  I don't know what comes with
+slack.  The only problem I see with the above is if you're using fetchmail to
+do the direct delivery and not handing off to an MTA.
+
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: pop login scripts?">Re: pop login scripts?</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=olfdhlonigbdihfbmhnp&amp;month=200503.html">&quot;Ian R. Justman&quot; ####@####.####</a>
+<br><b>Date:</b>
+31 Mar 2005 19:00:47 -0000
+<br><b>Message-Id:</b> &lt;424C48D1.40707@ian-justman.com&gt;
+<br>
+<hr><pre>Robert Nickel wrote:
+
+&gt; If the above don't get you going in the right direction, mail back to the list
+&gt; with the specifics of what MTA you're using.  I don't know what comes with
+&gt; slack.  The only problem I see with the above is if you're using fetchmail to
+&gt; do the direct delivery and not handing off to an MTA.
+&gt; 
+&gt; --Robert
+
+When last I used Slackware (7.1), they were using Sendmail.  They 
+probably still are.
+
+&lt;rant&gt;
+I have NO earthly clue why anyone would continue to use it when there's 
+better (IMO) out there.
+&lt;/rant&gt;
+
+--Ian.
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

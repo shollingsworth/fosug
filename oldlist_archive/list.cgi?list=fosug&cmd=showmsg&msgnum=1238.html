@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Jump Drives</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Jump Drives</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1237.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1239.html">Re: [FOSUG] Second Account</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kcmjbjkdhicamcacijji.html">Ronnie Ugulano</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1237.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1240.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nkojbhfdfnhomhdbmecl.html">Steve Bibayoff</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Jump Drives">Re: Jump Drives</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200606.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+4 Jun 2006 22:05:09 -0700
+<br><b>Message-Id:</b> &lt;20060605060551.GW29255@server.may.localdomain&gt;
+<br>
+<hr><pre>On Sun, Jun 04, 2006 at 10:18:36PM -0700, Drew Baker wrote:
+&gt; Note, to make a flash or jump, or thumb drive usable in linux. You
+&gt; need 3 things compiled in your kernel. Either monolithic (all in 1
+&gt; kernel) or in moduals.
+&gt; 
+&gt; USB Support
+&gt; USB Mass storage
+&gt; and
+&gt; (whatever Filesystem your card is) In 99% of cases it's Fat16 (so you
+&gt; would use vfat)
+&gt; 
+&gt; Once thoes are compiled and running, simply plug in device.  if you
+&gt; check the dmesg log you will see it showup as a Scsi drive.  /dev/sda
+&gt; for example. then you mount it like any normal drive
+&gt; 
+&gt; mount /dev/sda1 /mnt/flash
+&gt; or whatever they happen to be.
+&gt; 
+&gt; 
+&gt; Second note. ALL USB Flash/Pen/Thumb/Jump/Toe drives are linux
+&gt; compatable (unless they are a crappy knock off, and I havn't seen a
+&gt; non-standard knock off in about 7 years).  Easiest way to verify if
+&gt; you will have problems with your drive.  PLug it into any windows ME
+&gt; or XP computer and if It detects without the need for drivers, it is a
+&gt; standard MASS STORAGE USB device.  Virtualy every usb storage device
+&gt; uses this, harddrives, flash, most digital cameras. etc
+
+Drew I meant that the encryption application. It has a kernel module to enable
+the encryption that's cross-platform. That's what I couldn't get to work.
+Otherwise it works just peachy.
+
+Good to know that all pen drives should just work. I even did the udev thing
+of creating a device based on the serial number or whatever it was. Thanks
+Stevo for giving that little demo a few months back.
+
+Next time I see those pen drives maybe I'll pick one or 2 up. Was going to do
+that for my mom. They only allow them to store stuff on ZIP disks at work. No
+central storage for their stuff. Don't ask me, I don't know. Somehow they
+justify the cost of ZIP drives and their insecurity (information kept on them
+I would consider to be confidential data) as opposed to a file server. Not
+sure if they lock down the machines USB. I'm assuming you would be able to
+siable the USB Mass Storage with a policy.
+
+Patrick
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1238/3.html">Download</a>]</strong><br>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1237.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1239.html">Re: [FOSUG] Second Account</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kcmjbjkdhicamcacijji.html">Ronnie Ugulano</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1237.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn.html">Drew Baker</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>4 Jun 2006 22:05:09 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1240.html">Re: Jump Drives</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nkojbhfdfnhomhdbmecl.html">Steve Bibayoff</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200606.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

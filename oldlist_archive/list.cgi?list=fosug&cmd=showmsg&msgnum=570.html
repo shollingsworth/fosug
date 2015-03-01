@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Postfix and Port 587 (RFC 2476)</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Postfix and Port 587 (RFC 2476)</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=569.html">Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb.html">Sean Champ</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=571.html">Re: Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=569.html">Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb.html">Sean Champ</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=571.html">Re: Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Postfix and Port 587 (RFC 2476)">Re: Postfix and Port 587 (RFC 2476)</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200509.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+14 Sep 2005 06:00:13 -0000
+<br><b>Message-Id:</b> &lt;20050913225740.C2499@pmmay.sytes.net&gt;
+<br>
+<hr><pre>I'm going to reply here to this message instead of the other ones. SBCIS has
+been blocking outgoing SMTP (TCP/UDP Port 25) for several months. I used to
+send such small amounts of mail I didn't know about this for a few months
+until I looked at my logs...Yeah, I know Bad Admin, no cookie for you.
+
+Anyways, this is completely Opt-Outable as noted in the SBC message you posted
+earlier. You just need to configure your Postfix (or other MTA) to relay
+outgoing mail through SBC's SMTP servers. It's a one-line fix. Of course,
+depending on how old your account is (mine dates from pre-sbcglobal.net
+####@####.#### account...)) and the info on their site is incorrect for some
+people (like me.)
+
+Basically they are trying to stop the email worms that go out and ravage the
+Internet via SMTP. That should work, until a worm can actively search in IE/OE
+for the &quot;Outgoing SMTP server&quot;. At which time, something new will need to be
+tried. Probably on to using authentication for relaying. I know my ISP has
+this enabled.
+
+Also, this fixes the issue with some mail hosts not accepting mail directly
+from dymanic IP addresses, cable ISP IPs, etc., ala AOL. I think SBC gladly
+replays all mail sent to their SMTP servers via their own networks, no matter
+the content. They don't care what the FROM or REPLY addresses are. I still
+receive mail on 25 w/o problems (as well as 80, 22, etc.).
+
+As far as the government, specifically the FTC, RECOMMENDED that ISPs block
+outgoing port 25 and direct users to specifically using the ISP's outgoing
+SMTP servers. This was not a rule that the ISP must do this, just a measure
+they could take.
+
+Here's a Slashdot article about this, however, the linked CNN.COM article is
+gone:
+<a href="http://it.slashdot.org/comments.pl?sid=150605&amp;threshold=1&amp;mode=nested&amp;commentsort=0&amp;op=Change">http://it.slashdot.org/comments.pl?sid=150605&amp;threshold=1&amp;mode=nested&amp;commentsort=0&amp;op=Change</a>
+
+As for actually stopping spam, hard to say. The spammer can just send through
+their ISPs SMTP server. Though, I'm sure it would be noticed quickly and said
+user would probably be banned. Not that that would ever stop them.
+
+Patrick
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=569.html">Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb.html">Sean Champ</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=571.html">Re: Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=569.html">Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb.html">Sean Champ</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>14 Sep 2005 06:00:13 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=571.html">Re: Postfix and Port 587 (RFC 2476)</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

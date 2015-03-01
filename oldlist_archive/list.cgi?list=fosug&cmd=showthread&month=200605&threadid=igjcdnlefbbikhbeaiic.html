@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: tcpdump and firewall activity.</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: tcpdump and firewall activity.</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: tcpdump and firewall activity.">tcpdump and firewall activity.</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo&amp;month=200605.html">Steven Hollingsworth ####@####.####</a>
+<br><b>Date:</b>
+3 May 2006 10:09:31 -0700
+<br><b>Message-Id:</b> &lt;1146676205.13632.20.camel@slappy.howe-electric.net&gt;
+<br>
+<hr><pre>Hi guys,
+
+I recently saw some interesting activity on my firewall. Same source and
+destination ports. I looked up the website and found this.
+
+<a href="http://131.174.33.137/">http://131.174.33.137/</a>
+
+&gt;From inside network traffic and a port scan I didn't see anybody trying
+to hit this address from the inside out. Usually I'd think a backdoor or
+something similar.
+
+Here is a tcpdump of the packets. The only port that makes sense is 80,
+37800 didn't pop up as a &quot;known&quot; service. This activity seems to repeat
+approximately every five minutes.
+
+Any ideas?
+
+~ stevo
+
+====================
+~ # tcpdump -x -i bridge0 src or dst 131.174.33.137
+tcpdump: verbose output suppressed, use -v or -vv for full protocol
+decode
+listening on bridge0, link-type EN10MB (Ethernet), capture size 68 bytes
+16:14:13.172174 IP 131.174.33.137.http &gt; firewall-host.37800: . ack
+1695611774 win 33304 &lt;nop,nop,timestamp 1799893716 2029885&gt;
+        0x0000:  4500 0034 8173 4000 2706 b3ad 83ae 2189
+        0x0010:  3fca 39a2 0050 93a8 122b fdfa 6510 fb7e
+        0x0020:  8010 8218 39db 0000 0101 080a 6b48 32d4
+        0x0030:  001e f93d
+16:14:13.205625 IP 131.174.33.137.http &gt; firewall-host.37800: . ack 1
+win 0
+        0x0000:  4500 0028 816e 0000 2706 f3be 83ae 2189
+        0x0010:  3fca 39a2 0050 93a8 122b fdf9 6510 fb7e
+        0x0020:  5010 0000 8c84 0000
+16:18:58.111541 IP 131.174.33.137.http &gt; firewall-host.37800: . ack 1
+win 0
+        0x0000:  4500 0028 86c1 0000 2706 ee6b 83ae 2189
+        0x0010:  3fca 39a2 0050 93a8 122b fdf9 6510 fb7e
+        0x0020:  5010 0000 8c84 0000
+16:18:58.144910 IP 131.174.33.137.http &gt; firewall-host.37800: . ack 1
+win 33304 &lt;nop,nop,timestamp 1800178716 2029885&gt;
+        0x0000:  4500 0034 86c6 4000 2706 ae5a 83ae 2189
+        0x0010:  3fca 39a2 0050 93a8 122b fdfa 6510 fb7e
+        0x0020:  8010 8218 e08e 0000 0101 080a 6b4c 8c1c
+        0x0030:  001e f93d
+16:23:43.052551 IP 131.174.33.137.http &gt; firewall-host.37800: . ack 1
+win 0
+        0x0000:  4500 0028 893c 0000 2706 ebf0 83ae 2189
+        0x0010:  3fca 39a2 0050 93a8 122b fdf9 6510 fb7e
+        0x0020:  5010 0000 8c84 0000
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: tcpdump and firewall activity.">Re: tcpdump and firewall activity.</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200605.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+3 May 2006 17:05:23 -0700
+<br><b>Message-Id:</b> &lt;20060504000940.GN6808@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2006.05.03 10:10:05 -0700, Steven Hollingsworth wrote:
+&gt; Hi guys,
+&gt; 
+&gt; I recently saw some interesting activity on my firewall. Same source and
+&gt; destination ports. I looked up the website and found this.
+&gt; 
+&gt; <a href="http://131.174.33.137/">http://131.174.33.137/</a>
+&gt; 
+&gt; &gt;From inside network traffic and a port scan I didn't see anybody trying
+&gt; to hit this address from the inside out. Usually I'd think a backdoor or
+&gt; something similar.
+&gt; 
+&gt; Here is a tcpdump of the packets. The only port that makes sense is 80,
+&gt; 37800 didn't pop up as a &quot;known&quot; service. This activity seems to repeat
+&gt; approximately every five minutes.
+&gt; 
+&gt; Any ideas?
+[...]
+
+My two cents is that 37800 was the port picked by your clients box for the
+outbound connection.  Anything 1025-65535 is valid.
+
+As for that site, it's wierd!
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/1143/3.html">Download</a>]</strong><br>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200605.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200606.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

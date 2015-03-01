@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: AJAX</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200604.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: AJAX</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1047.html">Re: finally delurking</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo.html">Steven Hollingsworth</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1049.html">Re: Its that time again. The Next fosug dinner.</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=glmcfhdkpcnmapjminmj.html">Michelle</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1042.html">AJAX</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=ifhdmkmglanbjaacepdn.html">suzi.thinkinkless.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: AJAX">Re: AJAX</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=hdggnldinakgdeajfgef&amp;month=200604.html">Mattias Thorslund ####@####.####</a>
+<br><b>Date:</b>
+21 Apr 2006 09:43:58 -0700
+<br><b>Message-Id:</b> &lt;44490C87.1080306@thorslund.us&gt;
+<br>
+<hr><pre>####@####.#### wrote:
+&gt;
+&gt; ####@####.#### wrote:
+&gt;
+&gt;&gt; Have you used any AJAX-y functionality by the way?
+&gt;
+&gt; I think most of the google maps stuff i've done on fresnofamous.com is
+&gt; considered AJAX - hooks into the geocoder.us lon/lat lookups. This was
+&gt; all done with drupal functionality in mind. For other stuff I have
+&gt; used yahoo maps/geocoder API in the same way - using curl to work
+&gt; around a particular server environment to read xml data and load the
+&gt; maps (via google or yahoo) accordingly. I think the phpflickr
+&gt; experiments I've done fit here as well. I've been really happy with
+&gt; the user-level enhancements this technology can bring into the mix.
+
+Pretty nifty! Yes, the possibilities to improve usability are what's
+exciting.
+
+&gt; What do you need AJAX for? I'm always happy to share code.
+
+Well, what I'm doing right now is that I'm using a simple JavaScript
+wrapper for the XMLHttpRequest object, and the PEAR JSON class for the
+data (so, it's &quot;AJAJ&quot;, then?). Currently, I'm using this to make the
+data in some HTML tables editable, by  displaying a form when the user
+clicks to edit a row.
+
+There are plenty of other uses that I can think of but haven't gotten
+around to implementing yet!
+
+
+&gt;&gt; Opinions on which toolkits
+&gt;&gt; are easier to work with than others?
+&gt;
+&gt; There are a number of good AJAX frameworks/APIs/toolkits/libraries out
+&gt; there. Many are connected. Some of these libraries may be behind the
+&gt; stuff I worked on but i am not 100% sure at the moment. It's been a
+&gt; few months (6?) since I did any real work on this stuff + I was
+&gt; hacking, not necessarily writing from scratch. If I had time to play
+&gt; today here's where I would go (no particular order). I've heard good
+&gt; things about each of them.
+&gt; sajax
+&gt; <a href="http://www.modernmethod.com/sajax/">http://www.modernmethod.com/sajax/</a>
+&gt; Xajax
+&gt; <a href="http://www.xajaxproject.org/">http://www.xajaxproject.org/</a>
+&gt; Dojo
+&gt; <a href="http://dojotoolkit.org/">http://dojotoolkit.org/</a>
+&gt; Prototype
+&gt; <a href="http://prototype.conio.net/">http://prototype.conio.net/</a>
+&gt; script.aculo.us
+&gt; <a href="http://script.aculo.us/">http://script.aculo.us/</a>
+&gt; Rico
+&gt; <a href="http://openrico.org/">http://openrico.org/</a>
+
+Oh, yes, I recognize some but not all. Scriptaculous looks cool but I
+haven't used any of them yet...
+
+Thanks for talking some web development!
+
+Mattias
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1047.html">Re: finally delurking</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhpbmleombbbcpidojbo.html">Steven Hollingsworth</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1049.html">Re: Its that time again. The Next fosug dinner.</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=glmcfhdkpcnmapjminmj.html">Michelle</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>21 Apr 2006 09:43:58 -0700 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=1042.html">AJAX</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=ifhdmkmglanbjaacepdn.html">suzi.thinkinkless.com</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200603.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200604.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200604.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200605.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

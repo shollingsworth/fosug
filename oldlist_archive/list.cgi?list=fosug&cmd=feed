@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<feed version="0.3"
+      xmlns="http://purl.org/atom/ns#">
+ <title>Fresno Open Source Users Group Mailing List</title>
+ <link rel="alternate"
+       type="text/html"
+       href="http://fosug.org/cgi-bin/list.cgi?list=fosug"/>
+ <modified>2006-07-28T22:07:28Z</modified>
+ <author>
+  <name>fosug@fosug.org</name>
+ </author>
+ <generator url="http://untroubled.org/ezmlm-browse/"
+            version="0.10">
+  ezmlm-browse 0.10
+ </generator>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1362"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1362</id>
+  <author>
+   <name>Patrick May</name>
+  </author>
+  <issued>2006-07-28T22:07:28Z</issued>
+  <modified>2006-07-28T22:07:28Z</modified>
+  <content><pre>From: Patrick May
+
+On Fri, Jul 28, 2006 at 11:30:17AM -0700, Steven Hollingsworth wrote:
+&gt; On Fri, 2006-07-28 at 10:44 -0700, Dennis Aston wrote:
+&gt; &gt; Funny, somebody at our office actually remembered and sent around a
+&gt; &gt; thank you email.  It was kind of nice.
+&gt; 
+&gt; Happy Sysadmin day to all you SA's :-) wooo hooo....
+&gt; 
+&gt; That said I'm taking down the mailing list and web site this weekend to
+&gt; transfer it to a new server, and setup a few new bells, whistles, and
+&gt; things that go blinky blinky (not really)
+&gt; 
+&gt; Cheers,
+&gt; 
+&gt; ~ stevo
+
+Come on you know that &lt;BLINK&gt; just rocks the web!
+
+Patrick</pre></content>
+ </entry>
+ <entry>
+  <title>ftp brute force attacks</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1361"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1361</id>
+  <author>
+   <name>Steven Hollingsworth</name>
+  </author>
+  <issued>2006-07-28T21:50:23Z</issued>
+  <modified>2006-07-28T21:50:23Z</modified>
+  <content><pre>From: Steven Hollingsworth
+
+Hi All,
+
+I'm curious, has anybody else seen brute force login attacks like these
+over the past few weeks?
+
+It seems to mostly come from China (big suprise) and they stop after 2 -
+4 hours of guessing the adminstrator password.
+
+~ stevo</pre></content>
+ </entry>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1360"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1360</id>
+  <author>
+   <name>Ronnie Ugulano</name>
+  </author>
+  <issued>2006-07-28T19:07:20Z</issued>
+  <modified>2006-07-28T19:07:20Z</modified>
+  <content><pre>From: Ronnie Ugulano
+
+&gt;&gt;Funny, somebody at our office actually remembered and sent around a thank 
+&gt;&gt;you email.  It was kind of nice.&lt;&lt;
+
+    We used to be not-so-cool people, but nowadays it's a good idea to be 
+nice to your local geek at all times. You never know when they've got to 
+pull your bacon out of the fire.
+
+~Ronnie
+Linux Newbie in training</pre></content>
+ </entry>
+ <entry>
+  <title>Re: [FOSUG] VMWare is pretty cool</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1359"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1359</id>
+  <author>
+   <name>Ronnie Ugulano</name>
+  </author>
+  <issued>2006-07-28T19:05:13Z</issued>
+  <modified>2006-07-28T19:05:13Z</modified>
+  <content><pre>From: Ronnie Ugulano
+
+&gt;&gt;Very cool Ronnie! Give us a rundown on anything cool you come across :-)&lt;&lt;
+
+    With regard to the VMWare, or to Linux? Both are Star Trek projects for 
+me still.
+
+~Ronnie
+Linux Newbie in training</pre></content>
+ </entry>
+ <entry>
+  <title>Re: [FOSUG] VMWare is pretty cool</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1358"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1358</id>
+  <author>
+   <name>Steven Hollingsworth</name>
+  </author>
+  <issued>2006-07-28T18:10:25Z</issued>
+  <modified>2006-07-28T18:10:25Z</modified>
+  <content><pre>From: Steven Hollingsworth
+
+On Wed, 2006-07-26 at 13:22 -0700, Ronnie Ugulano wrote:
+&gt;     OK, I just loaded VMWare (evaluation) and loaded Ubuntu under that, on my new AMD64 machine. I wanted to get set up and have time to play before Drew's demonstration. Very, very cool!     The newer computer lets me use the newer Linux versions, (Ubuntu 6.06) so I can get a better idea on how the regular version of Ubuntu works. Had a few small hangups in the installation, but it was pretty trouble free. I plan to explore more, later, but so far it looks very good.
+&gt; 
+&gt; ~Ronnie
+&gt; Linux Newbie in training
+
+Very cool Ronnie! Give us a rundown on anything cool you come across :-)</pre></content>
+ </entry>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1357"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1357</id>
+  <author>
+   <name>Steven Hollingsworth</name>
+  </author>
+  <issued>2006-07-28T17:25:08Z</issued>
+  <modified>2006-07-28T17:25:08Z</modified>
+  <content><pre>From: Steven Hollingsworth
+
+On Fri, 2006-07-28 at 10:44 -0700, Dennis Aston wrote:
+&gt; Funny, somebody at our office actually remembered and sent around a
+&gt; thank you email.  It was kind of nice.
+
+Happy Sysadmin day to all you SA's :-) wooo hooo....
+
+That said I'm taking down the mailing list and web site this weekend to
+transfer it to a new server, and setup a few new bells, whistles, and
+things that go blinky blinky (not really)
+
+Cheers,
+
+~ stevo</pre></content>
+ </entry>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1356"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1356</id>
+  <author>
+   <name>Dennis Aston</name>
+  </author>
+  <issued>2006-07-28T16:39:20Z</issued>
+  <modified>2006-07-28T16:39:20Z</modified>
+  <content><pre>From: Dennis Aston
+
+Funny, somebody at our office actually remembered and sent around a
+thank you email.  It was kind of nice.
+
+On 7/28/06, Drew Baker ####@####.#### wrote:
+&gt; hehe
+&gt; very funny, maybe I can get free lunch out of the day! ;)
+&gt;
+&gt;
+&gt;
+&gt; On 7/28/06, Ronnie Ugulano ####@####.#### wrote:
+&gt; &gt;     That was great, Susi! Very appropriately timed, because I just had my
+&gt; &gt; network go down, and I fixed it, so I sent a copy to Dennis. He is
+&gt; rewarding
+&gt; &gt; me with a brand new thumb drive. Nice, huh?
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; ~Ronnie
+&gt; &gt; Linux Newbie in training
+&gt; &gt;
+&gt; &gt;
+&gt;
+&gt;
+&gt; --
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt;
+&gt; Open Source Software, Not only a way of life, but a tasty desert as
+&gt; well.  http://www.fosug.org
+&gt;
+&gt; Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com
+&gt;</pre></content>
+ </entry>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1355"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1355</id>
+  <author>
+   <name>Drew Baker</name>
+  </author>
+  <issued>2006-07-28T16:12:57Z</issued>
+  <modified>2006-07-28T16:12:57Z</modified>
+  <content><pre>From: Drew Baker
+
+hehe
+very funny, maybe I can get free lunch out of the day! ;)
+
+
+
+On 7/28/06, Ronnie Ugulano ####@####.#### wrote:
+&gt;     That was great, Susi! Very appropriately timed, because I just had my
+&gt; network go down, and I fixed it, so I sent a copy to Dennis. He is rewarding
+&gt; me with a brand new thumb drive. Nice, huh?
+&gt;
+&gt;
+&gt; ~Ronnie
+&gt; Linux Newbie in training
+&gt;
+&gt;
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+
+Open Source Software, Not only a way of life, but a tasty desert as
+well.  http://www.fosug.org
+
+Bring back the days of the BBS:  Telnet/SSH2:/doteltech.com</pre></content>
+ </entry>
+ <entry>
+  <title>Re: Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1354"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1354</id>
+  <author>
+   <name>Ronnie Ugulano</name>
+  </author>
+  <issued>2006-07-28T13:58:52Z</issued>
+  <modified>2006-07-28T13:58:52Z</modified>
+  <content><pre>From: Ronnie Ugulano
+
+That was great, Susi! Very appropriately timed, because I just had my 
+network go down, and I fixed it, so I sent a copy to Dennis. He is rewarding 
+me with a brand new thumb drive. Nice, huh?
+
+
+~Ronnie
+Linux Newbie in training</pre></content>
+ </entry>
+ <entry>
+  <title>Happy Sysadmin day!</title>
+  <link rel="alternate"
+        type="text/html"
+        href="http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1353"/>
+  <id>http://fosug.org/cgi-bin/list.cgi?list=fosug&amp;cmd=showmsg&amp;msgnum=1353</id>
+  <author>
+   <name>suzi.thinkinkless.com</name>
+  </author>
+  <issued>2006-07-28T13:42:52Z</issued>
+  <modified>2006-07-28T13:42:52Z</modified>
+  <content><pre>From: suzi.thinkinkless.com
+
+Friday, July 28th, 2006, is the 7th annual System Administrator  
+Appreciation Day.
+On this special international day, give your System Administrator  
+something that shows that you truly appreciate their hard work and  
+dedication.
+
+http://www.sysadminday.com/
+
+If I had a brazillion dollars I'd buy each and every one of you a Mac.
+
+As a consolation prize I promise not to say bad things about you  
+behind your backs.
+(* this offer expires at midnight 7/28/06 PDT)
+suz</pre></content>
+ </entry>
+</feed>

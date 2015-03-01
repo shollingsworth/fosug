@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: ESMTP and SBC (Re: SBC .. ISP ...  SMTP ... necessity .. "Port 587")</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: ESMTP and SBC (Re: SBC .. ISP ...  SMTP ... necessity .. "Port 587")</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: ESMTP and SBC (Re: SBC .. ISP ...  SMTP ... necessity .. "Port 587")">ESMTP and SBC (Re: SBC .. ISP ...  SMTP ... necessity .. "Port 587")</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=gdhbakpdgecebppfhofb&amp;month=200509.html">Sean Champ ####@####.####</a>
+<br><b>Date:</b>
+13 Sep 2005 18:23:41 -0000
+<br><b>Message-Id:</b> &lt;20050913182327.GA16167@tokamak.dtdns.net&gt;
+<br>
+<hr><pre>
+On 09-13-05, Sean Champ wrote:
+&gt;
+&gt; In summary: If your site does SMTP service, and must be connected-to, 
+&gt; from anyone who would be using (connecting through) SBC, you will
+&gt; probably want to support &quot;Port 587&quot; connections, in your site's SMTP
+&gt; server -- like, very soon -- or they will not be able to connect.
+
+[...]
+&gt; 
+&gt; SBC mentions a port 587 and an RFC 2476 -- something about SMTP --
+&gt; seeeming like the most viable thing for resolving SBC's new port 25
+&gt; &quot;filtering&quot;. 
+&gt; 
+
+Looking through RFC 2476:
+
+What soemone at SBC had denoted as &quot;port 587&quot; is more commonly
+referred to as ESMTP. 
+
+That, presumably, will be supported with every single common MTA.
+
+
+So, in revised summary: 
+
+
+If a site does provide SMTP service, and must be connected-to, from 
+anyone who would be connecting through SBC, then the site's
+administrator will  probably want to support ESMTP connections, in
+the site's SMTP server -- like, very soon -- or the people using SBC
+will not be able to send emails, via the site's SMTPN server.
+
+
+Furthermore, anyone using SBC will have to use  either:
+1) SBC's MTA
+2) an MTA supporting ESMTP
+3) maybe some SSL tunneling ?
+
+(n.b SSL tunneling is doable for us, but not be so doable, for
+everyone.)
+
+
+I'd say SBC has overdone it. I'll keep any comments to myself, about
+their partner, Yahoo.
+
+-- 
+Sean Champ
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200509.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200509.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

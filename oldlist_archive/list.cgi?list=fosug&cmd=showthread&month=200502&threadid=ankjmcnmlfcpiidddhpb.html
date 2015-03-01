@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: mod_auth_ldap</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200501.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200502.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: mod_auth_ldap</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: mod_auth_ldap">mod_auth_ldap</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=oecidgpomioaadbpdhcp&amp;month=200502.html">Keith Conley ####@####.####</a>
+<br><b>Date:</b>
+24 Feb 2005 05:25:52 -0000
+<br><b>Message-Id:</b> &lt;421D654F.4040106@drac0.net&gt;
+<br>
+<hr><pre>Right now, my employer has a mostly M$ network.  We have an NT 4 server 
+that is being overworked like you wouldn't belive.  (It's the web 
+server, mail server, file server, database server, etc... you get the 
+picture.)  
+
+In an attempt to lessen the load on that server I've set up a few linux 
+systems. 
+
+My company has several salesmen who are always on the road and work from 
+home when they aren't  at a client's store.  There are several reports 
+that are generated that they need to see, such as inventory reports, 
+sales reports, etc.
+
+When I came onboard with this company, the &quot;intranet&quot; (where all these 
+reports are visable from) was visable to the Internet!  I quickly fixed 
+this, but now all these sales men who have had the same user name and 
+password for 6 years can't remmember it long enough to log on to view 
+their reports...   But I digress...  Back to my point.
+
+Anyway, what I need to know is will apache mod_auth_ldap 
+<a href="http://fosug.org/cgi-bin/%3Chttp://www.gaddis.org/cgi-bin/redir.pl?url=http://httpd.apache.org/docs-2.0/mod/mod_auth_ldap.html%3E">&lt;http://www.gaddis.org/cgi-bin/redir.pl?url=http://httpd.apache.org/docs-2.0/mod/mod_auth_ldap.html&gt;</a> 
+work to authenticate with Active Directory, so I can protect the 
+&quot;intranet&quot; sub directory that they want on the web server and, so I 
+don't have to individually add each user and update each password if and 
+when their password changes?
+
+Does anyone have a better solution to suggest?
+
+Keith
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: mod_auth_ldap">Re: mod_auth_ldap</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200502.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+24 Feb 2005 06:23:28 -0000
+<br><b>Message-Id:</b> &lt;20050224062308.GD2295@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>Good grief, that's a gob of fluff for a little content. :-)
+
+On 2005.02.23 23:25:35 +0000, Keith Conley wrote:
+[...]
+&gt; My company has several salesmen who are always on the road and work from 
+&gt; home when they aren't  at a client's store.  There are several reports 
+&gt; that are generated that they need to see, such as inventory reports, 
+&gt; sales reports, etc.
+&gt; 
+[...]
+&gt; Anyway, what I need to know is will apache mod_auth_ldap 
+&gt; <a href="http://fosug.org/cgi-bin/%3Chttp://www.gaddis.org/cgi-bin/redir.pl?url=http://httpd.apache.org/docs-2.0/mod/mod_auth_ldap.html%3E">&lt;http://www.gaddis.org/cgi-bin/redir.pl?url=http://httpd.apache.org/docs-2.0/mod/mod_auth_ldap.html&gt;</a> 
+&gt; work to authenticate with Active Directory, so I can protect the &quot;intranet&quot; 
+&gt; sub directory that they want on the web server and, so I don't have to 
+&gt; individually add each user and update each password if and when their 
+&gt; password changes?
+
+Kinda, sorta, yes.  Theres a whole lot more detail that you need to put into
+this message like what's available on the backend (e.g. PERL, PHP, Python,
+...) and what *exactly* you wish to serve up - dynamic content, static web
+pages, ... .
+
+The downside on any apache auth module is that the credentials get cached by
+the browser and then are sent with each request to the server as part of the
+client headers.  If you're not using https for *all* requests to the server,
+the credentials get sent over the wire base64 encoded (which you can decode
+fairly quickly by hand).  The reason that this happens is that you're giving
+up the authorization mechanism to the server and not keeping it at your
+application level.
+
+&gt; Does anyone have a better solution to suggest?
+
+Why, yes.  I would suggest using a scripting language or some sort of portal
+that can let you control per user access via sessions.  This allows you to
+terminate the session based on a number of criterion (user logout, expiry
+time, insecure transmission) and only requires the transmission of the session
+key (hopefully over an https connection).
+
+I'll spare the list, but I have an ldap auth module for php that you can have
+(it's for use against NDS, but should work for any LDAPv2 compliant server -
+which I believe AD is) and modify to suit your needs if you would like.  I
+pretty much abandoned Perl for scripting at work to standardize on PHP for my
+colleague's sanity.  You can do the same things with Perl, and I think I have
+the same code for Perl somewhere.
+
+--Robert
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200501.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200502.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

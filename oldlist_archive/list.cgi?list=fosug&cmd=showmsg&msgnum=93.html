@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Intrusion Attempt</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200411.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Intrusion Attempt</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=92.html">October Videos</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=94.html">Re: Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=91.html">Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=94.html">Re: Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Intrusion Attempt">Re: Intrusion Attempt</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200411.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+29 Nov 2004 22:39:10 -0000
+<br><b>Message-Id:</b> &lt;20041129223853.GL3316@homebase.we1.client2.attbi.com&gt;
+<br>
+<hr><pre>On 2004.11.29 14:04:26 +0000, Stevo wrote:
+&gt; Hey all,
+&gt; 
+&gt; I got some reports on my apache server that a client was trying to
+&gt; access files her shouldn't. Ohh... sbout 12 pages worth. And I also
+&gt; had a grip of stuff in my IDS from the same IP. I believe the person
+&gt; was using Nessus.
+
+&lt;insert favorite explitive&gt; script kiddie!
+
+&gt; I want to make sure that my webserver isn't compromised... anybody
+&gt; have any suggestions. I've never had to dig into a machine forensicly
+&gt; before, so my experience isn't that great.
+
+First things first, get the versions of all the software that you're using for
+your web service and find all the vulnerabilities for that service (e.g.
+apache's last several problems have been with the openssl libraries).  Write
+it all down so that you have a handy reference.
+
+I would suggest running mactime against the system
+<a href="http://fosug.org/cgi-bin/(http://www.sleuthkit.org/sleuthkit/).">(http://www.sleuthkit.org/sleuthkit/).</a>  What the utility does is look at the
+timestamps on your filesystem (Modified/Access/Change).  Using vi, you can
+open up the output file and do a reverse search (?&lt;criterion&gt;) for the string
+&quot; mac &quot; and it'll tell you the files that have been modified and changed
+recently (this is a good indicator of nefarious deeds).
+
+&gt; Any help would be appreciated. Oh... btw... the host that was
+&gt; attacking me isn't local.
+&gt; 
+&gt; <a href="http://www.whois.sc/67.18.100.114">http://www.whois.sc/67.18.100.114</a>
+
+That doesn't matter.  Use the abuse address and send whatever info you get.
+Either it's a zombie (doubtful as most don't run wide range scans) or it's a
+script kiddie who just learned about nessus and picked you for fun (or
+whatever other reason seems valid -- likely you're not the only one).
+
+BTW: the web link is nice, but you get crap information sometimes.  ALWAYS go
+command line here (whois -h whois.arin.net xx.xx.xx.xx).  The example above
+gives no contact mail address, but command line gets the following:
+
+OrgAbuseHandle: ABUSE271-ARIN
+OrgAbuseName:   Abuse 
+OrgAbusePhone:  +1-214-782-7802
+OrgAbuseEmail:  ####@####.####
+
+Expect to get an automated response.
+
+&gt; Cheers,
+&gt; 
+&gt; Stevo
+&gt; 
+&gt; 	Earliest: 05:48:32.259746 on 11/28/2004
+&gt; 	Latest: 05:53:25.497673 on 11/28/2004
+&gt; 	
+&gt; 	34 different signatures are present for 67.18.100.114 as a source
+&gt; 	
+[...]
+
+The IDS log is nice for knowing to look, but you need to look at the web logs
+for that time period.  Try something like this:
+
+grep 67.18.100.114 /path/to/web/log/access.file /path/to/web/log/error.file
+
+That'll give you some information on your service issues and you can see the
+actual requests made against the server.
+
+Also, look at your syslog files (using mactime is a good idea here) and see if
+there's any mention of your http service crapping out.
+
+That's all for now.  More specifics if you find anything there.
+
+--Robert
+</pre>
+<hr><strong>[Content type application/pgp-signature not shown. <a href="list.cgi/fosug/93/3.html">Download</a>]</strong><br>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=92.html">October Videos</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=94.html">Re: Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=91.html">Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>29 Nov 2004 22:39:10 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=94.html">Re: Intrusion Attempt</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200411.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200411.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200412.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

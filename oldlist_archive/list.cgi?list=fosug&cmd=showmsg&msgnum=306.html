@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Keymaps</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Keymaps</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=305.html">Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=307.html">Re: Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=305.html">Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=307.html">Re: Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Keymaps">Re: Keymaps</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200503.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+30 Mar 2005 20:08:11 -0000
+<br><b>Message-Id:</b> &lt;20050330200800.GB13716@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.03.30 10:54:07 +0000, Mike wrote:
+&gt; Hey guys, I need some help. I´ve been hitting my head up against the
+&gt; wall and can´t figure out this problem. My keymaps are screwey, while
+&gt; in X I type a single or double quote it´s not bieng recognized as a
+&gt; true character and generates errors when I run scripts.
+&gt; 
+&gt; for example:
+&gt; #!/usr/bin/env perl
+&gt; #
+&gt; #
+&gt; print ¨Hello World!!!\n¨;
+&gt; 
+&gt; generates the following error:
+&gt; Unrecognized character \xA8 at ./helloWorld.pl line 4.
+&gt;
+&gt; I dumped out of X and edited the script with vim and found that the
+&gt; quotation marks are upside down question marks, yet from the console I
+&gt; can type these characters just fine. So I took a look at my xorg.conf
+&gt; file and my keymaps are set to ¨us¨. I verified that the us.map.gz is
+&gt; in the /usr/share/i386/qwerty subdirectory.
+&gt; 
+&gt; Does anyone have any suggestions on what I can do to fix?
+
+My section governing the keyboard settings is as follows:
+
+Section &quot;InputDevice&quot;
+  Driver       &quot;kbd&quot;
+  Identifier   &quot;Keyboard[0]&quot;
+  Option       &quot;Protocol&quot; &quot;Standard&quot;
+  Option       &quot;XkbKeyCodes&quot; &quot;xfree86&quot;
+  Option       &quot;XkbLayout&quot; &quot;us&quot;
+  Option       &quot;XkbModel&quot; &quot;pc104&quot;
+EndSection
+
+If yours is the same, I would look for another copy of the us.map.gz file and
+dump it in place.
+
+My us.map.gz is in /usr/X11R6/share/keymaps/i386/qwerty and has a md5sum of
+34fc02ef080757cdc93e15b9302edab1 (if that helps at all).  I'd check to make
+sure it's not a symbolic link.
+
+Other than that, it's just a zipped text file.  Mine looks like this:
+# us.map
+keymaps 0-2,4-6,8-9,12
+alt_is_meta
+include &quot;qwerty-layout&quot;
+include &quot;linux-with-alt-and-altgr&quot;
+include &quot;compose.latin1&quot;
+include &quot;euro1.map&quot;
+strings as usual
+
+keycode   1 = Escape
+keycode   2 = one              exclam
+keycode   3 = two              at               at               nul
+nul
+keycode   4 = three            numbersign
+        control keycode   4 = Escape
+keycode   5 = four             dollar           dollar
+Control_backslash
+keycode   6 = five             percent
+        control keycode   6 = Control_bracketright
+keycode   7 = six              asciicircum
+        control keycode   7 = Control_asciicircum
+keycode   8 = seven            ampersand        braceleft
+Control_underscore
+keycode   9 = eight            asterisk         bracketleft      Delete
+keycode  10 = nine             parenleft        bracketright
+keycode  11 = zero             parenright       braceright
+keycode  12 = minus            underscore       backslash
+Control_underscore Control_underscore
+keycode  13 = equal            plus
+keycode  14 = Delete
+keycode  15 = Tab
+keycode  26 = bracketleft      braceleft
+        control keycode  26 = Escape
+keycode  27 = bracketright     braceright       asciitilde
+Control_bracketright
+keycode  28 = Return
+        alt     keycode  28 = Meta_Control_m
+keycode  29 = Control
+keycode  39 = semicolon        colon
+keycode  40 = apostrophe       quotedbl
+        control keycode  40 = Control_g
+keycode  41 = grave            asciitilde
+        control keycode  41 = nul
+keycode  42 = Shift
+keycode  43 = backslash        bar
+        control keycode  43 = Control_backslash
+keycode  51 = comma            less
+keycode  52 = period           greater
+keycode  53 = slash            question
+        control keycode  53 = Control_underscore
+        control shift keycode 53 = Delete
+keycode  54 = Shift
+keycode  56 = Alt
+keycode  57 = space
+        control keycode  57 = nul
+keycode  58 = Caps_Lock
+keycode  86 = less             greater          bar
+keycode  97 = Control
+
+I'd dig around in the included files and just do a search on quote.
+
+Lastly, a fun vim tip is that you can hover over any single character and push
+ga to get the ascii value in decimal, hex and octal.
+
+e.g. Hover over the quote &quot; and pushing ga gives:
+
+&lt;&quot;&gt;  34,  Hex 22,  Octal 042
+
+at the bottom of my vim screen.
+
+Hope that helps!
+--Robert
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=305.html">Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=307.html">Re: Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=305.html">Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>30 Mar 2005 20:08:11 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=307.html">Re: Keymaps</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn.html">Mike</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

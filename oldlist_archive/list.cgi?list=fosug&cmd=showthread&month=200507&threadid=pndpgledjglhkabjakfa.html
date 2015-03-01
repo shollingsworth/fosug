@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Mysql question</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200507.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Mysql question</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Mysql question">Mysql question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=mhmconlefkfpabdjmbnh&amp;month=200507.html">&quot;Mike Fennell&quot; ####@####.####</a>
+<br><b>Date:</b>
+23 Jul 2005 05:43:07 -0000
+<br><b>Message-Id:</b> 
+<br>
+<hr><pre>Hi Guys,
+
+ 
+
+Got a question that I hope someone that can help me out with..
+
+ 
+
+ 
+
+I need to allow remote access to a mysql database. Sounds simple, I've done
+this before, just not on this particular machine. I have done the following:
+
+ 
+
+ 
+
+GRANT ALL PRIVILEGES ON *.* TO USERNAME@IP IDENTIFIED BY &quot;PASSWORD&quot;;
+
+ 
+
+That goes through just fine then I flush the privileges and all should be
+well at that point, but the user is getting a access denied error. So I
+checked the firewall, ports were open, so I disabled the firewall (iptables
+with the APF script) and still nadda.. no mysql love.
+
+ 
+
+I have quadruple check that I used the correct username and password the
+client swears he's using the correct info. 
+
+Changed the IP to a domain name, then to allow access from all locations @%
+still nothing,
+
+ 
+
+Any ideas?
+
+ 
+
+Thanks,
+
+ 
+
+Mike
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Mysql question">Re: Mysql question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200507.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+23 Jul 2005 06:16:48 -0000
+<br><b>Message-Id:</b> &lt;20050723061628.GK2433@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.07.22 22:42:42 +0000, Mike Fennell wrote:
+&gt; Hi Guys,
+&gt; 
+&gt; Got a question that I hope someone that can help me out with..
+&gt; 
+&gt; I need to allow remote access to a mysql database. Sounds simple, I've done
+&gt; this before, just not on this particular machine. I have done the following:
+&gt; 
+&gt; GRANT ALL PRIVILEGES ON *.* TO USERNAME@IP IDENTIFIED BY &quot;PASSWORD&quot;;
+&gt; 
+&gt; That goes through just fine then I flush the privileges and all should be
+&gt; well at that point, but the user is getting a access denied error. So I
+&gt; checked the firewall, ports were open, so I disabled the firewall (iptables
+&gt; with the APF script) and still nadda.. no mysql love.
+&gt; 
+&gt; I have quadruple check that I used the correct username and password the
+&gt; client swears he's using the correct info. 
+&gt; 
+&gt; Changed the IP to a domain name, then to allow access from all locations @%
+&gt; still nothing,
+&gt; 
+&gt; Any ideas?
+
+If you look at the firewall logs, do you actually see the connection coming
+in to the box?
+
+I'm guessing that the connection may be blocked at the source by some egress
+filtering.
+
+If that's not the case, maybe post up some more details about the config, etc.
+
+Have you checked to see if you're mysql is responding to any requests you make
+from the same subnet?  Maybe nobody but localhost can connect to the box.
+
+Lastly, the ip address permission system stuff has changed in recent versions
+of mysql from a flat ip to ip/netmask notation (e.g. 10.10.0.0/24).
+
+HTH,
+--Robert
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Mysql question">Re: Mysql question</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=eohcdhlkcmfanomafofg&amp;month=200507.html">####@####.####</a>
+<br><b>Date:</b>
+23 Jul 2005 06:35:06 -0000
+<br><b>Message-Id:</b> &lt;4326799.1122100485511.JavaMail.teamon@b217.teamon.com&gt;
+<br>
+<hr><pre>Also, what version of mysql are you running. with version 4 they changed the default something or other with the way it stores passwords. I ran into a similar issue with mysql4 and phpnuke. The command you should try is something along the lines of 
+
+GRANT ALL PRIVILEGES ON *.* TO USERNAME@IP IDENTIFIED BY &quot;old_PASSWORD=password&quot;;
+
+Not sure if the syntax is correct but nothing google can?t check. You should also find the technical details when you confirm the syntax. I would do this further but I am on my pocketpc and don?t want to spend an hour looking through forums. Hope that helps
+
+Mike h
+
+
+
+
+-----Original Message-----
+    From: &quot;Robert ####@####.####
+    Sent: 7/23/05 1:16:28 AM
+    To: ####@####.####
+    Subject: Re: Mysql question
+    
+    On 2005.07.22 22:42:42 +0000, Mike Fennell wrote:
+    &gt; Hi Guys,
+    &gt; 
+    &gt; Got a question that I hope someone that can help me out with..
+    &gt; 
+    &gt; I need to allow remote access to a mysql database. Sounds simple, I've done
+    &gt; this before, just not on this particular machine. I have done the following:
+    &gt; 
+    &gt; GRANT ALL PRIVILEGES ON *.* TO USERNAME@IP IDENTIFIED BY &quot;PASSWORD&quot;;
+    &gt; 
+    &gt; That goes through just fine then I flush the privileges and all should be
+    &gt; well at that point, but the user is getting a access denied error. So I
+    &gt; checked the firewall, ports were open, so I disabled the firewall (iptables
+    &gt; with the APF script) and still nadda.. no mysql love.
+    &gt; 
+    &gt; I have quadruple check that I used the correct username and password the
+    &gt; client swears he's using the correct info. 
+    &gt; 
+    &gt; Changed the IP to a domain name, then to allow access from all locations @%
+    &gt; still nothing,
+    &gt; 
+    &gt; Any ideas?
+    
+    If you look at the firewall logs, do you actually see the connection coming
+    in to the box?
+    
+    I'm guessing that the connection may be blocked at the source by some egress
+    filtering.
+    
+    If that's not the case, maybe post up some more details about the config, etc.
+    
+    Have you checked to see if you're mysql is responding to any requests you make
+    from the same subnet?  Maybe nobody but localhost can connect to the box.
+    
+    Lastly, the ip address permission system stuff has changed in recent versions
+    of mysql from a flat ip to ip/netmask notation (e.g. 10.10.0.0/24).
+    
+    HTH,
+    --Robert
+    
+
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200507.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

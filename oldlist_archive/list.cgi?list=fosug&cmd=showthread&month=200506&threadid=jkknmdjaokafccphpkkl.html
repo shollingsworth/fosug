@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Thin Clients</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200506.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Thin Clients</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Thin Clients">Thin Clients</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200506.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2005 01:30:32 -0000
+<br><b>Message-Id:</b> &lt;20050609013016.86285.qmail@web51808.mail.yahoo.com&gt;
+<br>
+<hr><pre>Any of you guys every use linux based thin clients? 
+We will be setting them up at work.  We have a lot of
+budget and bandwidth constraints.  We will be using
+TFTP to download the kernel with bootscript and load
+it's own DKE desktop because of this.
+
+I'm not one of the admins (I hope to get promodted to
+the NOC at some point in the future).  But can you
+think of a better way to do this.  With all of the
+clients running like that it may take a while to get
+new stations up and running, with more than 20 clients
+up it can take 2-5 minutes to download the kernel on a
+newly booting station.
+
+Can anybody think of a better and/or easier way,
+possably a less bandwidth intensive way to do this? 
+Processor power is not a problem.
+
+
+		
+__________________________________ 
+Discover Yahoo! 
+Have fun online with music videos, cool games, IM and more. Check it out! 
+<a href="http://discover.yahoo.com/online.html">http://discover.yahoo.com/online.html</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Thin Clients">Re: Thin Clients</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd&amp;month=200506.html">Stevo ####@####.####</a>
+<br><b>Date:</b>
+9 Jun 2005 01:36:02 -0000
+<br><b>Message-Id:</b> &lt;b9bd1f4d05060818351d219574@mail.gmail.com&gt;
+<br>
+<hr><pre>On 6/8/05, Joel Searcy ####@####.#### wrote:
+&gt; Any of you guys every use linux based thin clients?
+&gt; We will be setting them up at work.  We have a lot of
+&gt; budget and bandwidth constraints.  We will be using
+&gt; TFTP to download the kernel with bootscript and load
+&gt; it's own DKE desktop because of this.
+&gt; 
+&gt; I'm not one of the admins (I hope to get promodted to
+&gt; the NOC at some point in the future).  But can you
+&gt; think of a better way to do this.  With all of the
+&gt; clients running like that it may take a while to get
+&gt; new stations up and running, with more than 20 clients
+&gt; up it can take 2-5 minutes to download the kernel on a
+&gt; newly booting station.
+&gt; 
+&gt; Can anybody think of a better and/or easier way,
+&gt; possably a less bandwidth intensive way to do this?
+&gt; Processor power is not a problem.
+&gt; 
+
+A.) Check where your bandwidth clogs are and possibly think about
+subneting to relieve some of the stress.
+
+B.) How often are you going to have all the workstations bounce at once?
+
+or
+
+On your TS server you may think about installing a gigabit card, and
+maybe a gigabit hub as well. It's all about discovering where you
+bottleneck is.
+
+That's all I can think of.
+
+Cheers,
+
+Stevo
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200506.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

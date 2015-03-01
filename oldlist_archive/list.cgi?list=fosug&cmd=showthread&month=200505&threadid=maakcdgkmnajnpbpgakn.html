@@ -1,0 +1,1511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: Can't turn on DVD's DMA</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200505.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: Can't turn on DVD's DMA</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Can't turn on DVD's DMA">Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200505.html">George Fragos ####@####.####</a>
+<br><b>Date:</b>
+15 May 2005 23:58:32 -0000
+<br><b>Message-Id:</b> &lt;618e69c7050515165839acedc3@mail.gmail.com&gt;
+<br>
+<hr><pre>I've been having unbelievable problems with DVD drives. I've had 2 Sony DVD 
+drives go dead and a 3rd came DOA. The two did work for DVD movies with the 
+normal Linux fun. This time I replaced the Sony DVD ROM with a brand new 
+LiteON DVD ROM. With some machinations I got it to work for DVD data and 
+finally watched a movie with Mplayer. Mplayer bombed because this DVD won't 
+let me turn on DMA with Yast. I tried the following Konsole to see if there 
+was an error message (see below). Can anyone tell me how to turn DMA on. 
+
+fragos@linux:~&gt; su
+Password:
+linux:/home/fragos # hdparm -d1 /dev/hdc
+
+/dev/hdc:
+setting using_dma to 1 (on)
+HDIO_SET_DMA failed: Operation not permitted
+using_dma = 0 (off)
+linux:/home/fragos #
+
+FYI -- I have an AMD XP 1600 and SuSE 9.3. All worked before.
+
+George
+
+
+-- 
+____________
+George Fragos
+####@####.####
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo&amp;month=200505.html">Elliott Johnson ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 00:17:42 -0000
+<br><b>Message-Id:</b> &lt;20050516002011.GA23254@mail.fasl.info&gt;
+<br>
+<hr><pre>&gt; I tried the following Konsole to see if there was an error message 
+&gt; (see below). Can anyone tell me how to turn DMA on. 
+
+&gt; linux:/home/fragos # hdparm -d1 /dev/hdc
+
+George,
+
+Can you post the results of:
+
+hdparm -i /dev/hdc
+
+it should list a few different modes under DMA or UDMA.
+
+Elliott
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200505.html">Drew Baker ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 06:08:30 -0000
+<br><b>Message-Id:</b> &lt;61c1dc3c0505152308492674bb@mail.gmail.com&gt;
+<br>
+<hr><pre>have you checked the cable? Many DMA transmition failures can be
+results of a faulty cable. Or attaching the device to a master or
+slave that is not 100% ATAPI complient.  Example. Knock off NEC ZIP
+drive attached to Liteon DVD drive. Zip on master, DVD on slave. DVD
+acts up. However problem is actually with zIp drive not DVD.  The way
+IDE Master/slave works is.  The slave puts on leather and is required
+to ask it's &quot;master&quot; permision to do anything, always terminating it's
+request with a hearty &quot;SIR&quot;
+ummm
+errrr
+heheh ok seriously tho.
+If this is not your setup, still good info to keep in mind. IDE sends
+all signals to the &quot;Master&quot; drive.  If the signals are intended to the
+&quot;slave&quot; device. If the &quot;master&quot; device is in an idle state, it will
+relay the information to the &quot;slave&quot;  Here are some limitations you
+should keep in mind when dealing with IDE.  You will find that they do
+work in other configurations but the only reson they work, is because
+bios's attempt to fix comming wiring problems. They usually will work,
+but at a reduced performacnce or reliability.
+
+Master/Slave/Cable Select jumpers.
+Never user the Cable Select jumper.  With linux this is not a huge
+problem because the operating system will always access the drive
+using /dev/hda, hdb, hdc, hdd etc. But because windows is a bit
+sloppier in it's drive handling. A hardrive that was originaly
+configured with Cable Select and has windows installed. IF for some
+reason that drive becomes master, Kiss your registry good by. You will
+find your C: drive suddenly something like E: and none of your
+programs will work. Even setting configuration back to the original
+will not fix the damage caused to the registry. Simply way to
+guarantee you won't run in to this problem, is to simply never use the
+cable select setting.
+
+Drive possision on cable, and type of cable.
+
+You will notice there are two types of cables. that looks exactaly
+like a floppy cable. 40 wires running down cable.  This cable is
+capable of ATA33 transmition.  This should only be used on CDROM'S
+Currently there are no ATA66 or higher cdrom's or burners, but I have
+seen tape drives that utilize the faster speeds.
+
+The second cable type is ATA66/100/133. This is the exact cable for
+all three speed  protocols.  Despite what compusa and monster cable
+tell you, you DO NOT need to upgrade your ATA66 cables to a $25 ATA133
+cables when you buy a new harddrive.
+This cable allows for much faster sustained transfers.  Currently
+cdroms do not use ATA66 or higher speeds. However you may use this
+cable on cdroms, you just won't gain any speed benifit.  These cables
+also fold and route easier around tight cases. The only con of this
+cable is it's cost.  ATA66+ cables will run you a few bucks more then
+the older style cables. Again despite what Compusa and monster cable
+tell you, you should still not pay more then $5 for cable.  Unless
+it's some super glowin dark rounded cable.
+here is your cable
+
+Drive connection. 
+
+MB========SL===MA
+
+You will notice you cable has two connection close to each other. and
+the third cable is farther appart then the first two.
+
+Motherboard is ALWAYS the farthest from either connector.
+Slave is ALWAY middle
+Master is always at the end farthest away from the motherboard. 
+
+Alot of bios can virtualy change the pinout to allow for improper
+master/slave placement, but at a cost of performance.
+
+So if you do it right to start with you will have a higher performing system.
+
+What drives to connect together on the same chain (cable)
+
+keep in mind that each channel is only capable of communicating at one
+protocal at time. PIO is a slow older modes that most cdroms use. UDMA
+is a faster mode that harddives use to transfer data. So if you have a
+brand new harddive working at ATA133 and a cdrom running at ATA33, by
+placing them on the same physical cable you force your harddrive to
+run at ATA33 loosing a large amount of performance. Some bios attempt
+to get around this by forcing the higer speed.  The cdrom will make
+alot of errors and require transmision re-requests.  The thinking
+behind this is even with fixing the errors it will still be faster
+then making the harddrive run at ata33. I havn't done any tests to see
+if this works or not, it's just a good idea not to put your system in
+the situation of having to do error correction.
+
+Match hardrives with harddrives. Preferably the same speed. ATA133
+with only 133's.
+
+You will notice alot of cd-burners request that you place the burner
+on the same chain as your harddrive to improve disk to disk copies. DO
+NOT DO THIS.  The reason they recomend this is because devices on the
+same chain loose a Massive amount of performance when accesss
+simultaniously.  So doing disk to disk coppies on same chain, may in
+some (especialy older computers) cases lead to bad burns.  By placing
+the burner on the same chain as your harddrive guarantees a higher
+performance on drive to drive coppies, at the cost of lowered
+harddrive performance on a whole. I personaly would take a loss of
+performance when I'm doing disk to disk copies, and maybe have to
+reduce burning speed to compensate, vs killing the performance of my
+harddrive the entire time I use the computer.
+
+Not sure if this helped you, But these are some pet peaves I see all
+the time when working on computers other people built.  Alot of people
+think as long as it works then it's done &quot;correctly&quot;  Just because it
+works, does not mean it's right.
+
+
+
+
+
+
+
+
+
+On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; I tried the following Konsole to see if there was an error message
+&gt; &gt; (see below). Can anyone tell me how to turn DMA on.
+&gt; 
+&gt; &gt; linux:/home/fragos # hdparm -d1 /dev/hdc
+&gt; 
+&gt; George,
+&gt; 
+&gt; Can you post the results of:
+&gt; 
+&gt; hdparm -i /dev/hdc
+&gt; 
+&gt; it should list a few different modes under DMA or UDMA.
+&gt; 
+&gt; Elliott
+&gt; 
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200505.html">Drew Baker ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 06:11:46 -0000
+<br><b>Message-Id:</b> &lt;61c1dc3c05051523115801a594@mail.gmail.com&gt;
+<br>
+<hr><pre>good lord I just read that post. I must be more tired then I thought.
+ignore the grammar and spelling. Been up all weekend in mountains
+hiking and all that fun stuff I'm a bit out of it.
+
+On 5/15/05, Drew Baker ####@####.#### wrote:
+&gt; have you checked the cable? Many DMA transmition failures can be
+&gt; results of a faulty cable. Or attaching the device to a master or
+&gt; slave that is not 100% ATAPI complient.  Example. Knock off NEC ZIP
+&gt; drive attached to Liteon DVD drive. Zip on master, DVD on slave. DVD
+&gt; acts up. However problem is actually with zIp drive not DVD.  The way
+&gt; IDE Master/slave works is.  The slave puts on leather and is required
+&gt; to ask it's &quot;master&quot; permision to do anything, always terminating it's
+&gt; request with a hearty &quot;SIR&quot;
+&gt; ummm
+&gt; errrr
+&gt; heheh ok seriously tho.
+&gt; If this is not your setup, still good info to keep in mind. IDE sends
+&gt; all signals to the &quot;Master&quot; drive.  If the signals are intended to the
+&gt; &quot;slave&quot; device. If the &quot;master&quot; device is in an idle state, it will
+&gt; relay the information to the &quot;slave&quot;  Here are some limitations you
+&gt; should keep in mind when dealing with IDE.  You will find that they do
+&gt; work in other configurations but the only reson they work, is because
+&gt; bios's attempt to fix comming wiring problems. They usually will work,
+&gt; but at a reduced performacnce or reliability.
+&gt; 
+&gt; Master/Slave/Cable Select jumpers.
+&gt; Never user the Cable Select jumper.  With linux this is not a huge
+&gt; problem because the operating system will always access the drive
+&gt; using /dev/hda, hdb, hdc, hdd etc. But because windows is a bit
+&gt; sloppier in it's drive handling. A hardrive that was originaly
+&gt; configured with Cable Select and has windows installed. IF for some
+&gt; reason that drive becomes master, Kiss your registry good by. You will
+&gt; find your C: drive suddenly something like E: and none of your
+&gt; programs will work. Even setting configuration back to the original
+&gt; will not fix the damage caused to the registry. Simply way to
+&gt; guarantee you won't run in to this problem, is to simply never use the
+&gt; cable select setting.
+&gt; 
+&gt; Drive possision on cable, and type of cable.
+&gt; 
+&gt; You will notice there are two types of cables. that looks exactaly
+&gt; like a floppy cable. 40 wires running down cable.  This cable is
+&gt; capable of ATA33 transmition.  This should only be used on CDROM'S
+&gt; Currently there are no ATA66 or higher cdrom's or burners, but I have
+&gt; seen tape drives that utilize the faster speeds.
+&gt; 
+&gt; The second cable type is ATA66/100/133. This is the exact cable for
+&gt; all three speed  protocols.  Despite what compusa and monster cable
+&gt; tell you, you DO NOT need to upgrade your ATA66 cables to a $25 ATA133
+&gt; cables when you buy a new harddrive.
+&gt; This cable allows for much faster sustained transfers.  Currently
+&gt; cdroms do not use ATA66 or higher speeds. However you may use this
+&gt; cable on cdroms, you just won't gain any speed benifit.  These cables
+&gt; also fold and route easier around tight cases. The only con of this
+&gt; cable is it's cost.  ATA66+ cables will run you a few bucks more then
+&gt; the older style cables. Again despite what Compusa and monster cable
+&gt; tell you, you should still not pay more then $5 for cable.  Unless
+&gt; it's some super glowin dark rounded cable.
+&gt; here is your cable
+&gt; 
+&gt; Drive connection.
+&gt; 
+&gt; MB========SL===MA
+&gt; 
+&gt; You will notice you cable has two connection close to each other. and
+&gt; the third cable is farther appart then the first two.
+&gt; 
+&gt; Motherboard is ALWAYS the farthest from either connector.
+&gt; Slave is ALWAY middle
+&gt; Master is always at the end farthest away from the motherboard.
+&gt; 
+&gt; Alot of bios can virtualy change the pinout to allow for improper
+&gt; master/slave placement, but at a cost of performance.
+&gt; 
+&gt; So if you do it right to start with you will have a higher performing system.
+&gt; 
+&gt; What drives to connect together on the same chain (cable)
+&gt; 
+&gt; keep in mind that each channel is only capable of communicating at one
+&gt; protocal at time. PIO is a slow older modes that most cdroms use. UDMA
+&gt; is a faster mode that harddives use to transfer data. So if you have a
+&gt; brand new harddive working at ATA133 and a cdrom running at ATA33, by
+&gt; placing them on the same physical cable you force your harddrive to
+&gt; run at ATA33 loosing a large amount of performance. Some bios attempt
+&gt; to get around this by forcing the higer speed.  The cdrom will make
+&gt; alot of errors and require transmision re-requests.  The thinking
+&gt; behind this is even with fixing the errors it will still be faster
+&gt; then making the harddrive run at ata33. I havn't done any tests to see
+&gt; if this works or not, it's just a good idea not to put your system in
+&gt; the situation of having to do error correction.
+&gt; 
+&gt; Match hardrives with harddrives. Preferably the same speed. ATA133
+&gt; with only 133's.
+&gt; 
+&gt; You will notice alot of cd-burners request that you place the burner
+&gt; on the same chain as your harddrive to improve disk to disk copies. DO
+&gt; NOT DO THIS.  The reason they recomend this is because devices on the
+&gt; same chain loose a Massive amount of performance when accesss
+&gt; simultaniously.  So doing disk to disk coppies on same chain, may in
+&gt; some (especialy older computers) cases lead to bad burns.  By placing
+&gt; the burner on the same chain as your harddrive guarantees a higher
+&gt; performance on drive to drive coppies, at the cost of lowered
+&gt; harddrive performance on a whole. I personaly would take a loss of
+&gt; performance when I'm doing disk to disk copies, and maybe have to
+&gt; reduce burning speed to compensate, vs killing the performance of my
+&gt; harddrive the entire time I use the computer.
+&gt; 
+&gt; Not sure if this helped you, But these are some pet peaves I see all
+&gt; the time when working on computers other people built.  Alot of people
+&gt; think as long as it works then it's done &quot;correctly&quot;  Just because it
+&gt; works, does not mean it's right.
+&gt; 
+&gt; 
+&gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; I tried the following Konsole to see if there was an error message
+&gt; &gt; &gt; (see below). Can anyone tell me how to turn DMA on.
+&gt; &gt;
+&gt; &gt; &gt; linux:/home/fragos # hdparm -d1 /dev/hdc
+&gt; &gt;
+&gt; &gt; George,
+&gt; &gt;
+&gt; &gt; Can you post the results of:
+&gt; &gt;
+&gt; &gt; hdparm -i /dev/hdc
+&gt; &gt;
+&gt; &gt; it should list a few different modes under DMA or UDMA.
+&gt; &gt;
+&gt; &gt; Elliott
+&gt; &gt;
+&gt; 
+&gt; --
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; 
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo&amp;month=200505.html">Elliott Johnson ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 09:32:17 -0000
+<br><b>Message-Id:</b> &lt;20050516093511.GA24034@mail.fasl.info&gt;
+<br>
+<hr><pre>Hi,
+
+George and I have been emailing a bit and it seems the drive's
+dma isn't being interpreted correctly at boot.  In fact hdparm
+can't figure out any of the modes of operation PIO or U/DMA for
+the drive.  He sent me his dmesg, and I'll chop it down to the 
+important parts for those interested:
+
+George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM -0700 write :
+&gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+&gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+&gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on pci0000:00:11.1
+&gt; &lt;6&gt;    ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &lt;6&gt;    ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache, CHS=16383/255/63, UDMA(100)
+&gt; &lt;6&gt;hda: cache flushes supported
+&gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete DataRequest }
+&gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &lt;4&gt;Attempting manual resume
+
+I googled around on the status error and came up with this
+<a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+The thread ended up being fixed by a kernel patch, so it probably
+isn't just a firmware upgrade.  George, I know you tried a
+knoppix boot and the problem persisted, but you may try a kernel
+upgrade none the less to see if that gets rid of it.
+
+One other thing you might check is how you have your IRQ's setup
+in your BIOS.  The lines:
+
+&gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+
+don't look so good.  If that's all well (using defaults is 
+usually best), you might first try booting without ACPI by
+appending noacpi to your bootloader line.  It'd be worth a shot
+before you huck the drive or mail it back to be fixed.
+
+If your problem still persists, bring it this weekend and maybe 7-8 
+minds can get it working :)
+
+Goodluck,
+
+Elliott
+
+&gt; 
+&gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; 
+&gt; &gt; Yikes!,
+&gt; &gt; 
+&gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; That is very strange because they should read the
+&gt; &gt; same if the drive and software are working.
+&gt; &gt; 
+&gt; &gt; The difference between the two is that -I is read
+&gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; found by probing during boot time.
+&gt; &gt; 
+&gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; 
+&gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; 
+&gt; &gt; -Elliott
+&gt; &gt; 
+&gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt;
+&gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt;
+&gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; 
+&gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt;
+&gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt;
+&gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; 
+&gt;
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200505.html">Drew Baker ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 14:15:32 -0000
+<br><b>Message-Id:</b> &lt;61c1dc3c0505160715423185c3@mail.gmail.com&gt;
+<br>
+<hr><pre>No, liton is a very good brand.  They actually manufacture about 70%
+of all drives now.  Vitually all drives you buy now are nothing more
+then rebranded Lite-On.  They are a fast reliable drive.
+
+On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; Hi,
+&gt; 
+&gt; George and I have been emailing a bit and it seems the drive's
+&gt; dma isn't being interpreted correctly at boot.  In fact hdparm
+&gt; can't figure out any of the modes of operation PIO or U/DMA for
+&gt; the drive.  He sent me his dmesg, and I'll chop it down to the
+&gt; important parts for those interested:
+&gt; 
+&gt; George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM -0700 write :
+&gt; &gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+&gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+&gt; &gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on pci0000:00:11.1
+&gt; &gt; &lt;6&gt;    ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &gt; &lt;6&gt;    ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache, CHS=16383/255/63, UDMA(100)
+&gt; &gt; &lt;6&gt;hda: cache flushes supported
+&gt; &gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete DataRequest }
+&gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &gt; &lt;4&gt;Attempting manual resume
+&gt; 
+&gt; I googled around on the status error and came up with this
+&gt; <a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+&gt; The thread ended up being fixed by a kernel patch, so it probably
+&gt; isn't just a firmware upgrade.  George, I know you tried a
+&gt; knoppix boot and the problem persisted, but you may try a kernel
+&gt; upgrade none the less to see if that gets rid of it.
+&gt; 
+&gt; One other thing you might check is how you have your IRQ's setup
+&gt; in your BIOS.  The lines:
+&gt; 
+&gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+&gt; 
+&gt; don't look so good.  If that's all well (using defaults is
+&gt; usually best), you might first try booting without ACPI by
+&gt; appending noacpi to your bootloader line.  It'd be worth a shot
+&gt; before you huck the drive or mail it back to be fixed.
+&gt; 
+&gt; If your problem still persists, bring it this weekend and maybe 7-8
+&gt; minds can get it working :)
+&gt; 
+&gt; Goodluck,
+&gt; 
+&gt; Elliott
+&gt; 
+&gt; &gt;
+&gt; &gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt;
+&gt; &gt; &gt; Yikes!,
+&gt; &gt; &gt;
+&gt; &gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; &gt; That is very strange because they should read the
+&gt; &gt; &gt; same if the drive and software are working.
+&gt; &gt; &gt;
+&gt; &gt; &gt; The difference between the two is that -I is read
+&gt; &gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; &gt; found by probing during boot time.
+&gt; &gt; &gt;
+&gt; &gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; &gt;
+&gt; &gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; &gt;
+&gt; &gt; &gt; -Elliott
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; 
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=icnjocoehjfdjalcjpbn&amp;month=200505.html">Drew Baker ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 14:17:53 -0000
+<br><b>Message-Id:</b> &lt;61c1dc3c05051607174a8b6581@mail.gmail.com&gt;
+<br>
+<hr><pre>Also have you tried changing the master and slave of your two drives?
+swap them around? Or just tryied running the DVD only?
+
+On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; No, liton is a very good brand.  They actually manufacture about 70%
+&gt; of all drives now.  Vitually all drives you buy now are nothing more
+&gt; then rebranded Lite-On.  They are a fast reliable drive.
+&gt; 
+&gt; On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; Hi,
+&gt; &gt;
+&gt; &gt; George and I have been emailing a bit and it seems the drive's
+&gt; &gt; dma isn't being interpreted correctly at boot.  In fact hdparm
+&gt; &gt; can't figure out any of the modes of operation PIO or U/DMA for
+&gt; &gt; the drive.  He sent me his dmesg, and I'll chop it down to the
+&gt; &gt; important parts for those interested:
+&gt; &gt;
+&gt; &gt; George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM -0700 write :
+&gt; &gt; &gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &gt; &gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+&gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+&gt; &gt; &gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &gt; &gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &gt; &gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &gt; &gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on pci0000:00:11.1
+&gt; &gt; &gt; &lt;6&gt;    ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &gt; &gt; &lt;6&gt;    ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &gt; &gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &gt; &gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &gt; &gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &gt; &gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &gt; &gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache, CHS=16383/255/63, UDMA(100)
+&gt; &gt; &gt; &lt;6&gt;hda: cache flushes supported
+&gt; &gt; &gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &gt; &gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete DataRequest }
+&gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &gt; &gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &gt; &gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &gt; &gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &gt; &gt; &lt;4&gt;Attempting manual resume
+&gt; &gt;
+&gt; &gt; I googled around on the status error and came up with this
+&gt; &gt; <a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+&gt; &gt; The thread ended up being fixed by a kernel patch, so it probably
+&gt; &gt; isn't just a firmware upgrade.  George, I know you tried a
+&gt; &gt; knoppix boot and the problem persisted, but you may try a kernel
+&gt; &gt; upgrade none the less to see if that gets rid of it.
+&gt; &gt;
+&gt; &gt; One other thing you might check is how you have your IRQ's setup
+&gt; &gt; in your BIOS.  The lines:
+&gt; &gt;
+&gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &lt;4&gt;    ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:11.1
+&gt; &gt;
+&gt; &gt; don't look so good.  If that's all well (using defaults is
+&gt; &gt; usually best), you might first try booting without ACPI by
+&gt; &gt; appending noacpi to your bootloader line.  It'd be worth a shot
+&gt; &gt; before you huck the drive or mail it back to be fixed.
+&gt; &gt;
+&gt; &gt; If your problem still persists, bring it this weekend and maybe 7-8
+&gt; &gt; minds can get it working :)
+&gt; &gt;
+&gt; &gt; Goodluck,
+&gt; &gt;
+&gt; &gt; Elliott
+&gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt; &gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; Yikes!,
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; &gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; &gt; &gt; That is very strange because they should read the
+&gt; &gt; &gt; &gt; same if the drive and software are working.
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; The difference between the two is that -I is read
+&gt; &gt; &gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; &gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; &gt; &gt; found by probing during boot time.
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; &gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; &gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; &gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; &gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; &gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; &gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; &gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; -Elliott
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; 
+&gt; --
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; 
+
+
+-- 
+Beware the jaws that bite, for they belong to my evil attack penguin.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200505.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 17:36:19 -0000
+<br><b>Message-Id:</b> &lt;f73f9abd050516103617fca076@mail.gmail.com&gt;
+<br>
+<hr><pre>Hey guys, I had a similar, but not exact problem. Below are the steps I 
+performed to resolve my issues. May be worth looking into...
+
+-Mike
+
+
+To Test HD Performance: hdparm -Tt /dev/hdx
+
+lspci | grep IDE 
+
+document the IDE controller driver and recompile the kernel with the driver. 
+
+
+After you have collected this information you can go into your kernel 
+configuration..
+[edit]
+Enabling the driver for your IDE controller in the kernel. 
+
+Once the curses GUI comes up navigate yourself over to Device Drivers ---&gt; 
+ATA/ATAPI/MFM/RLL support and scroll down until you find the controller that 
+matches the one you found in lspci. Note this may have a slightly different 
+name and may be a generic driver (i.e. VIA82CXXX). Select it and then build 
+your kernel. Don't forget to add any other options you might need.
+
+Restart your computer and see the annoying &quot;DMA NOT ENABLED&quot; error 
+disappear! Oh and it'll go faster too...
+
+Then rerun hdparm and compare. 
+
+
+
+
+
+
+
+
+On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; 
+&gt; Also have you tried changing the master and slave of your two drives?
+&gt; swap them around? Or just tryied running the DVD only?
+&gt; 
+&gt; On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; &gt; No, liton is a very good brand. They actually manufacture about 70%
+&gt; &gt; of all drives now. Vitually all drives you buy now are nothing more
+&gt; &gt; then rebranded Lite-On. They are a fast reliable drive.
+&gt; &gt;
+&gt; &gt; On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; Hi,
+&gt; &gt; &gt;
+&gt; &gt; &gt; George and I have been emailing a bit and it seems the drive's
+&gt; &gt; &gt; dma isn't being interpreted correctly at boot. In fact hdparm
+&gt; &gt; &gt; can't figure out any of the modes of operation PIO or U/DMA for
+&gt; &gt; &gt; the drive. He sent me his dmesg, and I'll chop it down to the
+&gt; &gt; &gt; important parts for those interested:
+&gt; &gt; &gt;
+&gt; &gt; &gt; George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM 
+&gt; -0700 write :
+&gt; &gt; &gt; &gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &gt; &gt; &gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override with 
+&gt; idebus=xx
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:
+&gt; 11.1
+&gt; &gt; &gt; &gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on pci0000:00:
+&gt; 11.1
+&gt; &gt; &gt; &gt; &lt;6&gt; ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &gt; &gt; &gt; &lt;6&gt; ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &gt; &gt; &gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &gt; &gt; &gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache, 
+&gt; CHS=16383/255/63, UDMA(100)
+&gt; &gt; &gt; &gt; &lt;6&gt;hda: cache flushes supported
+&gt; &gt; &gt; &gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete 
+&gt; DataRequest }
+&gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &gt; &gt; &gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &gt; &gt; &gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &gt; &gt; &gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &gt; &gt; &gt; &lt;4&gt;Attempting manual resume
+&gt; &gt; &gt;
+&gt; &gt; &gt; I googled around on the status error and came up with this
+&gt; &gt; &gt; <a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+&gt; &gt; &gt; The thread ended up being fixed by a kernel patch, so it probably
+&gt; &gt; &gt; isn't just a firmware upgrade. George, I know you tried a
+&gt; &gt; &gt; knoppix boot and the problem persisted, but you may try a kernel
+&gt; &gt; &gt; upgrade none the less to see if that gets rid of it.
+&gt; &gt; &gt;
+&gt; &gt; &gt; One other thing you might check is how you have your IRQ's setup
+&gt; &gt; &gt; in your BIOS. The lines:
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 0000:00:
+&gt; 11.1
+&gt; &gt; &gt;
+&gt; &gt; &gt; don't look so good. If that's all well (using defaults is
+&gt; &gt; &gt; usually best), you might first try booting without ACPI by
+&gt; &gt; &gt; appending noacpi to your bootloader line. It'd be worth a shot
+&gt; &gt; &gt; before you huck the drive or mail it back to be fixed.
+&gt; &gt; &gt;
+&gt; &gt; &gt; If your problem still persists, bring it this weekend and maybe 7-8
+&gt; &gt; &gt; minds can get it working :)
+&gt; &gt; &gt;
+&gt; &gt; &gt; Goodluck,
+&gt; &gt; &gt;
+&gt; &gt; &gt; Elliott
+&gt; &gt; &gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; Yikes!,
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; &gt; &gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; &gt; &gt; &gt; That is very strange because they should read the
+&gt; &gt; &gt; &gt; &gt; same if the drive and software are working.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; The difference between the two is that -I is read
+&gt; &gt; &gt; &gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; &gt; &gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; &gt; &gt; &gt; found by probing during boot time.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; &gt; &gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; &gt; &gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; &gt; &gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; &gt; &gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; &gt; &gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; &gt; &gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; &gt; &gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; -Elliott
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; &gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; &gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; &gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; &gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; &gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; &gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; &gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; &gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; &gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; &gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; &gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; &gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt;
+&gt; 
+&gt; 
+&gt; --
+&gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; 
+
+
+
+-- 
+Thanks,
+
+-Mike
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200505.html">George Fragos ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 19:12:15 -0000
+<br><b>Message-Id:</b> &lt;618e69c705051612127bb852d0@mail.gmail.com&gt;
+<br>
+<hr><pre>You guys are about to take me over the brink and into the truely hard core 
+strata. I have SuSE 9.3 so I thought it was the latest kernal. Before my 
+Sony DVD ROM self terminated its useful life it worked with this kernal and 
+DMA. Having never compiled a Linux kernal I will need some hand holding. 
+Perhaps if I'm going to jump into the fire, I should go all the way and try 
+Gentoo. I assume I can dual boot SuSE and Gentoo -- no evil empire on my 
+machine. Yet another thing I will require hand holding for.
+
+George
+
+On 5/16/05, Mike ####@####.#### wrote:
+&gt; 
+&gt; Hey guys, I had a similar, but not exact problem. Below are the steps I
+&gt; performed to resolve my issues. May be worth looking into...
+&gt; 
+&gt; -Mike
+&gt; 
+&gt; To Test HD Performance: hdparm -Tt /dev/hdx
+&gt; 
+&gt; lspci | grep IDE
+&gt; 
+&gt; document the IDE controller driver and recompile the kernel with the 
+&gt; driver.
+&gt; 
+&gt; After you have collected this information you can go into your kernel
+&gt; configuration..
+&gt; [edit]
+&gt; Enabling the driver for your IDE controller in the kernel.
+&gt; 
+&gt; Once the curses GUI comes up navigate yourself over to Device Drivers ---&gt;
+&gt; ATA/ATAPI/MFM/RLL support and scroll down until you find the controller 
+&gt; that
+&gt; matches the one you found in lspci. Note this may have a slightly 
+&gt; different
+&gt; name and may be a generic driver (i.e. VIA82CXXX). Select it and then 
+&gt; build
+&gt; your kernel. Don't forget to add any other options you might need.
+&gt; 
+&gt; Restart your computer and see the annoying &quot;DMA NOT ENABLED&quot; error
+&gt; disappear! Oh and it'll go faster too...
+&gt; 
+&gt; Then rerun hdparm and compare.
+&gt; 
+&gt; 
+&gt; On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; &gt;
+&gt; &gt; Also have you tried changing the master and slave of your two drives?
+&gt; &gt; swap them around? Or just tryied running the DVD only?
+&gt; &gt;
+&gt; &gt; On 5/16/05, Drew Baker ####@####.#### wrote:
+&gt; &gt; &gt; No, liton is a very good brand. They actually manufacture about 70%
+&gt; &gt; &gt; of all drives now. Vitually all drives you buy now are nothing more
+&gt; &gt; &gt; then rebranded Lite-On. They are a fast reliable drive.
+&gt; &gt; &gt;
+&gt; &gt; &gt; On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; &gt; Hi,
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; George and I have been emailing a bit and it seems the drive's
+&gt; &gt; &gt; &gt; dma isn't being interpreted correctly at boot. In fact hdparm
+&gt; &gt; &gt; &gt; can't figure out any of the modes of operation PIO or U/DMA for
+&gt; &gt; &gt; &gt; the drive. He sent me his dmesg, and I'll chop it down to the
+&gt; &gt; &gt; &gt; important parts for those interested:
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; George Fragos ####@####.#### @ Sun, May 15, 2005 at 11:01:53PM
+&gt; &gt; -0700 write :
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;ide: Assuming 33MHz system bus speed for PIO modes; override 
+&gt; with
+&gt; &gt; idebus=xx
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 
+&gt; 0000:00:
+&gt; &gt; 11.1
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;ACPI: PCI interrupt 0000:00:11.1[A]: no GSI
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: chipset revision 6
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: not 100% native mode: will probe irqs later
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: VIA vt8235 (rev 00) IDE UDMA133 controller on 
+&gt; pci0000:00:
+&gt; &gt; 11.1
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt; ide0: BM-DMA at 0xfc00-0xfc07, BIOS settings: hda:DMA, hdb:pio
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt; ide1: BM-DMA at 0xfc08-0xfc0f, BIOS settings: hdc:DMA, hdd:DMA
+&gt; &gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide0...
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hda: HDS722540VLAT20, ATA DISK drive
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;ide0 at 0x1f0-0x1f7,0x3f6 on irq 14
+&gt; &gt; &gt; &gt; &gt; &lt;7&gt;Probing IDE interface ide1...
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hdc: LILITE-ON DVD SOHD-16P6P9S, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hdd: SONY CD-RW CRX320E, ATAPI CD/DVD-ROM drive
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;ide1 at 0x170-0x177,0x376 on irq 15
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;hda: max request size: 1024KiB
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;hda: 80418240 sectors (41174 MB) w/1794KiB Cache,
+&gt; &gt; CHS=16383/255/63, UDMA(100)
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;hda: cache flushes supported
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt; hda: hda1 hda2 hda3
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hdc: status error: status=0x58 { DriveReady SeekComplete
+&gt; &gt; DataRequest }
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hdc: status timeout: status=0xd0 { Busy }
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;ide: failed opcode was: unknown
+&gt; &gt; &gt; &gt; &gt; &lt;3&gt;hdc: drive not ready for command
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;hdc: ATAPI reset complete
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;hdc: ATAPI 48X DVD-ROM drive, 254kB Cache
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;Uniform CD-ROM driver Revision: 3.20
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;hdd: ATAPI 52X DVD-ROM CD-R/RW drive, 2048kB Cache, UDMA(33)
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt;Attempting manual resume
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; I googled around on the status error and came up with this
+&gt; &gt; &gt; &gt; <a href="http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html">http://www.uwsg.iu.edu/hypermail/linux/kernel/0202.0/0128.html</a>
+&gt; &gt; &gt; &gt; The thread ended up being fixed by a kernel patch, so it probably
+&gt; &gt; &gt; &gt; isn't just a firmware upgrade. George, I know you tried a
+&gt; &gt; &gt; &gt; knoppix boot and the problem persisted, but you may try a kernel
+&gt; &gt; &gt; &gt; upgrade none the less to see if that gets rid of it.
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; One other thing you might check is how you have your IRQ's setup
+&gt; &gt; &gt; &gt; in your BIOS. The lines:
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &lt;6&gt;VP_IDE: IDE controller at PCI slot 0000:00:11.1
+&gt; &gt; &gt; &gt; &gt; &lt;4&gt; ACPI-0367: *** Warning: Unable to derive IRQ for device 
+&gt; 0000:00:
+&gt; &gt; 11.1
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; don't look so good. If that's all well (using defaults is
+&gt; &gt; &gt; &gt; usually best), you might first try booting without ACPI by
+&gt; &gt; &gt; &gt; appending noacpi to your bootloader line. It'd be worth a shot
+&gt; &gt; &gt; &gt; before you huck the drive or mail it back to be fixed.
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; If your problem still persists, bring it this weekend and maybe 7-8
+&gt; &gt; &gt; &gt; minds can get it working :)
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; Goodluck,
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; Elliott
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; On 5/15/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; Yikes!,
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; hdparm -i /dev/hdc doesn't list any DMA modes, yet
+&gt; &gt; &gt; &gt; &gt; &gt; hdparm -I /dev/hdc shows that it has up to udma2.
+&gt; &gt; &gt; &gt; &gt; &gt; That is very strange because they should read the
+&gt; &gt; &gt; &gt; &gt; &gt; same if the drive and software are working.
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; The difference between the two is that -I is read
+&gt; &gt; &gt; &gt; &gt; &gt; off of the firmware and is what the drive should
+&gt; &gt; &gt; &gt; &gt; &gt; be capable of doing. The -i flag shows what was
+&gt; &gt; &gt; &gt; &gt; &gt; found by probing during boot time.
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; What I'd do first is flash up to the lastest firmware,
+&gt; &gt; &gt; &gt; &gt; &gt; but I doubt that is the problem. Its just a good
+&gt; &gt; &gt; &gt; &gt; &gt; idea :) Second grab a stable kernel and install that
+&gt; &gt; &gt; &gt; &gt; &gt; to see if its just bad voodoo in the software world.
+&gt; &gt; &gt; &gt; &gt; &gt; If its still bugging after that, you may want to pull
+&gt; &gt; &gt; &gt; &gt; &gt; the drive and send it back if its still under warrentee.
+&gt; &gt; &gt; &gt; &gt; &gt; (Fourth (or is this the fifth) times the charm?)
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; By an off chance, did you check dmesg to see if the
+&gt; &gt; &gt; &gt; &gt; &gt; kernel complains on boot? If so post it up.
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; -Elliott
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -i /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Model=LILITE-ON DVD SOHD-16P6P9S, FwRev=, SerialNo=
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Config={ Fixed Removeable DTR&lt;=5Mbs DTR&gt;10Mbs nonMagnetic }
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; RawCHS=0/0/0, TrkSize=0, SectSize=0, ECCbytes=0
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; BuffType=8224, BuffSize=4112kB, MaxMultSect=32, MultSect=?0?
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; (maybe): CurCHS=2816/0/512, CurSects=393728, LBA=no
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; IORDY=no
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; PIO modes:
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; AdvancedPM=no
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Drive conforms to: ATA-2 published, ANSI X3.279-1996:
+&gt; &gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; * signifies the current active mode
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos # hdparm -I /dev/hdc
+&gt; &gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; &lt;snip&gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Capabilities:
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; LBA, IORDY(cannot be disabled)
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; DMA: mdma0 mdma1 mdma2 udma0 udma1 *udma2
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Cycle time: min=120ns recommended=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; PIO: pio0 pio1 pio2 pio3 pio4
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; Cycle time: no flow control=227ns IORDY flow control=120ns
+&gt; &gt; &gt; &gt; &gt; &gt; &gt; linux:/home/fragos #
+&gt; &gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt; &gt;
+&gt; &gt; &gt; &gt;
+&gt; &gt; &gt;
+&gt; &gt; &gt; --
+&gt; &gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt; &gt;
+&gt; &gt;
+&gt; &gt;
+&gt; &gt; --
+&gt; &gt; Beware the jaws that bite, for they belong to my evil attack penguin.
+&gt; &gt;
+&gt; 
+&gt; --
+&gt; Thanks,
+&gt; 
+&gt; -Mike
+&gt; 
+&gt; 
+
+
+-- 
+____________
+George Fragos
+####@####.####
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=dobfilgiepfbombnfajo&amp;month=200505.html">Elliott Johnson ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 19:35:45 -0000
+<br><b>Message-Id:</b> &lt;20050516193835.GA25301@mail.fasl.info&gt;
+<br>
+<hr><pre>George,
+
+Once you figure it out, you'll realize how
+easy it is.  The hardest part of course is
+getting to know what hardware you have.
+Once you know that compiling your kernel is
+no harder than:
+
+make menuconfig
+&lt;select your options&gt;
+make &amp;&amp; make modules_install
+
+You can even grab the latest kernel off of
+kernel.org and try it out.  Having two or
+more kernels is just a matter of adding
+three lines to your bootloader.  Currently 
+I've got about 3 or 4 laying around, most I
+should delete :)
+
+If you have the time you might try the 
+menuconfig part and just tool around in the
+options to get an idea of what the kernel
+has in it.  Pressing '?' on any item will
+bring up a short description.  For more
+info on the topic, there's always google :)
+
+Have fun,
+-Elliott
+
+George Fragos ####@####.#### @ Mon, May 16, 2005 at 12:12:05PM -0700 write :
+&gt; You guys are about to take me over the brink and into the truely hard core 
+&gt; strata. I have SuSE 9.3 so I thought it was the latest kernal. Before my 
+&gt; Sony DVD ROM self terminated its useful life it worked with this kernal and 
+&gt; DMA. Having never compiled a Linux kernal I will need some hand holding. 
+&gt; Perhaps if I'm going to jump into the fire, I should go all the way and try 
+&gt; Gentoo. I assume I can dual boot SuSE and Gentoo -- no evil empire on my 
+&gt; machine. Yet another thing I will require hand holding for.
+&gt; 
+&gt; George
+
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=aimdboopeclckeolemjn&amp;month=200505.html">Mike ####@####.####</a>
+<br><b>Date:</b>
+16 May 2005 20:46:47 -0000
+<br><b>Message-Id:</b> &lt;f73f9abd050516134656e5bdb@mail.gmail.com&gt;
+<br>
+<hr><pre>George,
+
+If your running Suse 9.3 your running the lastest and greatest and would 
+look in other directions. First, like Drew suggested, I would check the 
+Jumper settings on your DVD drive and verify they're set correctly Primary, 
+Secondary master/slave etc.... 
+
+If you think they're correct, take your drive out and try on another system. 
+If you system is going through DVD drives like candy, I would check your 
+power supply. Maybe the power lead your using is possibly shorted and 
+wreaking destruction. 
+
+Let us know...
+
+On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; 
+&gt; George,
+&gt; 
+&gt; Once you figure it out, you'll realize how
+&gt; easy it is. The hardest part of course is
+&gt; getting to know what hardware you have.
+&gt; Once you know that compiling your kernel is
+&gt; no harder than:
+&gt; 
+&gt; make menuconfig
+&gt; &lt;select your options&gt;
+&gt; make &amp;&amp; make modules_install
+&gt; 
+&gt; You can even grab the latest kernel off of
+&gt; kernel.org <a href="http://fosug.org/cgi-bin/%3Chttp://kernel.org%3E">&lt;http://kernel.org&gt;</a> and try it out. Having two or
+&gt; more kernels is just a matter of adding
+&gt; three lines to your bootloader. Currently
+&gt; I've got about 3 or 4 laying around, most I
+&gt; should delete :)
+&gt; 
+&gt; If you have the time you might try the
+&gt; menuconfig part and just tool around in the
+&gt; options to get an idea of what the kernel
+&gt; has in it. Pressing '?' on any item will
+&gt; bring up a short description. For more
+&gt; info on the topic, there's always google :)
+&gt; 
+&gt; Have fun,
+&gt; -Elliott
+&gt; 
+&gt; George Fragos ####@####.#### @ Mon, May 16, 2005 at 12:12:05PM -0700 
+&gt; write :
+&gt; &gt; You guys are about to take me over the brink and into the truely hard 
+&gt; core
+&gt; &gt; strata. I have SuSE 9.3 so I thought it was the latest kernal. Before my
+&gt; &gt; Sony DVD ROM self terminated its useful life it worked with this kernal 
+&gt; and
+&gt; &gt; DMA. Having never compiled a Linux kernal I will need some hand holding.
+&gt; &gt; Perhaps if I'm going to jump into the fire, I should go all the way and 
+&gt; try
+&gt; &gt; Gentoo. I assume I can dual boot SuSE and Gentoo -- no evil empire on my
+&gt; &gt; machine. Yet another thing I will require hand holding for.
+&gt; &gt;
+&gt; &gt; George
+&gt; 
+&gt; 
+
+
+-- 
+Thanks,
+
+-Mike
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Can't turn on DVD's DMA">Re: Can't turn on DVD's DMA</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=nljiecpfpnkhmgfboeen&amp;month=200505.html">George Fragos ####@####.####</a>
+<br><b>Date:</b>
+17 May 2005 02:23:56 -0000
+<br><b>Message-Id:</b> &lt;618e69c7050516192321a860e1@mail.gmail.com&gt;
+<br>
+<hr><pre>I double checked my hardware configuration and it was correct. I don't have 
+a 2nd box so I removed the DVD drive which was master, changed my CDRW from 
+slave to master and plugged in the same cables that were connected to the 
+DVD. The DMA problem went away so I'll return the DVD to PCclub for another. 
+The boot messages show that my box still thinks it should have a /dev/hdd. 
+Other than warning boot messages the system runs. I have developed another 
+issue. My Logitech USB mouse doesn't seem to be recognized during boot. I 
+use Alt-F2 to run yast and select hardware - mouse. Suddenly the mouse works 
+again.
+
+I want to double boot with Gentoo. Must I manually add boot and data 
+partitians before installing or will Gentoo help me with this? Anyway I'm 
+going to the Gentoo site to look for the download and some instructions.
+
+Thanks to everyone,
+George
+
+On 5/16/05, Mike ####@####.#### wrote:
+&gt; 
+&gt; George,
+&gt; 
+&gt; If your running Suse 9.3 your running the lastest and greatest and would
+&gt; look in other directions. First, like Drew suggested, I would check the
+&gt; Jumper settings on your DVD drive and verify they're set correctly 
+&gt; Primary,
+&gt; Secondary master/slave etc....
+&gt; 
+&gt; If you think they're correct, take your drive out and try on another 
+&gt; system.
+&gt; If you system is going through DVD drives like candy, I would check your
+&gt; power supply. Maybe the power lead your using is possibly shorted and
+&gt; wreaking destruction.
+&gt; 
+&gt; Let us know...
+&gt; 
+&gt; On 5/16/05, Elliott Johnson ####@####.#### wrote:
+&gt; &gt;
+&gt; &gt; George,
+&gt; &gt;
+&gt; &gt; Once you figure it out, you'll realize how
+&gt; &gt; easy it is. The hardest part of course is
+&gt; &gt; getting to know what hardware you have.
+&gt; &gt; Once you know that compiling your kernel is
+&gt; &gt; no harder than:
+&gt; &gt;
+&gt; &gt; make menuconfig
+&gt; &gt; &lt;select your options&gt;
+&gt; &gt; make &amp;&amp; make modules_install
+&gt; &gt;
+&gt; &gt; You can even grab the latest kernel off of
+&gt; &gt; kernel.org <a href="http://fosug.org/cgi-bin/%3Chttp://kernel.org%3E">&lt;http://kernel.org&gt;</a> <a href="http://fosug.org/cgi-bin/%3Chttp://kernel.org%3E">&lt;http://kernel.org&gt;</a> and try it out. 
+&gt; Having two or
+&gt; &gt; more kernels is just a matter of adding
+&gt; &gt; three lines to your bootloader. Currently
+&gt; &gt; I've got about 3 or 4 laying around, most I
+&gt; &gt; should delete :)
+&gt; &gt;
+&gt; &gt; If you have the time you might try the
+&gt; &gt; menuconfig part and just tool around in the
+&gt; &gt; options to get an idea of what the kernel
+&gt; &gt; has in it. Pressing '?' on any item will
+&gt; &gt; bring up a short description. For more
+&gt; &gt; info on the topic, there's always google :)
+&gt; &gt;
+&gt; &gt; Have fun,
+&gt; &gt; -Elliott
+&gt; &gt;
+&gt; &gt; George Fragos ####@####.#### @ Mon, May 16, 2005 at 12:12:05PM -0700
+&gt; &gt; write :
+&gt; &gt; &gt; You guys are about to take me over the brink and into the truely hard
+&gt; &gt; core
+&gt; &gt; &gt; strata. I have SuSE 9.3 so I thought it was the latest kernal. Before 
+&gt; my
+&gt; &gt; &gt; Sony DVD ROM self terminated its useful life it worked with this 
+&gt; kernal
+&gt; &gt; and
+&gt; &gt; &gt; DMA. Having never compiled a Linux kernal I will need some hand 
+&gt; holding.
+&gt; &gt; &gt; Perhaps if I'm going to jump into the fire, I should go all the way 
+&gt; and
+&gt; &gt; try
+&gt; &gt; &gt; Gentoo. I assume I can dual boot SuSE and Gentoo -- no evil empire on 
+&gt; my
+&gt; &gt; &gt; machine. Yet another thing I will require hand holding for.
+&gt; &gt; &gt;
+&gt; &gt; &gt; George
+&gt; &gt;
+&gt; &gt;
+&gt; 
+&gt; --
+&gt; Thanks,
+&gt; 
+&gt; -Mike
+&gt; 
+&gt; 
+
+
+-- 
+____________
+George Fragos
+####@####.####
+####@####.####
+73 East Swift Ave.
+Fresno CA 93704
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200505.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200505.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

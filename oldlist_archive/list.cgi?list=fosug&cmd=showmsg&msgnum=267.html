@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Re: Meeting</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=msg-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=msg-title><h1>fosug: Re: Meeting</h1></div>
+<hr>
+<div class=msg><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=266.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=268.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=266.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=268.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+</table>
+<hr><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: Meeting">Re: Meeting</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm&amp;month=200503.html">Patrick May ####@####.####</a>
+<br><b>Date:</b>
+22 Mar 2005 00:15:53 -0000
+<br><b>Message-Id:</b> &lt;20050321161938.J27759@pmmay.sytes.net&gt;
+<br>
+<hr><pre>On Mon, Mar 21, 2005 at 02:55:57PM -0800, Stevo wrote:
+&gt; You know I experienced a problem recently with a null byte character
+&gt; error message when I relayed off of smtp.comcast.net
+&gt; 
+&gt; Very strange. most people said the solution was enabling tls... which
+&gt; I'm going to try. But small test messages worked great :-)
+
+Ok, well this is what my problem was:
+
+Power outtage about 78 days ago (that's what the router's uptime is so I'm going off of that...and it makes sense.)
+
+When the machine came back up, the router (everything is on one machine...bad, I know...that's why I'm splitting off the router/firewall into a dedicated IPCop 1.4.4 box.) Sendmail wasn't set up right, well, wasn't ever set up at all. It was taking the outgoing mail and couldn't send it anywhere as 25 was blocked.
+
+PacBellSBCYahoo blocks outgoing port 25 except to their servers. Didn't know this until I was rummaging around their site. I guess it's been supposedly in affect since September...never noticed a problem before. The list using smtp.pacbell.yahoo.com for my outgoing mail server. So I try that. Not authorized...ok...so I set up te SASL in postfix...not authorized. Oh holy hell...WTF. So after spending 45 minutes on the phone with Tech Support...I'm thinking New Delhi, India. They walk me through getting stuff squared (web email access and from a generic email client standpoint). The account is old, ca 2000, and isn't on the sbcglobal/yahoo system. So web based mail is over on prodigy.net and their information on their site is of absolutely no use. Outgoing mail is mail.pacbell.net (I tried smtp.pacbell.net which USED to be a server...POP3 was always postoffice.pacbell.net). The goofy thing was incoming was working perfectly. So I get all the squared away (I was setting up the new system.) Once I had relayhost = [mail.pacbell.net] all was golden. And removed Sendmail from the system.
+
+So today I decided to fix the router, just to see if I could find the problem. I notice in the log an entry on the outgoing mail with sendmail. I thought I removed it, I didn't. So I rpm -e'ed sendmail and all is good in my world again.
+
+So guys if you're running FC3 and using Postfix...make sure you remove Sendmail. It's always installed, no matter what. Even if you uncheck it, it still gets installed. Ack.
+
+Next, I'd like to do the following for S&amp;Gs:
+
+eDMS (Document Management). Scan to PDF my bills and archive them. If I do this I'd like to run a seperate instance of Apache to serve it up on a different port not reachable from outside.
+
+Virus/spam filtering on Postfix.
+
+Attempt in some way to secure the wireless. I'm dealing with an XP Home and a 98SE machine over wireless. Maybe I'll just block them off from my side (server, workstation &amp; Replay.) I'd like to log the connections over the WiFi just to see if anyone is piggybacking on.
+
+HaylaFAX
+
+Digital Answering machine...I never get calls but I never check the other machine and nobody tells anyone what their messages were. My mom has this annoying thing where she won't erase massages off of the answering machine...so it just fills up. Now she can keep them on her computer! Plus I just want to do it. Again, it's for S&amp;Gs.
+
+I'd like a new photo album system. The one I'm using now I would run locally, then copy everything over. Well, I did it that way because the workstation is a 850 and the server was an AMD K5 PR133. Gotta love old hardware. Thing is still running from 4/97. Only changes: New Case and CPU fan (new CPU fan wouldn't fit in old case). Added a 3.1 GB drive back in ummm '98 sometime. It does have a problem with a drifting system (not hardware) clock. Oh the CD-Rom, well, I changed it out for some reason. Oh, put in like a 50x. Put that in a box. The 50x died at some point. Well, the 8x I pulled it out of a box this weekend...if had a big dent in the bottom. :O Yeah. TRASH. Wow I so forked off. Anyways. So what does everyone use, if they do? I'll have a full LAMP system so that's not an issue.
+
+I'd like to so something with MrHouse and X10. I've got a bunch of stuff. I just need another RJ-10 (the really small RJ used in telephone handsets). My interface cable got cut. :( Not sure how much I can do, I've put in a lot of CF lamps and they don't work with the standard X10 stuff. Works ok with the appliance modules as they have a relay. But the other ones don't work...unless you like seizure inducing flickering.
+
+ok, I think I went on long enough. LOL
+
+Patrick
+</pre>
+
+<hr><table class=msgmenu>
+
+<tr class=msgmenu-prevbydate>
+<td class=msgmenu-label>Previous by date:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=266.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbydate>
+<td class=msgmenu-label>Next by date:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=268.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+<tr class=msgmenu-prevbythread>
+<td class=msgmenu-label>Previous in thread:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=266.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=jjaibmhcgncgkcebgmfd.html">Stevo</a></td>
+</tr>
+
+<tr class=msgmenu-nextbythread>
+<td class=msgmenu-label>Next in thread:</td>
+<td class=msgmenu-value>22 Mar 2005 00:15:53 -0000 <a class="subject" href="list.cgi%3Flist=fosug&amp;cmd=showmsg&amp;msgnum=268.html">Re: Meeting</a>, <a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=likgobanhokmeddphnfm.html">Patrick May</a></td>
+</tr>
+
+</table>
+</div><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200502.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200503.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200503.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200504.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

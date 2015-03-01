@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: A good read and a warning for bsd ipsec users...</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200507.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: A good read and a warning for bsd ipsec users...</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: A good read and a warning for bsd ipsec users...">A good read and a warning for bsd ipsec users...</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200507.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+28 Jul 2005 03:24:48 -0000
+<br><b>Message-Id:</b> &lt;20050728032429.GH8530@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>If you haven't already taken the opportunity to partake of some of the *free*
+services that SANS offers, you should start by looking here:
+
+<a href="http://isc.sans.org/diary.php">http://isc.sans.org/diary.php</a>
+
+I keep this as my home page and make sure that I visit each day.
+
+This concludes the good read (as in it's a good idea to read it) portion of
+our posting.
+
+The bsd portion consists of an excerpt from the above link for today:
+
+  AH MAC vulnerability in freebds
+
+  FreeBSD IPSec
+
+  II. Problem Description A programming error in the implementation of the
+  AES-XCBC-MAC algorithm for authentication resulted in a constant key being
+  used instead of the key specified by the system administrator.
+
+  III. Impact If the AES-XCBC-MAC algorithm is used for authentication in the
+  absence of any encryption, then an attacker may be able to forge packets
+  which appear to originate from a different system and thereby succeed in
+  establishing an IPsec session. If access to sensitive information or systems
+  is controlled based on the identity of the source system, this may result in
+  information disclosure or privilege escalation.
+
+  Patches available here: IPSec Patch
+  <a href="http://fosug.org/cgi-bin/(ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-05:19/ipsec.patch)">(ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-05:19/ipsec.patch)</a>
+
+  Combined with the ESP ipsec vulnerabilty NISCC announced this negates their
+  recommended mitigation (add ah to esp). IPSec ESP Man_in_the_middle 
+
+And before you scream, &quot;But I don't use bsd, I use &lt;insert vendor x firewall
+gizmo name here&gt; and I'm secure,&quot; be sure that you know what it's running
+under the hood (e.g. checkpoint is bsd under the wraps and the pretty colors).
+
+--Robert
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200506.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200507.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200507.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200508.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>

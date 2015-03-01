@@ -1,0 +1,913 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<link href="../list/browse.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=rss2" />
+<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="list.cgi%3Flist=fosug&amp;cmd=feed&amp;feedtype=atom" />
+<title>fosug: Thread: php</title>
+<meta NAME="robots" CONTENT="noindex">
+<meta NAME="robots" CONTENT="nofollow">
+<base href="">
+</head>
+<body class=showthread-body>
+<div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200511.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+<hr>
+<div class=showthread-title><h1>fosug: Thread: php</h1></div>
+<hr>
+<table class=msgs><tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr><tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: php">php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200511.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 04:10:20 -0000
+<br><b>Message-Id:</b> &lt;20051102041003.86384.qmail@web51813.mail.yahoo.com&gt;
+<br>
+<hr><pre>I gots me a php issue that is more an admin thing than
+anything.  No help in the MB about this either.
+
+This is a script meant to verify my php.ini settings
+are working the way they are suppose to.
+
+display_errors and register_globals return a null
+value and won't display anything.  I have an open
+source application that I am trying to install (OS
+COMMERCE) and it requires register globals turned on. 
+I turned them on in the php.ini file as well as
+display errors (for dev purposes only) but the errors
+don't display and either will register globals turn
+on.  Can't seem to find much on this issue except to
+say  &quot;turn register_globals on&quot;.  I did that and
+the're still not on and the php script I am running as
+root won't echo what the value is, it will on other
+php.ini settings but not those to.  Any advice?
+
+
+
+echo 'display_errors = ' . ini_get('display_errors') .
+&quot;\n&quot;;
+echo 'register_globals = ' .
+ini_get('register_globals') . &quot;\n&quot;;
+echo 'post_max_size = ' . ini_get('post_max_size') .
+&quot;\n&quot;;
+echo 'post_max_size+1 = ' .
+(ini_get('post_max_size')+1) . &quot;\n&quot;;
+echo 'post_max_size in bytes = ' .
+return_bytes(ini_get('post_max_size'));
+
+function return_bytes($val) {
+   $val = trim($val);
+   $last = strtolower($val{strlen($val)-1});
+   switch($last) {
+       case 'g':
+           $val *= 1024;
+       case 'm':
+           $val *= 1024;
+       case 'k':
+           $val *= 1024;
+   }
+
+   return $val;
+}
+
+?&gt;
+
+-=JoeL=-
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa&amp;month=200511.html">Stephan Aleman ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 04:31:17 -0000
+<br><b>Message-Id:</b> &lt;20051102043057.57626.qmail@web52302.mail.yahoo.com&gt;
+<br>
+<hr><pre>--- Joel Searcy ####@####.#### wrote:
+
+&gt; I gots me a php issue that is more an admin thing
+&gt; than
+&gt; anything.  No help in the MB about this either.
+&gt; 
+&gt; This is a script meant to verify my php.ini settings
+&gt; are working the way they are suppose to.
+&gt; 
+&gt; display_errors and register_globals return a null
+&gt; value and won't display anything.  I have an open
+&gt; source application that I am trying to install (OS
+&gt; COMMERCE) and it requires register globals turned
+&gt; on. 
+&gt; I turned them on in the php.ini file as well as
+&gt; display errors (for dev purposes only) but the
+&gt; errors
+&gt; don't display and either will register globals turn
+&gt; on.  Can't seem to find much on this issue except to
+&gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; the're still not on and the php script I am running
+&gt; as
+&gt; root won't echo what the value is, it will on other
+&gt; php.ini settings but not those to.  Any advice?
+&gt; 
+&gt; 
+&gt; 
+&gt; echo 'display_errors = ' . ini_get('display_errors')
+&gt; .
+&gt; &quot;\n&quot;;
+&gt; echo 'register_globals = ' .
+&gt; ini_get('register_globals') . &quot;\n&quot;;
+&gt; echo 'post_max_size = ' . ini_get('post_max_size') .
+&gt; &quot;\n&quot;;
+&gt; echo 'post_max_size+1 = ' .
+&gt; (ini_get('post_max_size')+1) . &quot;\n&quot;;
+&gt; echo 'post_max_size in bytes = ' .
+&gt; return_bytes(ini_get('post_max_size'));
+&gt; 
+&gt; function return_bytes($val) {
+&gt;    $val = trim($val);
+&gt;    $last = strtolower($val{strlen($val)-1});
+&gt;    switch($last) {
+&gt;        case 'g':
+&gt;            $val *= 1024;
+&gt;        case 'm':
+&gt;            $val *= 1024;
+&gt;        case 'k':
+&gt;            $val *= 1024;
+&gt;    }
+&gt; 
+&gt;    return $val;
+&gt; }
+&gt; 
+&gt; ?&gt;
+&gt; 
+&gt; -=JoeL=-
+&gt;
+
+Can you post the resultant output of this script? Read
+comments at php.net/ini_get and
+php.net/register_globals for clues. 
+
+What web server are you running, sounds like it needs
+a restart to reload the settings in php.ini?
+
+Leaving register_globals on can be risky, if it's only
+for the configuration, don't forget to turn them off.
+
+
+
+	
+		
+__________________________________ 
+Yahoo! Mail - PC Magazine Editors' Choice 2005 
+<a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200511.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 04:43:29 -0000
+<br><b>Message-Id:</b> &lt;20051102044312.38128.qmail@web51811.mail.yahoo.com&gt;
+<br>
+<hr><pre>Sorry forgot about that... duh..
+
+Distro: FC4
+Web Server Apache/2.0.54
+Scripting Language: PHP 5.0.4
+
+Output of that script in both CLI and In a web page:
+
+display_errors =
+register_globals =
+post_max_size = 8M
+post_max_size+1 = 9
+post_max_size in bytes = 8388608
+
+And I know the're turned off.  I've tried just the
+display errors and register globals by themselves and
+they return the same value when I turned them ON in
+the php.ini file AND I RESTARTED HTTPD.  Is it a fault
+install of php maybe or do I need to reload it?  I'm
+trying to set up some Open Source projects because I
+have a guy willing to PAY me $$$ to skin and modify
+them started with OS COMMERCE.  It requires
+register_globals = on in order to install and run
+itself.  Works ok with apache 1.333 and php version
+4.2 or something like that but in that old of a
+version register_globals was on by default.
+--- Stephan Aleman ####@####.#### wrote:
+
+&gt; --- Joel Searcy ####@####.#### wrote:
+&gt; 
+&gt; &gt; I gots me a php issue that is more an admin thing
+&gt; &gt; than
+&gt; &gt; anything.  No help in the MB about this either.
+&gt; &gt; 
+&gt; &gt; This is a script meant to verify my php.ini
+&gt; settings
+&gt; &gt; are working the way they are suppose to.
+&gt; &gt; 
+&gt; &gt; display_errors and register_globals return a null
+&gt; &gt; value and won't display anything.  I have an open
+&gt; &gt; source application that I am trying to install (OS
+&gt; &gt; COMMERCE) and it requires register globals turned
+&gt; &gt; on. 
+&gt; &gt; I turned them on in the php.ini file as well as
+&gt; &gt; display errors (for dev purposes only) but the
+&gt; &gt; errors
+&gt; &gt; don't display and either will register globals
+&gt; turn
+&gt; &gt; on.  Can't seem to find much on this issue except
+&gt; to
+&gt; &gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; &gt; the're still not on and the php script I am
+&gt; running
+&gt; &gt; as
+&gt; &gt; root won't echo what the value is, it will on
+&gt; other
+&gt; &gt; php.ini settings but not those to.  Any advice?
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; echo 'display_errors = ' .
+&gt; ini_get('display_errors')
+&gt; &gt; .
+&gt; &gt; &quot;\n&quot;;
+&gt; &gt; echo 'register_globals = ' .
+&gt; &gt; ini_get('register_globals') . &quot;\n&quot;;
+&gt; &gt; echo 'post_max_size = ' . ini_get('post_max_size')
+&gt; .
+&gt; &gt; &quot;\n&quot;;
+&gt; &gt; echo 'post_max_size+1 = ' .
+&gt; &gt; (ini_get('post_max_size')+1) . &quot;\n&quot;;
+&gt; &gt; echo 'post_max_size in bytes = ' .
+&gt; &gt; return_bytes(ini_get('post_max_size'));
+&gt; &gt; 
+&gt; &gt; function return_bytes($val) {
+&gt; &gt;    $val = trim($val);
+&gt; &gt;    $last = strtolower($val{strlen($val)-1});
+&gt; &gt;    switch($last) {
+&gt; &gt;        case 'g':
+&gt; &gt;            $val *= 1024;
+&gt; &gt;        case 'm':
+&gt; &gt;            $val *= 1024;
+&gt; &gt;        case 'k':
+&gt; &gt;            $val *= 1024;
+&gt; &gt;    }
+&gt; &gt; 
+&gt; &gt;    return $val;
+&gt; &gt; }
+&gt; &gt; 
+&gt; &gt; ?&gt;
+&gt; &gt; 
+&gt; &gt; -=JoeL=-
+&gt; &gt;
+&gt; 
+&gt; Can you post the resultant output of this script?
+&gt; Read
+&gt; comments at php.net/ini_get and
+&gt; php.net/register_globals for clues. 
+&gt; 
+&gt; What web server are you running, sounds like it
+&gt; needs
+&gt; a restart to reload the settings in php.ini?
+&gt; 
+&gt; Leaving register_globals on can be risky, if it's
+&gt; only
+&gt; for the configuration, don't forget to turn them
+&gt; off.
+&gt; 
+&gt; 
+&gt; 
+&gt; 	
+&gt; 		
+&gt; __________________________________ 
+&gt; Yahoo! Mail - PC Magazine Editors' Choice 2005 
+&gt; <a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+&gt; 
+
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=kllfcpgdhhehicjdgkme&amp;month=200511.html">Robert Nickel ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 05:29:22 -0000
+<br><b>Message-Id:</b> &lt;20051102052903.GZ1715@homebase.hsd1.ca.comcast.net))&gt;
+<br>
+<hr><pre>On 2005.11.01 20:10:03 -0800, Joel Searcy wrote:
+&gt; I gots me a php issue that is more an admin thing than
+&gt; anything.  No help in the MB about this either.
+
+MB?
+
+&gt; display_errors and register_globals return a null
+&gt; value and won't display anything.  I have an open
+&gt; source application that I am trying to install (OS
+&gt; COMMERCE) and it requires register globals turned on. 
+&gt; I turned them on in the php.ini file as well as
+&gt; display errors (for dev purposes only) but the errors
+&gt; don't display and either will register globals turn
+&gt; on.  Can't seem to find much on this issue except to
+&gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; the're still not on and the php script I am running as
+&gt; root won't echo what the value is, it will on other
+&gt; php.ini settings but not those to.  Any advice?
+
+Run phpinfo() and see what the settings show. [0]
+
+Of particular interest is that you look at the php.ini file location that your
+php is looking at.  There are often more than one location that these show up
+in and if you happen to be looking in the wrong location and changing settings
+there, you'll develop a flat spot on your head.
+
+If you find that register_globals and display_errors are both off, you've
+worked on the wrong ini file.
+
+If you find that you're using the right file on the CLI, and that through your
+web server you have the same problem, make sure that there's no settings in
+the .htaccess file in the directory you're interested in.
+
+As to the NULL return on the ini_get calls, this is as designed.  If the
+values aren't explicitly set in the php.ini file, then you'll get NULL string
+returns.  The best way around this is to cast the values as integers when
+reading, a la:
+
+  print 'register_globals = ' . ((int) ini_get('register_globals')) . &quot;\n&quot;;
+
+which should yeild the desired 0|1 that you're looking for.
+
+If you don't want to mess with the full-blown register_globals mojo, you can
+simply create an include file (or find one that's used by every page) and
+place a call to import_request_variables [1] or better yet, to extract [2].
+
+&lt;soapbox&gt;
+If you're running an application that still *requires* the use of
+register_globals, you should consider another application VERY SERIOUSLY.  
+&lt;/soapbox&gt;
+
+hth,
+  --Robert
+
+[0] /path/to/php/bin/php -i | less
+[1] <a href="http://us2.php.net/manual/en/function.import-request-variables.php">http://us2.php.net/manual/en/function.import-request-variables.php</a>
+[2] <a href="http://us2.php.net/manual/en/function.extract.php">http://us2.php.net/manual/en/function.extract.php</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa&amp;month=200511.html">Stephan Aleman ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 05:32:44 -0000
+<br><b>Message-Id:</b> &lt;20051102053226.72415.qmail@web52305.mail.yahoo.com&gt;
+<br>
+<hr><pre>--- Joel Searcy ####@####.#### wrote:
+
+&gt; Sorry forgot about that... duh..
+&gt; 
+&gt; Distro: FC4
+&gt; Web Server Apache/2.0.54
+&gt; Scripting Language: PHP 5.0.4
+&gt; 
+&gt; Output of that script in both CLI and In a web page:
+&gt; 
+&gt; display_errors =
+&gt; register_globals =
+&gt; post_max_size = 8M
+&gt; post_max_size+1 = 9
+&gt; post_max_size in bytes = 8388608
+&gt; 
+&gt; And I know the're turned off.  I've tried just the
+&gt; display errors and register globals by themselves
+&gt; and
+&gt; they return the same value when I turned them ON in
+&gt; the php.ini file AND I RESTARTED HTTPD.  Is it a
+&gt; fault
+&gt; install of php maybe or do I need to reload it?  I'm
+&gt; trying to set up some Open Source projects because I
+&gt; have a guy willing to PAY me $$$ to skin and modify
+&gt; them started with OS COMMERCE.  It requires
+&gt; register_globals = on in order to install and run
+&gt; itself.  Works ok with apache 1.333 and php version
+&gt; 4.2 or something like that but in that old of a
+&gt; version register_globals was on by default.
+
+Don't worry so much about the script, if you edited
+the file and know it's restarted, try the installation
+proceures again ... were there any other errors.
+
+&gt; --- Stephan Aleman ####@####.#### wrote:
+&gt; 
+&gt; &gt; --- Joel Searcy ####@####.#### wrote:
+&gt; &gt; 
+&gt; &gt; &gt; I gots me a php issue that is more an admin
+&gt; thing
+&gt; &gt; &gt; than
+&gt; &gt; &gt; anything.  No help in the MB about this either.
+&gt; &gt; &gt; 
+&gt; &gt; &gt; This is a script meant to verify my php.ini
+&gt; &gt; settings
+&gt; &gt; &gt; are working the way they are suppose to.
+&gt; &gt; &gt; 
+&gt; &gt; &gt; display_errors and register_globals return a
+&gt; null
+&gt; &gt; &gt; value and won't display anything.  I have an
+&gt; open
+&gt; &gt; &gt; source application that I am trying to install
+&gt; (OS
+&gt; &gt; &gt; COMMERCE) and it requires register globals
+&gt; turned
+&gt; &gt; &gt; on. 
+&gt; &gt; &gt; I turned them on in the php.ini file as well as
+&gt; &gt; &gt; display errors (for dev purposes only) but the
+&gt; &gt; &gt; errors
+&gt; &gt; &gt; don't display and either will register globals
+&gt; &gt; turn
+&gt; &gt; &gt; on.  Can't seem to find much on this issue
+&gt; except
+&gt; &gt; to
+&gt; &gt; &gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; &gt; &gt; the're still not on and the php script I am
+&gt; &gt; running
+&gt; &gt; &gt; as
+&gt; &gt; &gt; root won't echo what the value is, it will on
+&gt; &gt; other
+&gt; &gt; &gt; php.ini settings but not those to.  Any advice?
+&gt; &gt; &gt; 
+&gt; &gt; &gt; 
+&gt; &gt; &gt; 
+&gt; &gt; &gt; echo 'display_errors = ' .
+&gt; &gt; ini_get('display_errors')
+&gt; &gt; &gt; .
+&gt; &gt; &gt; &quot;\n&quot;;
+&gt; &gt; &gt; echo 'register_globals = ' .
+&gt; &gt; &gt; ini_get('register_globals') . &quot;\n&quot;;
+&gt; &gt; &gt; echo 'post_max_size = ' .
+&gt; ini_get('post_max_size')
+&gt; &gt; .
+&gt; &gt; &gt; &quot;\n&quot;;
+&gt; &gt; &gt; echo 'post_max_size+1 = ' .
+&gt; &gt; &gt; (ini_get('post_max_size')+1) . &quot;\n&quot;;
+&gt; &gt; &gt; echo 'post_max_size in bytes = ' .
+&gt; &gt; &gt; return_bytes(ini_get('post_max_size'));
+&gt; &gt; &gt; 
+&gt; &gt; &gt; function return_bytes($val) {
+&gt; &gt; &gt;    $val = trim($val);
+&gt; &gt; &gt;    $last = strtolower($val{strlen($val)-1});
+&gt; &gt; &gt;    switch($last) {
+&gt; &gt; &gt;        case 'g':
+&gt; &gt; &gt;            $val *= 1024;
+&gt; &gt; &gt;        case 'm':
+&gt; &gt; &gt;            $val *= 1024;
+&gt; &gt; &gt;        case 'k':
+&gt; &gt; &gt;            $val *= 1024;
+&gt; &gt; &gt;    }
+&gt; &gt; &gt; 
+&gt; &gt; &gt;    return $val;
+&gt; &gt; &gt; }
+&gt; &gt; &gt; 
+&gt; &gt; &gt; ?&gt;
+&gt; &gt; &gt; 
+&gt; &gt; &gt; -=JoeL=-
+&gt; &gt; &gt;
+&gt; &gt; 
+&gt; &gt; Can you post the resultant output of this script?
+&gt; &gt; Read
+&gt; &gt; comments at php.net/ini_get and
+&gt; &gt; php.net/register_globals for clues. 
+&gt; &gt; 
+&gt; &gt; What web server are you running, sounds like it
+&gt; &gt; needs
+&gt; &gt; a restart to reload the settings in php.ini?
+&gt; &gt; 
+&gt; &gt; Leaving register_globals on can be risky, if it's
+&gt; &gt; only
+&gt; &gt; for the configuration, don't forget to turn them
+&gt; &gt; off.
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; 
+&gt; &gt; 	
+&gt; &gt; 		
+&gt; &gt; __________________________________ 
+&gt; &gt; Yahoo! Mail - PC Magazine Editors' Choice 2005 
+&gt; &gt; <a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+&gt; &gt; 
+&gt; 
+&gt; 
+&gt; 
+&gt; 		
+&gt; __________________________________ 
+&gt; Yahoo! FareChase: Search multiple travel sites in
+&gt; one click.
+&gt; <a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+&gt; 
+
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa&amp;month=200511.html">Stephan Aleman ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 05:36:27 -0000
+<br><b>Message-Id:</b> &lt;20051102053609.98169.qmail@web52310.mail.yahoo.com&gt;
+<br>
+<hr><pre>--- Robert Nickel ####@####.#### wrote:
+
+&gt; On 2005.11.01 20:10:03 -0800, Joel Searcy wrote:
+&gt; &gt; I gots me a php issue that is more an admin thing
+&gt; than
+&gt; &gt; anything.  No help in the MB about this either.
+&gt; 
+&gt; MB?
+&gt; 
+&gt; &gt; display_errors and register_globals return a null
+&gt; &gt; value and won't display anything.  I have an open
+&gt; &gt; source application that I am trying to install (OS
+&gt; &gt; COMMERCE) and it requires register globals turned
+&gt; on. 
+&gt; &gt; I turned them on in the php.ini file as well as
+&gt; &gt; display errors (for dev purposes only) but the
+&gt; errors
+&gt; &gt; don't display and either will register globals
+&gt; turn
+&gt; &gt; on.  Can't seem to find much on this issue except
+&gt; to
+&gt; &gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; &gt; the're still not on and the php script I am
+&gt; running as
+&gt; &gt; root won't echo what the value is, it will on
+&gt; other
+&gt; &gt; php.ini settings but not those to.  Any advice?
+&gt; 
+&gt; Run phpinfo() and see what the settings show. [0]
+&gt; 
+&gt; Of particular interest is that you look at the
+&gt; php.ini file location that your
+&gt; php is looking at.  There are often more than one
+&gt; location that these show up
+&gt; in and if you happen to be looking in the wrong
+&gt; location and changing settings
+&gt; there, you'll develop a flat spot on your head.
+&gt; 
+&gt; If you find that register_globals and display_errors
+&gt; are both off, you've
+&gt; worked on the wrong ini file.
+&gt; 
+
+Use this to find those files:
+find / -name php.ini
+
+&gt; If you find that you're using the right file on the
+&gt; CLI, and that through your
+&gt; web server you have the same problem, make sure that
+&gt; there's no settings in
+&gt; the .htaccess file in the directory you're
+&gt; interested in.
+&gt; 
+&gt; As to the NULL return on the ini_get calls, this is
+&gt; as designed.  If the
+&gt; values aren't explicitly set in the php.ini file,
+&gt; then you'll get NULL string
+&gt; returns.  The best way around this is to cast the
+&gt; values as integers when
+&gt; reading, a la:
+&gt; 
+&gt;   print 'register_globals = ' . ((int)
+&gt; ini_get('register_globals')) . &quot;\n&quot;;
+&gt; 
+&gt; which should yeild the desired 0|1 that you're
+&gt; looking for.
+&gt; 
+&gt; If you don't want to mess with the full-blown
+&gt; register_globals mojo, you can
+&gt; simply create an include file (or find one that's
+&gt; used by every page) and
+&gt; place a call to import_request_variables [1] or
+&gt; better yet, to extract [2].
+&gt; 
+&gt; &lt;soapbox&gt;
+&gt; If you're running an application that still
+&gt; *requires* the use of
+&gt; register_globals, you should consider another
+&gt; application VERY SERIOUSLY.  
+&gt; &lt;/soapbox&gt;
+&gt; 
+&gt; hth,
+&gt;   --Robert
+&gt; 
+&gt; [0] /path/to/php/bin/php -i | less
+&gt; [1]
+&gt;
+<a href="http://us2.php.net/manual/en/function.import-request-variables.php">http://us2.php.net/manual/en/function.import-request-variables.php</a>
+&gt; [2]
+&gt; <a href="http://us2.php.net/manual/en/function.extract.php">http://us2.php.net/manual/en/function.extract.php</a>
+&gt; 
+
+
+	
+		
+__________________________________ 
+Yahoo! Mail - PC Magazine Editors' Choice 2005 
+<a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=phnejcnpkfifbncbfgmj&amp;month=200511.html">Joel Searcy ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 22:30:04 -0000
+<br><b>Message-Id:</b> &lt;20051102222951.79159.qmail@web51808.mail.yahoo.com&gt;
+<br>
+<hr><pre>Yea yea I know rob that register_globals is insecure
+and applications that use it are an incident waiting
+to happen.  
+
+As to what the MB is, MB = message board.  Sorry at
+work I've gotten use to using shorthand.
+
+I did the find thiny and it only returs one awnser,
+/etc/php.ini and that is the ONLY file I've been
+editin to try to get stuff changed.
+
+As far as errors I try to display what the ini file is
+ set to with php to make sure my install is working
+and those are the only 2 settings I can't get a value
+on, they always come up null, every other setting I
+can get a string, boolian, or intiger return on it. 
+Quite frustraiting, in the FC4 build it may not be
+able to be turned on at all or it could be just a bug
+during the install.  Either way that is the only php
+application that doesn't work on my distro that I have
+found(could be do to bad programming and the authors
+of OS COMMERCE just don't want to update the code).  I
+found a supposed &quot;fix&quot; but that doesn't work either. 
+Also I have a series of apache mods installed
+including mod-security, mod-ssl, and son on, the
+standard apache install for FC4 comes with all that,
+if that helps at all.
+
+I've been considering it a lot and th guy who is
+paying me $$$$ wants the application skinned but I'm
+just going to reccomend switching applications.  I
+hostestly don't want to contribute to a serious
+incident waiting to happen.  I'm open to suggestions
+as to any open souce e-commerce applications.
+
+--- Stephan Aleman ####@####.#### wrote:
+
+&gt; --- Robert Nickel ####@####.#### wrote:
+&gt; 
+&gt; &gt; On 2005.11.01 20:10:03 -0800, Joel Searcy wrote:
+&gt; &gt; &gt; I gots me a php issue that is more an admin
+&gt; thing
+&gt; &gt; than
+&gt; &gt; &gt; anything.  No help in the MB about this either.
+&gt; &gt; 
+&gt; &gt; MB?
+&gt; &gt; 
+&gt; &gt; &gt; display_errors and register_globals return a
+&gt; null
+&gt; &gt; &gt; value and won't display anything.  I have an
+&gt; open
+&gt; &gt; &gt; source application that I am trying to install
+&gt; (OS
+&gt; &gt; &gt; COMMERCE) and it requires register globals
+&gt; turned
+&gt; &gt; on. 
+&gt; &gt; &gt; I turned them on in the php.ini file as well as
+&gt; &gt; &gt; display errors (for dev purposes only) but the
+&gt; &gt; errors
+&gt; &gt; &gt; don't display and either will register globals
+&gt; &gt; turn
+&gt; &gt; &gt; on.  Can't seem to find much on this issue
+&gt; except
+&gt; &gt; to
+&gt; &gt; &gt; say  &quot;turn register_globals on&quot;.  I did that and
+&gt; &gt; &gt; the're still not on and the php script I am
+&gt; &gt; running as
+&gt; &gt; &gt; root won't echo what the value is, it will on
+&gt; &gt; other
+&gt; &gt; &gt; php.ini settings but not those to.  Any advice?
+&gt; &gt; 
+&gt; &gt; Run phpinfo() and see what the settings show. [0]
+&gt; &gt; 
+&gt; &gt; Of particular interest is that you look at the
+&gt; &gt; php.ini file location that your
+&gt; &gt; php is looking at.  There are often more than one
+&gt; &gt; location that these show up
+&gt; &gt; in and if you happen to be looking in the wrong
+&gt; &gt; location and changing settings
+&gt; &gt; there, you'll develop a flat spot on your head.
+&gt; &gt; 
+&gt; &gt; If you find that register_globals and
+&gt; display_errors
+&gt; &gt; are both off, you've
+&gt; &gt; worked on the wrong ini file.
+&gt; &gt; 
+&gt; 
+&gt; Use this to find those files:
+&gt; find / -name php.ini
+&gt; 
+&gt; &gt; If you find that you're using the right file on
+&gt; the
+&gt; &gt; CLI, and that through your
+&gt; &gt; web server you have the same problem, make sure
+&gt; that
+&gt; &gt; there's no settings in
+&gt; &gt; the .htaccess file in the directory you're
+&gt; &gt; interested in.
+&gt; &gt; 
+&gt; &gt; As to the NULL return on the ini_get calls, this
+&gt; is
+&gt; &gt; as designed.  If the
+&gt; &gt; values aren't explicitly set in the php.ini file,
+&gt; &gt; then you'll get NULL string
+&gt; &gt; returns.  The best way around this is to cast the
+&gt; &gt; values as integers when
+&gt; &gt; reading, a la:
+&gt; &gt; 
+&gt; &gt;   print 'register_globals = ' . ((int)
+&gt; &gt; ini_get('register_globals')) . &quot;\n&quot;;
+&gt; &gt; 
+&gt; &gt; which should yeild the desired 0|1 that you're
+&gt; &gt; looking for.
+&gt; &gt; 
+&gt; &gt; If you don't want to mess with the full-blown
+&gt; &gt; register_globals mojo, you can
+&gt; &gt; simply create an include file (or find one that's
+&gt; &gt; used by every page) and
+&gt; &gt; place a call to import_request_variables [1] or
+&gt; &gt; better yet, to extract [2].
+&gt; &gt; 
+&gt; &gt; &lt;soapbox&gt;
+&gt; &gt; If you're running an application that still
+&gt; &gt; *requires* the use of
+&gt; &gt; register_globals, you should consider another
+&gt; &gt; application VERY SERIOUSLY.  
+&gt; &gt; &lt;/soapbox&gt;
+&gt; &gt; 
+&gt; &gt; hth,
+&gt; &gt;   --Robert
+&gt; &gt; 
+&gt; &gt; [0] /path/to/php/bin/php -i | less
+&gt; &gt; [1]
+&gt; &gt;
+&gt;
+<a href="http://us2.php.net/manual/en/function.import-request-variables.php">http://us2.php.net/manual/en/function.import-request-variables.php</a>
+&gt; &gt; [2]
+&gt; &gt; <a href="http://us2.php.net/manual/en/function.extract.php">http://us2.php.net/manual/en/function.extract.php</a>
+&gt; &gt; 
+&gt; 
+&gt; 
+&gt; 	
+&gt; 		
+&gt; __________________________________ 
+&gt; Yahoo! Mail - PC Magazine Editors' Choice 2005 
+&gt; <a href="http://mail.yahoo.com">http://mail.yahoo.com</a>
+&gt; 
+
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=bhdbalplpandhjmbbdfo&amp;month=200511.html">chad godfirnon ####@####.####</a>
+<br><b>Date:</b>
+2 Nov 2005 22:37:54 -0000
+<br><b>Message-Id:</b> &lt;52d8d94b0511021437k7cfb055cn85fb18c0411e2f05@mail.gmail.com&gt;
+<br>
+<hr><pre>sorry, forgot to change the 'to' field
+
+---------- Forwarded message ----------
+From: chad godfirnon ####@####.####
+Date: Nov 2, 2005 2:36 PM
+Subject: Re: php
+To: Joel Searcy ####@####.####
+
+
+Just a shot in the dark, as I've never used either of these
+applications, but there is a fork of OS Commerce called zencart
+<a href="http://www.zencart.com/">http://www.zencart.com/</a> .  (One of the core developers was interviewed
+recently on lugradio www.lugradio.org )
+I don't know if this app uses register_globals or not, but it might be
+worth checking out.
+
+
+&gt; I'm open to suggestions
+&gt; as to any open souce e-commerce applications.
+</pre>
+
+<tr><td class=msgsitem><b>Subject:</b>
+<a href="mailto:fosug@fosug.org?subject=Re: Re: php">Re: php</a>
+<br><b>From:</b>
+<a class="author" href="list.cgi%3Flist=fosug&amp;cmd=author&amp;authorid=deohdojobcjaofpchhfa&amp;month=200511.html">Stephan Aleman ####@####.####</a>
+<br><b>Date:</b>
+3 Nov 2005 01:44:53 -0000
+<br><b>Message-Id:</b> &lt;20051103014438.7737.qmail@web52306.mail.yahoo.com&gt;
+<br>
+<hr><pre>&gt;
+&gt; &gt; I'm open to suggestions
+&gt; &gt; as to any open souce e-commerce applications.
+&gt; 
+
+I've actually set up a Potter with Zen Cart. He uses
+it with PayPal, does Verisign over SSL, it's plugged
+into USPS and even has templates. One CMS rising in
+popularity is Mambo, but choose the solution that best
+fits the customer's needs:
+<a href="http://www.opensourcecms.com">http://www.opensourcecms.com</a>
+
+If you want this to work for you both, I recommend
+letting someone else host it, so you don't have to
+worry about the bottom layers,
+<a href="http://www.webopedia.com/quick_ref/OSI_Layers.asp">http://www.webopedia.com/quick_ref/OSI_Layers.asp</a> .
+It'll save you unimaginable headches at a cost they
+usually don't mind covering. Say Midphase or Prokmu
+for example, but there are many more to look at.
+
+Email me off list and we'll go over how it works.
+
+Stephan
+
+
+		
+__________________________________ 
+Yahoo! FareChase: Search multiple travel sites in one click.
+<a href="http://farechase.yahoo.com">http://farechase.yahoo.com</a>
+</pre>
+
+<tr><td colspan=99 class=pager>
+<span class="pager-first">[<<]</span>
+<span class="pager-prev">[<]</span>
+<span class="pager-curr">Page 1 of 1</span>
+<span class="pager-next">[>]</span>
+<span class="pager-last">[>>]</span>
+</td></tr></table><hr><div class=menubar>
+<a class="menu-lists" href="list.cgi.html">[Lists]</a>
+<a class="menu-config" href="list.cgi%3Flist=fosug&amp;cmd=configure.html">[Configure]</a>
+<a class="menu-first" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200410.html">[<<]</a>
+<a class="menu-prev" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200510.html">[<]</a>
+<a class="menu-bythread" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200511.html">[by Thread]</a>
+<a class="menu-bydate" href="list.cgi%3Flist=fosug&amp;cmd=monthbydate&amp;month=200511.html">[by Date]</a>
+<a class="menu-next" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200512.html">[>]</a>
+<a class="menu-last" href="list.cgi%3Flist=fosug&amp;cmd=monthbythread&amp;month=200607.html">[>>]</a>
+<a class="menu-months" href="list.cgi%3Flist=fosug&amp;cmd=months.html">[Months]</a>
+<a class="menu-search" href="list.cgi%3Flist=fosug&amp;cmd=search.html">[Search]</a>
+<a class="menu-subscribe" href="mailto:fosug-subscribe@fosug.org?subject=Just click SEND">[eSubscribe]</a>
+<a class="feed-link" href="list.cgi%3Flist=fosug&amp;cmd=feed">[Feed]</a>
+</div>
+
+<hr>
+<div class=versioninfo>
+Powered by
+<a href="http://untroubled.org/ezmlm-browse/">ezmlm-browse 0.10</a>.
+</div>
+</body>
+</html>
